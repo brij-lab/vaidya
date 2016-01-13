@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="bg_gradient_start">#31244e</color>
+    <color name="bg_gradient_end">#6b394c</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="feed_bg">#22252b</color>
+    <color name="feed_item_bg">#ffffff</color>
+    <color name="feed_item_border">#c2c3c8</color>
+    <color name="link">#0a80d1</color>
+    <color name="timestamp">#a0a3a7</color>
+    <color name="shadow">#555555</color>
+    <color name="title">#ead61c</color><color name="actionbar_background">#f09609</color><color name="actionbar_background1">#660066</color>
+</resources>

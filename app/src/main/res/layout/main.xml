@@ -1,28 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:padding="16dp" >
 
-    <TextView
-        android:id="@+id/caption_text"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:typeface="sans" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
         android:layout_weight="1"
-        android:gravity="center" >
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/caption_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:typeface="sans" />
 
         <TextView
             android:id="@+id/result_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_gravity="left"
+            android:maxLines="15"
+            android:scrollbars="vertical"
+            android:gravity="bottom"/>
+
+        <TextView
+            android:id="@+id/partial_result_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium" />
     </LinearLayout>
-</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <!--<ImageButton
+            android:id="@+id/btnSpeak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@mipmap/ico_mic"
+            android:clickable="false" />-->
+
+        <Button android:id="@+id/btnSpeak" android:text="Speak" android:layout_width="150dp"
+            android:layout_height="wrap_content" android:background="@drawable/speak_button"
+            android:layout_marginRight="5dp"/>
+        <Button android:id="@+id/btnReset" android:text="Reset" android:layout_width="150dp"
+            android:layout_height="wrap_content" android:background="@drawable/reset_button"/>
+
+        <!--<TextView
+            android:id="@+id/micText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/tap_on_mic"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="normal" />-->
+    </LinearLayout>
+
+</RelativeLayout>

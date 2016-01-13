@@ -14,4 +14,4 @@ grammar digits;
           eight |
           nine  ;
 
-public <digits> = <digit>+;
+public <digits> = <digit>+;	

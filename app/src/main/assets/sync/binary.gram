@@ -1,0 +1,13 @@
+#JSGF V1.0;
+
+grammar binary;
+
+public <binary> =   yes |
+                    yeah |
+                    no |
+                    nope |
+                    yep |
+                    that's right |
+                    maybe |
+                    negative |
+                    positive ;

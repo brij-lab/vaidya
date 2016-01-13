@@ -5,8 +5,8 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "edu.cmu.sphinx.pocketsphinx"
-        minSdkVersion 14
+        applicationId "iiit.speech.itra"
+        minSdkVersion 21
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
@@ -21,6 +21,8 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:support-v4:22.0.0'
+    compile files('libs/TarsosLSH-latest.jar')
 }
 
 ant.importBuild 'assets.xml'
