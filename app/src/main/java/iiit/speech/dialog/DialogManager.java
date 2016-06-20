@@ -53,6 +53,14 @@ public class DialogManager {
         if (nlu.isValidString(hyp)) {
             if (!state.entered) {
                 state.onEntry();
+
+                // TO surpass the domain detection logic
+                if (state.conclude) {
+                    current_state = state.next_state;
+                    states.get(current_state).domain = state.domain;
+                    state = states.get(current_state);
+                    state.onEntry();
+                }
             }
             else if (!state.conclude) {
                 state.onRecognize(hyp);
@@ -70,8 +78,7 @@ public class DialogManager {
                 }
             }
         }
-        else
-        {
+        else {
             app.speakOut("Please repeat");
         }
 

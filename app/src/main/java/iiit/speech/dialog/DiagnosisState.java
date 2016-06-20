@@ -151,6 +151,8 @@ public class DiagnosisState extends DialogState {
         }
         if (possible_diseases.size() == 0) {
             conclude = true;
+            next_state = "greet";
+            current_grammar = app.GREET_RESPONSE;
         }
     }
 

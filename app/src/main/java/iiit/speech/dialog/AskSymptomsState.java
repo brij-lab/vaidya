@@ -67,7 +67,7 @@ public class AskSymptomsState extends DialogState {
         }
         completeSymptomList();
         current_symptom = ((HealthDomain) domain).getSingleUnacknowledged();
-        if (current_symptom == null && symptom_request_count == 3) {
+        if (current_symptom == null && symptom_request_count == 2) {
             next_state = "diagnosis";
             conclude = true;
         } else {
@@ -86,20 +86,22 @@ public class AskSymptomsState extends DialogState {
         String current_symptom = ((HealthDomain) domain).getSingleUnacknowledged();
         ((HealthDomain) domain).displaySymptomList();
         System.out.println("Current Symptom ===> " + current_symptom);
-        if (current_symptom == null) {
+        //if (current_symptom == null) {
+        if (symptom_request_count < 2) {
             // There are no un-acknowledged symptoms in the list obtained up till now
             switch (symptom_request_count) {
                 case 0:
-                    app.speakOut("Please tell your symptoms.");
+                    app.speakOut("Hi. Please tell your symptoms.");
                     break;
                 case 1:
-                    app.speakOut("please tell if you have any other symptoms.");
+                    app.speakOut("Please tell if you have any other symptoms.");
                     break;
             }
             // Set appropriate grammar
             current_grammar =  app.SYMPTOM_RESPONSE;
             symptom_request_count++;
-        } else {
+
+        } else if (current_symptom != null) {
             // TODO merge to accept natural language as response
             app.speakOut("Do you have " + current_symptom);
             // Set appropriate grammar

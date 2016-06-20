@@ -62,7 +62,7 @@ public class DiseaseDetailsState extends DialogState {
         if (nlu.resolveBinaryHyp(hyp)) {
             app.speakOut(DISEASE_DEF.get(disease.toLowerCase()));
         } else {
-            app.speakOut("okay");
+            app.speakOut("Okay. Please consult a doctor immediately.");
         }
         conclude = true;
     }
