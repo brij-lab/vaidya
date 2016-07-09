@@ -31,10 +31,10 @@ public class NLU {
     public NLU(VaidyaActivity a) throws IOException{
         System.out.println("Stating NLU...");
         app = a;
-        File symp_file = new File(app.assetDir, "symptom_edit_dist.txt");
+        File symp_file = new File(app.assetDir, "symptom_edit_dist" + a.langName+".txt");
         symptom_list = readLines(symp_file);
         System.out.println("Read symptoms file...");
-        File stopwords_file = new File(app.assetDir, "stopwords.txt");
+        File stopwords_file = new File(app.assetDir, "stopwords"+a.langName+".txt");
         stopword_tokens = readLines(stopwords_file);
         System.out.println("Read stopwords file...");
         stopword_list = Arrays.asList(stopword_tokens);
