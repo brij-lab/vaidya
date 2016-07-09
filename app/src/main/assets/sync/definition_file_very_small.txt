@@ -1,0 +1,7 @@
+acute_gastroentrictis ## Gastroenteritis or infectious diarrhea is a medical condition from inflammation of the stomach and the small intestine.It causes combination of diarrhea, vomiting, and abdominal pain and cramping.
+tuberculosis ## Tuberculosis is an infectious disease caused by Mycobacterium tuberculosis. Tuberculosis generally affects the lungs, but can also affect other parts of the body. It is spread through the air when people who have an active TB infection cough, sneeze, or otherwise transmit respiratory fluids through the air.
+diabetes ## Diabetes mellitus or diabetes is a group of metabolic diseases in which there are high blood sugar levels over a prolonged period. Symptoms of high blood sugar include frequent urination, increased thirst, and increased hunger. 
+dengue ## Dengue fever or breakbone fever is a mosquito-borne tropical disease caused by the dengue virus. Symptoms include fever, headache, muscle and joint pains, and a characteristic skin rash.
+malaria ## Malaria is a mosquito-borne infectious disease.Malaria causes symptoms that typically include fever, fatigue, vomiting, and headaches.
+acute_pharyngitis ## Pharyngitis is the inflammation of the pharynx which is at the back of the throat. Also called sore throat. It causes scratchiness in the throat and difficulty in swallowing.
+urinal_tract_infection ## Please go to the doctor immediately.

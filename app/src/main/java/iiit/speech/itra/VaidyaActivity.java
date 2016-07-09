@@ -34,7 +34,7 @@ import iiit.speech.dialog.DialogManager;
 
 public class VaidyaActivity extends Activity implements
         RecognitionListener, TextToSpeech.OnInitListener {
-		
+
     /* Named searches allow to quickly reconfigure the decoder */
     public final String GREET_RESPONSE = "greet";
     public final String SYMPTOM_RESPONSE = "symptom";
@@ -53,8 +53,8 @@ public class VaidyaActivity extends Activity implements
     TextView caption_text;
     TextView micText;
 
-    int langid;
-
+    public int langid;
+    public String langName = "_";
     public File assetDir;
 
     DialogManager dialogManager;
@@ -77,9 +77,18 @@ public class VaidyaActivity extends Activity implements
         if (extras != null) {
             langid = extras.getInt("langid");
         }
-
         caption_text = (TextView) findViewById(R.id.caption_text);
         caption_text.setText("Preparing the medic " + langid);
+
+        if(langid == 0){
+            langName = langName + "en";
+        }
+        else if(langid == 1){
+            langName = langName +"hi";
+        }
+        else{
+            langName = langName + "te";
+        }
 
         mic_button = (Button) findViewById(R.id.btnSpeak);
         reset_button = (Button) findViewById(R.id.btnReset);
@@ -289,7 +298,7 @@ public class VaidyaActivity extends Activity implements
         }
 
     }
-    
+
     /**
      * In partial result we get quick updates about current hypothesis. In
      * keyword spotting mode we can react here, in other modes we need to wait
@@ -369,7 +378,7 @@ public class VaidyaActivity extends Activity implements
 
     private void switchSearch(String searchName) {
         recognizer.stop();
-        
+
         // If we are not spotting, start listening with timeout (10000 ms or 10 seconds).
         /*if (searchName.equals(KWS_SEARCH))
             recognizer.startListening(searchName);
@@ -383,20 +392,20 @@ public class VaidyaActivity extends Activity implements
     private void setupRecognizer(File assetsDir) throws IOException {
         // The recognizer can be configured to perform multiple searches
         // of different kind and switch between them
-        
+
         recognizer = defaultSetup()
                 .setAcousticModel(new File(assetsDir, "en-us-ptm"))
                 .setDictionary(new File(assetsDir, "cmudict-en-us.dict"))
-                
+
                 // To disable logging of raw audio comment out this call (takes a lot of space on the device)
                 .setRawLogDir(assetsDir)
-                
+
                 // Threshold to tune for keyphrase to balance between false alarms and misses
                 .setKeywordThreshold(1e-45f)
-                
+
                 // Use context-independent phonetic search, context-dependent is too slow for mobile
                 .setBoolean("-allphone_ci", true)
-                
+
                 .getRecognizer();
         recognizer.addListener(this);
 
@@ -406,30 +415,31 @@ public class VaidyaActivity extends Activity implements
 
         // Create keyword-activation search.
         //recognizer.addKeyphraseSearch(KWS_SEARCH, KEYPHRASE);
-        
+
         // Create grammar-based search for selection between demos
         //File menuGrammar = new File(assetsDir, "menu.gram");
         //recognizer.addGrammarSearch(MENU_SEARCH, menuGrammar);
 
         // Create grammar-based search for digit recognition
-        File greetingGrammar = new File(assetsDir, "greet.gram");
+
+        File greetingGrammar = new File(assetsDir, "greet"+langName+".gram");
         recognizer.addGrammarSearch(GREET_RESPONSE, greetingGrammar);
 
         // Create grammar-based search for digit recognition
-        File symptomGrammar = new File(assetsDir, "symptom.gram");
+        File symptomGrammar = new File(assetsDir, "symptom"+langName+".gram");
         recognizer.addGrammarSearch(SYMPTOM_RESPONSE, symptomGrammar);
 
         // Create grammar-based search for digit recognition
-        File binaryGrammar = new File(assetsDir, "binary.gram");
+        File binaryGrammar = new File(assetsDir, "binary"+langName+".gram");
         recognizer.addGrammarSearch(BINARY_RESPONSE, binaryGrammar);
-        
+
         // Create language model search
         File languageModel = new File(assetsDir, "health.lm.dmp");
         recognizer.addNgramSearch(GENERIC_SEARCH, languageModel);
 
         //File keyphrases = new File(assetsDir, "symp_edit_dist.old.txt");
         //recognizer.addKeywordSearch(FORECAST_SEARCH, keyphrases);
-        
+
         // Phonetic search
         //File phoneticModel = new File(assetsDir, "en-phone.dmp");
         //recognizer.addAllphoneSearch(PHONE_SEARCH, phoneticModel);

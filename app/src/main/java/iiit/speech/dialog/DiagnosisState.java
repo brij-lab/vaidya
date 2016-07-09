@@ -209,6 +209,7 @@ public class DiagnosisState extends DialogState {
                 System.out.println("Symptom ==> " + e.getKey() + "  ; disease count ==>" + e.getValue().size());
                 if (Math.abs(Dc - e.getValue().size()) < min_dif) {
                     symptom_toask = e.getKey();
+                    min_dif = Math.abs(Dc - e.getValue().size()) ;
                 }
             }
         }

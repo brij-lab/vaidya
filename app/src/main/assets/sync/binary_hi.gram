@@ -1,0 +1,9 @@
+#JSGF V1.0;
+
+grammar binary;
+
+public <binary> =   undi |
+                    avnu undi |
+                    ledu |
+                    kadu |
+                    avnu ;
