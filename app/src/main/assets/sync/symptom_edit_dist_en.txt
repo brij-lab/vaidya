@@ -458,7 +458,7 @@ flashbacks
 bad dreams
 frightening thoughts
 avoidance
-hyperarousal of PTSD occurring within one month of a traumatic experience as Acute Stress Disorder or ASD
+hyperarousal of ptsd occurring within one month of a traumatic experience as acute stress disorder or asd
 agraphia
 acalculia
 finger agnosia
