@@ -192,12 +192,14 @@ public class DiagnosisState extends DialogState {
             dis_vec = DISEASE_VECTOR.get(dis);
             for (Integer idx: getOneIndices(dis_vec)) {
                 poss_sym = SYMPTOM_IDX.get(idx);
-                dis_list = possible_symptoms.get(poss_sym);
-                if (dis_list == null) {
-                    dis_list = new HashSet<>();
-                    possible_symptoms.put(poss_sym, dis_list);
+                if(poss_sym != null) {
+                    dis_list = possible_symptoms.get(poss_sym);
+                    if (dis_list == null) {
+                        dis_list = new HashSet<>();
+                        possible_symptoms.put(poss_sym, dis_list);
+                    }
+                    dis_list.add(dis);
                 }
-                dis_list.add(dis);
             }
         }
 
