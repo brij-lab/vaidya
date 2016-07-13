@@ -39,6 +39,7 @@ public class VaidyaActivity extends Activity implements
     public final String GREET_RESPONSE = "greet";
     public final String SYMPTOM_RESPONSE = "symptom";
     public final String BINARY_RESPONSE = "binary";
+    public final String SYMPTOM_QUERY_RESPONSE = "symp_query";
     public final String GENERIC_SEARCH = "generic";
 
     private final int REQ_CODE_SPEECH_INPUT = 100;
@@ -417,7 +418,7 @@ public class VaidyaActivity extends Activity implements
         //recognizer.addKeyphraseSearch(KWS_SEARCH, KEYPHRASE);
 
         // Create grammar-based search for selection between demos
-        //File menuGrammar = new File(assetsDir, "menu.gram");
+        //File menuGrammar = new File(assetsDir, "menu_en.gram");
         //recognizer.addGrammarSearch(MENU_SEARCH, menuGrammar);
 
         // Create grammar-based search for digit recognition
@@ -432,6 +433,9 @@ public class VaidyaActivity extends Activity implements
         // Create grammar-based search for digit recognition
         File binaryGrammar = new File(assetsDir, "binary"+langName+".gram");
         recognizer.addGrammarSearch(BINARY_RESPONSE, binaryGrammar);
+
+        File symQueryGrammar = new File(assetsDir, "symptom_query_response"+langName+".gram");
+        recognizer.addGrammarSearch(SYMPTOM_QUERY_RESPONSE, symQueryGrammar);
 
         // Create language model search
         File languageModel = new File(assetsDir, "health.lm.dmp");
