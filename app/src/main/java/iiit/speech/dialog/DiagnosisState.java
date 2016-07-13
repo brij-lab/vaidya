@@ -26,7 +26,7 @@ public class DiagnosisState extends DialogState {
 
     private VaidyaActivity app;
     private NLU nlu;
-
+    public boolean sym_Expain_Flag = false;
     private Map<String, Integer[]> SYMPTOM_VECTOR;
     private Map<String, Integer[]> DISEASE_VECTOR;
 
@@ -133,7 +133,14 @@ public class DiagnosisState extends DialogState {
         Arrays.fill(final_symp_vec, 1);
         Map<String, Boolean> ack_symptoms = ((HealthDomain)domain).getSymptoms();
         for (Map.Entry<String, Boolean> e: ack_symptoms.entrySet()) {
-            final_symp_vec = intersect(final_symp_vec, SYMPTOM_VECTOR.get(e.getKey().replaceAll(" ", "_")));
+            Integer [] symp_vector =  SYMPTOM_VECTOR.get(e.getKey().replaceAll(" ", "_"));
+            System.out.println("Vector for =========> " + e.getKey());
+            printIntArray(symp_vector);
+            System.out.println("Final vector : before =========> ");
+            printIntArray(final_symp_vec);
+            final_symp_vec = intersect(final_symp_vec, symp_vector);
+            System.out.println("Final vector : after =========> ");
+            printIntArray(final_symp_vec);
         }
         possible_diseases = new HashSet<>();
         for (Integer idx: getOneIndices(final_symp_vec)) {
@@ -146,7 +153,11 @@ public class DiagnosisState extends DialogState {
                 app.speakOut(dis.replaceAll("_", " "));
             }
         }
+        // If there are more than one possible disease then ask for more symptoms to resolve
         if (possible_diseases.size() > 1) {
+            for (String dis: possible_diseases) {
+                System.out.println(dis.replaceAll("_", " "));
+            }
             getPossibleSymptoms();
         }
         if (possible_diseases.size() == 0) {
@@ -158,27 +169,41 @@ public class DiagnosisState extends DialogState {
 
     @Override
     public void onRecognize(String hyp) {
-
+        sym_Expain_Flag = false;
         if (expect_binary) {
-            if (nlu.resolveBinaryHyp(hyp)) {
+            System.out.println("Resolving symtom =========> " + symptom_toask);
+            if (nlu.resolveSymptomQueryHyp(hyp).equalsIgnoreCase("yes")) {
                 possible_diseases = possible_symptoms.get(symptom_toask);
-            } else {
+                System.out.println("Remaining diseases ============>>>>");
+                for (String rdis : possible_diseases) {
+                    System.out.println(rdis);
+                }
+            } else if (nlu.resolveSymptomQueryHyp(hyp).equalsIgnoreCase("no")) {
                 possible_diseases.removeAll(possible_symptoms.get(symptom_toask));
+                System.out.println("Remaining diseases ============>>>>");
+                for (String rdis : possible_diseases) {
+                    System.out.println(rdis);
+                }
+            } else {
+                ((HealthDomain) domain).symptom_explain = symptom_toask;
+                conclude = true;
+                sym_Expain_Flag = true;
             }
             already_asked_symptoms.add(symptom_toask);
         }
-
-        app.appendColoredText(app.result_text, "Disease count = " + possible_diseases.size(), Color.GREEN);
-        if (possible_diseases.size() > 1) {
-            getPossibleSymptoms();
-        } else {
-            for (String d: possible_diseases) {
-                d = d.replaceAll("_", " ");
-                app.speakOut("your most probable diagnosis is " + d);
-                app.appendColoredText(app.result_text, "Diagnosis = " + d, Color.WHITE);
-                ((HealthDomain)domain).setDisease(d);
-                conclude = true;
-                break;
+        if(!sym_Expain_Flag) {
+            app.appendColoredText(app.result_text, "Disease count = " + possible_diseases.size(), Color.GREEN);
+            if (possible_diseases.size() > 1) {
+                getPossibleSymptoms();
+            } else {
+                for (String d : possible_diseases) {
+                    d = d.replaceAll("_", " ");
+                    app.speakOut("your most probable diagnosis is " + d);
+                    app.appendColoredText(app.result_text, "Diagnosis = " + d, Color.WHITE);
+                    ((HealthDomain) domain).setDisease(d);
+                    conclude = true;
+                    break;
+                }
             }
         }
     }
@@ -190,8 +215,11 @@ public class DiagnosisState extends DialogState {
         Set<String> dis_list;
         for (String dis: possible_diseases) {
             dis_vec = DISEASE_VECTOR.get(dis);
+            System.out.println("Vector for disease====================>" + dis);
+            printIntArray(dis_vec);
             for (Integer idx: getOneIndices(dis_vec)) {
                 poss_sym = SYMPTOM_IDX.get(idx);
+                System.out.println("Poss Sym===================>" + poss_sym);
                 if(poss_sym != null) {
                     dis_list = possible_symptoms.get(poss_sym);
                     if (dis_list == null) {
@@ -209,6 +237,10 @@ public class DiagnosisState extends DialogState {
         for (Map.Entry<String, Set<String>> e: possible_symptoms.entrySet()) {
             if (!already_asked_symptoms.contains(e.getKey())) {
                 System.out.println("Symptom ==> " + e.getKey() + "  ; disease count ==>" + e.getValue().size());
+                for (String cdis : e.getValue()) {
+                    System.out.println(cdis);
+                }
+
                 if (Math.abs(Dc - e.getValue().size()) < min_dif) {
                     symptom_toask = e.getKey();
                     min_dif = Math.abs(Dc - e.getValue().size()) ;
@@ -216,12 +248,25 @@ public class DiagnosisState extends DialogState {
             }
         }
         app.speakOut("Do you have " + symptom_toask.replaceAll("_", " "));
-        current_grammar = app.BINARY_RESPONSE;
+        current_grammar = app.SYMPTOM_QUERY_RESPONSE;
         expect_binary = true;
     }
 
     @Override
     public void onExit() {
-        next_state = "disease_details";
+        if(!sym_Expain_Flag){
+            next_state = "disease_details";
+        }
+        else{
+            next_state = "symptom_details";
+        }
+    }
+
+    void printIntArray(Integer [] arr) {
+        int len = arr.length;
+        for (int i = 0; i < len; i++) {
+            System.out.print(String.valueOf(arr[i]) + " ");
+        }
+        System.out.println();
     }
 }

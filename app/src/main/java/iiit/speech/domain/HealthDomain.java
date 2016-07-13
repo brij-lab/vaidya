@@ -11,6 +11,7 @@ import java.util.TreeMap;
  */
 public class HealthDomain extends DomainDesc{
 
+    public String symptom_explain;
     private Map<String, Boolean> symptoms;
     private String disease;
     private Set<String> removed_symptoms;
@@ -38,7 +39,6 @@ public class HealthDomain extends DomainDesc{
     public String getDisease() {
         return disease;
     }
-
     public void addSymptoms(String sym) {
         symptoms.put(sym, Boolean.FALSE);
     }

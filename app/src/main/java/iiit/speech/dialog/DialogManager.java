@@ -42,6 +42,8 @@ public class DialogManager {
         states.put("diagnosis", diagnosisState);
         DiseaseDetailsState diseaseDetailsState = new DiseaseDetailsState(app, nlu);
         states.put("disease_details", diseaseDetailsState);
+        SymptomDetailsState symptomDetailsState = new SymptomDetailsState(app, nlu);
+        states.put("symptom_details", symptomDetailsState);
 
         current_state = "greet";
     }
@@ -59,6 +61,7 @@ public class DialogManager {
                     current_state = state.next_state;
                     states.get(current_state).domain = state.domain;
                     state = states.get(current_state);
+                    //state.conclude = false;
                     state.onEntry();
                 }
             }
@@ -74,6 +77,14 @@ public class DialogManager {
                         //manage(null);
                         state = states.get(current_state);
                         state.onEntry();
+                        if (state.conclude) {
+                            current_state = state.next_state;
+                            states.get(current_state).domain = state.domain;
+                            state = states.get(current_state);
+                            if (state.conclude){
+                                state.conclude = false;
+                            }
+                        }
                     }
                 }
             }

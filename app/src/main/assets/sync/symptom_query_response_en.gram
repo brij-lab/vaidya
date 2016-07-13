@@ -1,0 +1,18 @@
+#JSGF V1.0;
+
+grammar symptom_query_response;
+
+public <symptom_query> =    what does that mean |
+                            what |
+                            what is that |
+                            meaning |
+                            i donno |
+                            yes |
+                            yeah |
+                            no |
+                            nope |
+                            yep |
+                            that's right |
+                            maybe |
+                            negative |
+                            positive;

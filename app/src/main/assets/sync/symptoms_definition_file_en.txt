@@ -1,0 +1,632 @@
+headache ## Hey dude
+fatigue ## Hey dude
+fever ## Hey dude
+abdominal pain ## Hey dude
+nausea ## Hey dude
+jaundice ## Hey dude
+rash ## Hey dude
+skin rash ## Hey dude
+anemia ## Hey dude
+malaise ## Hey dude
+distention ## Hey dude
+constipation ## Hey dude
+diarrhea ## Hey dude
+mucopurulent discharge from the eye ## Hey dude
+pain in the eye ## Hey dude
+redness ## Hey dude
+stiff neck ## Hey dude
+confusion ## Hey dude
+eschar ## Hey dude
+regional adenopathy ## Hey dude
+maculopapular rash on extremities ## Hey dude
+swallowing ## Hey dude
+pain ## Hey dude
+burning ## Hey dude
+distension ## Hey dude
+decreased appetite ## Hey dude
+vomiting ## Hey dude
+weight loss ## Hey dude
+bloody stools ## Hey dude
+rash which is followed by blisters ## Hey dude
+itching ## Hey dude
+burning pain ## Hey dude
+paresthesia ## Hey dude
+cough ## Hey dude
+wheezing ## Hey dude
+splenomegaly ## Hey dude
+bloody diarrhea ## Hey dude
+hepatosplenomegaly ## Hey dude
+chills ## Hey dude
+rapid breathing ## Hey dude
+anorexia ## Hey dude
+decreased weight ## Hey dude
+depression ## Hey dude
+watery diarrhea ## Hey dude
+muscle aches ## Hey dude
+sore throat ## Hey dude
+myalgia ## Hey dude
+muscle ache ## Hey dude
+coughing ## Hey dude
+pain in lower and upper extremities ## Hey dude
+papulovesicular rash on the soft palate ## Hey dude
+cervical lymphadenopathy ## Hey dude
+conjunctival suffusion ## Hey dude
+blood in the urine ## Hey dude
+blood in the sputum ## Hey dude
+hemorrhagic fever ## Hey dude
+photophobia ## Hey dude
+neck stiffness ## Hey dude
+meningitis ## Hey dude
+accumulation of fluid in the abdomen ## Hey dude
+dehydration ## Hey dude
+scaling of skin lesions ## Hey dude
+thickening of nails ## Hey dude
+swollen periungal tissue ## Hey dude
+scarring of the scalp ## Hey dude
+anxiety ## Hey dude
+shortness of breath ## Hey dude
+chest tightness ## Hey dude
+lymphangitis ## Hey dude
+lymphadenopathy ## Hey dude
+stiffness ## Hey dude
+irritation ## Hey dude
+swelling ## Hey dude
+joint pain ## Hey dude
+murmurs ## Hey dude
+peripheral edema ## Hey dude
+pulmonary rales ## Hey dude
+petechia ## Hey dude
+skin lesions ## Hey dude
+gummatous ulcers ## Hey dude
+periosteal lesions ## Hey dude
+paresis ## Hey dude
+tabes ## Hey dude
+optic atrophy ## Hey dude
+interstitial keratitis ## Hey dude
+sensorineural deafness ## Hey dude
+dental deformities ## Hey dude
+renal failure ## Hey dude
+hemorrhagic manifestations ## Hey dude
+pulmonary edema ## Hey dude
+sweating ## Hey dude
+chest pain ## Hey dude
+muscle tightness ## Hey dude
+mucopurulent nasal discharge ## Hey dude
+nodular lesions in the lungs ## Hey dude
+blisters ## Hey dude
+drowsiness ## Hey dude
+seizures ## Hey dude
+seizure ## Hey dude
+severe headache ## Hey dude
+rectal bleeding ## Hey dude
+formation of ulcers ## Hey dude
+hepatomegaly ## Hey dude
+arthralgia ## Hey dude
+headaches ## Hey dude
+hemoptysis ## Hey dude
+pneumonia ## Hey dude
+cramping ## Hey dude
+failure to thrive ## Hey dude
+blood stained nasal discharge ## Hey dude
+perioral fissures ## Hey dude
+choroiditis ## Hey dude
+hydrocephalus ## Hey dude
+intellectual disability ## Hey dude
+osteochondritis ## Hey dude
+pseudoparalysis ## Hey dude
+nonproductive cough ## Hey dude
+maceration ## Hey dude
+conjunctivitis ## Hey dude
+scaling ## Hey dude
+irritability ## Hey dude
+abnormal reflexes ## Hey dude
+involuntary movements ## Hey dude
+hemiplagia ## Hey dude
+ataxia ## Hey dude
+nystagmus ## Hey dude
+dysphasia ## Hey dude
+lymphadenopathy of the neck ## Hey dude
+back pain ## Hey dude
+abortion ## Hey dude
+stillbirth ## Hey dude
+arthritis ## Hey dude
+skin nodules ## Hey dude
+maculopapular rash ## Hey dude
+sweats ## Hey dude
+weakness ## Hey dude
+neurologic changes ## Hey dude
+acute respiratory distress ## Hey dude
+lymphadenitis ## Hey dude
+prostration ## Hey dude
+tremors ## Hey dude
+loss of conjugate eye movements ## Hey dude
+muscle rigidity ## Hey dude
+hemiparesis ## Hey dude
+coma ## Hey dude
+runny nose ## Hey dude
+enlarged ## Hey dude
+loss of appetite ## Hey dude
+difficulty in breathing ## Hey dude
+sneezing ## Hey dude
+circling ## Hey dude
+excess salivation in piglets ## Hey dude
+intense itching in cattle ## Hey dude
+myalgia in the legs and lumbosacral region ## Hey dude
+inguinal lymphadenitis ## Hey dude
+abscesses in the groin area ## Hey dude
+paralysis ## Hey dude
+muscle weakness ## Hey dude
+rectal prolapse ## Hey dude
+growth retardation ## Hey dude
+lack of appetite ## Hey dude
+cramps ## Hey dude
+incoordination ## Hey dude
+muscle tremors ## Hey dude
+loss of the voice ## Hey dude
+acute chest pain ## Hey dude
+disturbance of heart rate ## Hey dude
+dyspnea ## Hey dude
+hypoxemia ## Hey dude
+cognitive impairment ## Hey dude
+motor dysfunction ## Hey dude
+behavioral change ## Hey dude
+speech problems ## Hey dude
+altered mental status ## Hey dude
+poor appetite ## Hey dude
+itchy ## Hey dude
+mediastinal lymphadenopathy ## Hey dude
+lameness ## Hey dude
+nasal discharge ## Hey dude
+ocular discharge ## Hey dude
+cessation of rumination ## Hey dude
+relapsing fever ## Hey dude
+leukopenia ## Hey dude
+petechiae ## Hey dude
+necrosis ## Hey dude
+difficulty breathing ## Hey dude
+adenopathy ## Hey dude
+sensory loss ## Hey dude
+motor loss ## Hey dude
+eye damage ## Hey dude
+liver enlargement ## Hey dude
+eruption of rose colored spots ## Hey dude
+abdominal cramps ## Hey dude
+high fever ## Hey dude
+huddling ## Hey dude
+hemorrhages in the skin ## Hey dude
+opaque nail ## Hey dude
+yellow brown nail ## Hey dude
+crumbly nail that can separate from the nail bed ## Hey dude
+stupor ## Hey dude
+disorientation ## Hey dude
+convulsions ## Hey dude
+spastic paralysis ## Hey dude
+swollen lymph nodes ## Hey dude
+abdominal cramps and pain ## Hey dude
+regional lymphadenopathy ## Hey dude
+backache ## Hey dude
+pleural effusions ## Hey dude
+staggering gait ## Hey dude
+dementia ## Hey dude
+blurred vision ## Hey dude
+stomach pain ## Hey dude
+red eyes ## Hey dude
+flushed face ## Hey dude
+red throat ## Hey dude
+nosebleeds ## Hey dude
+blood in the feces and urine ## Hey dude
+cervical rigidity ## Hey dude
+muscle spasms ## Hey dude
+bleeding from the oral and nasal mucosa ## Hey dude
+bleeding from the bronchopulmonary ## Hey dude
+lesions ## Hey dude
+vomiting of blood ## Hey dude
+severe diarrhea ## Hey dude
+acute flaccid paralysis ## Hey dude
+lethargy ## Hey dude
+heart failure ## Hey dude
+pallor ## Hey dude
+cyanosis ## Hey dude
+tachycardia ## Hey dude
+enlargement of heart ## Hey dude
+abdominal discomfort ## Hey dude
+tiredness ## Hey dude
+muscle pain ## Hey dude
+reddening of the skin ## Hey dude
+thrombocytopenia ## Hey dude
+pleural effusion ## Hey dude
+congestive heart failure ## Hey dude
+nodule ## Hey dude
+bone lesions ## Hey dude
+lesions in the mucosa of digestive tract ## Hey dude
+necrosis of lymphoid tissue ## Hey dude
+hoof inflammation and dermatitis ## Hey dude
+difficulty feeding ## Hey dude
+ptosis ## Hey dude
+loss of head control ## Hey dude
+breathing difficulties ## Hey dude
+muscular hypotonia ## Hey dude
+muscular atrophy ## Hey dude
+feeding difficulties ## Hey dude
+recurrent episodes of vomiting and diarrhea ## Hey dude
+pleuritic chest pain ## Hey dude
+easy bruising ## Hey dude
+blood spots ## Hey dude
+bleeding gums ## Hey dude
+shock ## Hey dude
+weak pulse ## Hey dude
+hypotension ## Hey dude
+body aches ## Hey dude
+dry cough ## Hey dude
+hypoxia ## Hey dude
+loss of reflexes ## Hey dude
+hallucinations ## Hey dude
+numbness ## Hey dude
+parasthesias ## Hey dude
+respiratory failure ## Hey dude
+burning sensation during urination ## Hey dude
+discharge from the penis ## Hey dude
+increased vaginal discharge ## Hey dude
+vaginal bleeding between periods ## Hey dude
+orbital cellulitis ## Hey dude
+proptosis ## Hey dude
+pus discharge from the nose ## Hey dude
+dizziness ## Hey dude
+altered consciousness ## Hey dude
+vision loss ## Hey dude
+shin pain ## Hey dude
+soreness of the muscles of the legs and back ## Hey dude
+memory loss ## Hey dude
+sleepiness ## Hey dude
+breathing distress ## Hey dude
+watery eyes ## Hey dude
+eschars ## Hey dude
+rash on extremities ## Hey dude
+swelling of the feet ## Hey dude
+gangrene ## Hey dude
+lesions on the skin ## Hey dude
+severe pain behind the eyes ## Hey dude
+muscle and bone pain ## Hey dude
+mild bleeding ## Hey dude
+stiff body ## Hey dude
+exhaustion ## Hey dude
+change in bowel habits ## Hey dude
+spastic weakness of both legs ## Hey dude
+muscle stiffness ## Hey dude
+sensory disturbance ## Hey dude
+spasms ## Hey dude
+vesicular rash of the ear or mouth ## Hey dude
+tinnitus ## Hey dude
+vertigo ## Hey dude
+otalgia ## Hey dude
+respiratory problems ## Hey dude
+bleeding disorder ## Hey dude
+tachypnea ## Hey dude
+dyspepsia ## Hey dude
+formation of fistulas ## Hey dude
+cold sores ## Hey dude
+bad breath ## Hey dude
+oral lesions ## Hey dude
+severe abdominal and back pain ## Hey dude
+severe pain ## Hey dude
+sensitivity to light touch ## Hey dude
+epistaxis ## Hey dude
+hematemesis ## Hey dude
+melena ## Hey dude
+menorrhagia ## Hey dude
+night sweats ## Hey dude
+cracking ## Hey dude
+delirium ## Hey dude
+papulovesicular rash ## Hey dude
+sepsis ## Hey dude
+murmur ## Hey dude
+sensory disturbances ## Hey dude
+bleeding ## Hey dude
+odynophagia ## Hey dude
+swollen lymph glands ## Hey dude
+skin rash on the chest ## Hey dude
+cerebral hemorrhage ## Hey dude
+marked leukocytosis ## Hey dude
+diffuse infiltrates on chest radiograph ## Hey dude
+coryza ## Hey dude
+maculopapular ## Hey dude
+watery blisters ## Hey dude
+swelling of the lymph nodes ## Hey dude
+limb pain ## Hey dude
+paraplegia ## Hey dude
+dysarthria ## Hey dude
+bleeding into skin and other organs ## Hey dude
+nasal flaring in infants ## Hey dude
+bluish skin due to lack of oxygen ## Hey dude
+fissures ## Hey dude
+diplopia ## Hey dude
+dysphonia ## Hey dude
+dysphagia ## Hey dude
+descending muscle paralysis ## Hey dude
+lacrimation ## Hey dude
+recurring periods of wheezing ## Hey dude
+mucus production ## Hey dude
+sleep apnea ## Hey dude
+breathing problems ## Hey dude
+cranial nerve palsies ## Hey dude
+skin ulcer ## Hey dude
+severe muscle pain ## Hey dude
+falling blood pressure ## Hey dude
+sensitivity to light ## Hey dude
+bilateral corneal opacity ## Hey dude
+oculonasal discharge ## Hey dude
+rigidity of limbs ## Hey dude
+slurred speech ## Hey dude
+cellulitis ## Hey dude
+lesions in the brain or meninges ## Hey dude
+ascending regional lymphadenopathy ## Hey dude
+itching of the scalp ## Hey dude
+pus filled lesions on the scalp ## Hey dude
+patches of hair loss ## Hey dude
+stillborn piglets ## Hey dude
+mummified fetuses ## Hey dude
+premature farrowings ## Hey dude
+weak born pigs ## Hey dude
+myositis ## Hey dude
+degeneration of neuronal tissue ## Hey dude
+enlarged spleen ## Hey dude
+hemorrhages in the internal organs ## Hey dude
+bulging eyes ## Hey dude
+bloated abdomens ## Hey dude
+pain in the chest and throughout body ## Hey dude
+fibrosis ## Hey dude
+watery or bloody diarrhea ## Hey dude
+severe frontal headaches ## Hey dude
+joint aches ## Hey dude
+flushing of the face ## Hey dude
+decreased level of consciousness ## Hey dude
+cranial nerve deficits ## Hey dude
+dark urine ## Hey dude
+impaired speech ## Hey dude
+cognitive deterioration ## Hey dude
+muscle pains ## Hey dude
+redness of the eyes ## Hey dude
+low blood pressure ## Hey dude
+acute shock ## Hey dude
+vascular leakage ## Hey dude
+acute kidney failure ## Hey dude
+body ache ## Hey dude
+sweat ## Hey dude
+tearing ## Hey dude
+physical weakness ## Hey dude
+rosy spots on the central body ## Hey dude
+bradycardia ## Hey dude
+mood disturbances ## Hey dude
+behaviour disturbances ## Hey dude
+cognitive disturbances ## Hey dude
+neurologic disturbances ## Hey dude
+movement impairment ## Hey dude
+rigors ## Hey dude
+rigor ## Hey dude
+red eye ## Hey dude
+skin rash called erythema migrans ## Hey dude
+lung lesions ## Hey dude
+forced expiration ## Hey dude
+profuse sweating ## Hey dude
+spasmodic coughing ## Hey dude
+ecchymoses on the tongue ## Hey dude
+lacrimation in humans ## Hey dude
+gasping ## Hey dude
+twisting of head and neck ## Hey dude
+complete paralysis ## Hey dude
+reduced egg production in birds ## Hey dude
+productive cough ## Hey dude
+widespread abnormalities of social interactions and communication ## Hey dude
+severely restricted interests ## Hey dude
+highly repetitive behavior ## Hey dude
+indigestion ## Hey dude
+reduced level of consciousness ## Hey dude
+neck pain ## Hey dude
+facial flush ## Hey dude
+hemorrhagic features ## Hey dude
+proteinuria ## Hey dude
+soft tissue swelling ## Hey dude
+chest discomfort or pain ## Hey dude
+mild spotted fever ## Hey dude
+sores ## Hey dude
+swollen glands ## Hey dude
+ulcer formation ## Hey dude
+abdominal bloating ## Hey dude
+persistent vomiting ## Hey dude
+difficulty speaking ## Hey dude
+difficulty swallowing ## Hey dude
+difficulty chewing ## Hey dude
+changes in personality ## Hey dude
+twitching ## Hey dude
+low fever ## Hey dude
+lesions in the back area of the mouth ## Hey dude
+abdominal pain in middle or lower right part ## Hey dude
+personality and behavioral changes ## Hey dude
+partial paralysis ## Hey dude
+groin pain ## Hey dude
+discharge from penis ## Hey dude
+scrotal swelling ## Hey dude
+blood in the semen ## Hey dude
+neuropathy ## Hey dude
+autonomic instability ## Hey dude
+psychosis ## Hey dude
+multiorgan failure ## Hey dude
+desquamation ## Hey dude
+nonfocal neurologic abnormalities ## Hey dude
+respiratory distress ## Hey dude
+flashbacks ## Hey dude
+bad dreams ## Hey dude
+frightening thoughts ## Hey dude
+avoidance ## Hey dude
+hyperarousal of PTSD occurring within one month of a traumatic experience as Acute Stress Disorder or ASD ## Hey dude
+agraphia ## Hey dude
+acalculia ## Hey dude
+finger agnosia ## Hey dude
+herpetic lesions ## Hey dude
+painful swallowing ## Hey dude
+cough with mucus ## Hey dude
+maculopapular or petechial rash ## Hey dude
+cough with sputum ## Hey dude
+draining of sinuses ## Hey dude
+diaphoresis ## Hey dude
+maculopapular rash progressing into papular or petechial rash ## Hey dude
+alterations in sensorium ## Hey dude
+obstructing hydrocephalus ## Hey dude
+fever for two to three days ## Hey dude
+nodules and cavitations of the lungs ## Hey dude
+swollen hilar lymph nodes ## Hey dude
+abdominal distension ## Hey dude
+motor impairment ## Hey dude
+difficulty in walking and maintaining balance ## Hey dude
+meningeal irritation ## Hey dude
+cerebellar syndrome ## Hey dude
+pleural thickening ## Hey dude
+shivers ## Hey dude
+bleeding from the mouth ## Hey dude
+intense stabbing pain in the back and legs that recurs irregularly ## Hey dude
+gait ataxia ## Hey dude
+hyperesthesia ## Hey dude
+loss of bladder sensation leading to urine retention ## Hey dude
+erectile dysfunction ## Hey dude
+cotton wool spots ## Hey dude
+retinal hemorrhages ## Hey dude
+microaneurysms ## Hey dude
+skin reddening ## Hey dude
+skin itching ## Hey dude
+gastrointestinal bleeding ## Hey dude
+intestinal bleeding ## Hey dude
+rash on the face which spreads to the trunk and limbs ## Hey dude
+joint pains ## Hey dude
+prickling or itching sensation at the site of bite ## Hey dude
+agitation ## Hey dude
+hydrophobia ## Hey dude
+stiffness of the neck ## Hey dude
+bleeding problems ## Hey dude
+vascular dilation ## Hey dude
+eyelid edema ## Hey dude
+watering of the eye ## Hey dude
+conjunctival congestion ## Hey dude
+superficial punctate epithelial keratitis ## Hey dude
+fluid filled blister formation ## Hey dude
+stiffness in the spine ## Hey dude
+stiffness in the neck ## Hey dude
+stiffness in the hips ## Hey dude
+stiffness in the jaw ## Hey dude
+stiffness in the rib cage ## Hey dude
+fitting ## Hey dude
+redness of skin ## Hey dude
+tenderness of skin ## Hey dude
+warmth of skin ## Hey dude
+hemorrhagic lesions of the skin ## Hey dude
+reduction in the fluid part of the blood ## Hey dude
+pins and needles sensation ## Hey dude
+behavioral abnormalities ## Hey dude
+poor concentration ## Hey dude
+lassitude ## Hey dude
+insomnia ## Hey dude
+weakness and wasting of shoulder girdle and arm muscles ## Hey dude
+slowly progressive leg weakness with urinary or fecal incontinence or both ## Hey dude
+paralysis of the legs due to thrombosis of spinal arteries ## Hey dude
+large blisters ## Hey dude
+pain in the infected area ## Hey dude
+myonecrosis ## Hey dude
+gas production ## Hey dude
+red colored skin rash ## Hey dude
+dysentery ## Hey dude
+difficulty concentrating ## Hey dude
+deterioration of memory ## Hey dude
+defective judgment ## Hey dude
+swelling of the lower abdomen and legs ## Hey dude
+irregular heartbeat ## Hey dude
+excessive salivation ## Hey dude
+swelling of the face and tongue ## Hey dude
+cyanosis of the tongue ## Hey dude
+clay colored stools ## Hey dude
+disturbances in sleep ## Hey dude
+abnormal behavior ## Hey dude
+somnolence ## Hey dude
+clay colored bowel movements ## Hey dude
+pleuretic chest pain ## Hey dude
+hindlimb weakness ## Hey dude
+head tilt ## Hey dude
+distention from gas or fluid ## Hey dude
+digestive disturbances ## Hey dude
+emaciation ## Hey dude
+formation of tubercles ## Hey dude
+foul breath ## Hey dude
+inflammatory infiltrations ## Hey dude
+caseation ## Hey dude
+hairy fleece in lambs ## Hey dude
+abnormal body conformation ## Hey dude
+swollen and tender salivary glands under the ears or jaw on one or both sides of the face ## Hey dude
+watery yellow diarrhea ## Hey dude
+rapid respiration ## Hey dude
+profound depression ## Hey dude
+painful sores in the mouth ## Hey dude
+skin rash on the palms of the hands and soles of the feet ## Hey dude
+eye redness ## Hey dude
+abdominal fullness related to an enlarged spleen ## Hey dude
+bone pain ## Hey dude
+bruising ## Hey dude
+easy bleeding ## Hey dude
+increased susceptibility to infection ## Hey dude
+severe chest pain ## Hey dude
+pleuritis ## Hey dude
+gastointestinal bleeding ## Hey dude
+cerebellar ataxia ## Hey dude
+vaginal yeast infection ## Hey dude
+mouth sores ## Hey dude
+congestion of ocular conjunctivae ## Hey dude
+reddening of lips ## Hey dude
+reddening of oral cavity ## Hey dude
+protuberance of tongue papillae ## Hey dude
+edema of extremities ## Hey dude
+focal neurological signs ## Hey dude
+chills which rapidly progress to bilateral interstitial pulmonary infiltrates occurrence ## Hey dude
+vomiting blood ## Hey dude
+passing blood in the feces ## Hey dude
+ecchymoses ## Hey dude
+bleeding from the nose or gums ## Hey dude
+bleeding from venepuncture sites ## Hey dude
+reduced consciousness ## Hey dude
+ocular muscle palsies ## Hey dude
+malnutrition ## Hey dude
+bronchospasm ## Hey dude
+bloody sputum ## Hey dude
+frothy sputum ## Hey dude
+sparse scalp hair ## Hey dude
+thin upper lip ## Hey dude
+rounded nose ## Hey dude
+lesions in the brain ## Hey dude
+low grade fever ## Hey dude
+bleeding in the eyes ## Hey dude
+large joints ## Hey dude
+wide set eyes ## Hey dude
+round flat face ## Hey dude
+hiccups ## Hey dude
+internal and external bleeding ## Hey dude
+abrupt onset of dyspnea ## Hey dude
+internal hemorrhage ## Hey dude
+confusional syndrome ## Hey dude
+maculopapular rash on the trunk ## Hey dude
+sudden onset of headache ## Hey dude
+loss of strength ## Hey dude
+bleeding under the skin ## Hey dude
+paralysis of arms and legs ## Hey dude
+nephrotic range proteinuria ## Hey dude
+azotemia ## Hey dude
+hypoalbuminemia ## Hey dude
+hyperlipidemia ## Hey dude
+meningism ## Hey dude
+bronchial exudate ## Hey dude
+retrosternal pain ## Hey dude
+facial swelling ## Hey dude
+mucosal bleeding ## Hey dude
+respiratory signs ## Hey dude
+itchy patches ## Hey dude
+red rash on the skin ## Hey dude
+pain in the outer ear ## Hey dude
+ear discharge ## Hey dude
+eye discharge ## Hey dude
+paralysis of arms ## Hey dude
+paralysis of legs ## Hey dude

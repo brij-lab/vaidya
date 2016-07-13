@@ -68,6 +68,16 @@ public class NLU {
         return yes;
     }
 
+    public String resolveSymptomQueryHyp(String hyp){
+
+        if(hyp.contains("yes") || hyp.contains("yeah") || hyp.contains("yep")){
+            return "yes";
+        }
+        else if(hyp.contains("no") || hyp.contains("nope") || hyp.contains("nothing")){
+            return "no";
+        }
+        return "query";
+    }
     public boolean stringContainsItemFromList(String inputString, String[] items)
     {
         for(int i =0; i < items.length; i++)
