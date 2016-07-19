@@ -26,6 +26,7 @@ public class NLU {
     private String[] symptom_list;
     private String[] symptom_tokens;
     private String[] stopword_tokens;
+    private String[] disease_list;
     private List stopword_list;
 
     public NLU(VaidyaActivity a) throws IOException{
@@ -40,6 +41,9 @@ public class NLU {
         stopword_list = Arrays.asList(stopword_tokens);
 
         symptom_tokens = concatenate(listToTokens(symptom_list), health_domain);
+
+        File disease_name_file = new File(app.assetDir, "disease_edit_dist.txt");
+        disease_list = readLines(disease_name_file);
     }
 
     public DomainDesc getDomain(String hyp) throws IOException{
@@ -47,7 +51,7 @@ public class NLU {
         DomainDesc domain;
 
         if (stringContainsItemFromList(hyp, symptom_tokens)) {
-            domain = new HealthDomain();
+            domain = new HealthDomain(app);
             List<String> symps = findSymptomsInHyp(hyp);
             for (String sym : symps) {
                 ((HealthDomain)domain).addSymptoms(sym);
@@ -68,6 +72,19 @@ public class NLU {
         return yes;
     }
 
+    public String resolveGreetStateResponse(String hyp){
+
+        if(hyp.contains("first aid")){
+            return "first aid";
+        }
+        else if(hyp.contains("diagnose") || hyp.contains("diagnose disease")){
+            return "ask symptoms";
+        }
+        else if((stringContainsItemFromList(hyp, disease_list)) || hyp.contains("enquiry")){
+            return "disease enquiry";
+        }
+        return "ask symptoms";
+    }
     public String resolveSymptomQueryHyp(String hyp){
 
         if(hyp.contains("yes") || hyp.contains("yeah") || hyp.contains("yep")){
@@ -90,6 +107,8 @@ public class NLU {
         return false;
     }
 
+
+
     public List<String> findSymptomsInHyp(String inputString)
     {
         List<String> syms = new ArrayList<>();
@@ -101,6 +120,19 @@ public class NLU {
             }
         }
         return syms;
+    }
+
+    public String findDiseaseInHyp(String inputString)
+    {
+        List<String> disease = new ArrayList<>();
+        for(int i =0; i < disease_list.length; i++)
+        {
+            if(inputString.contains(disease_list[i]))
+            {
+                return disease_list[i];
+            }
+        }
+        return null;
     }
 
     public String[] readLines(File filename) throws IOException {

@@ -27,14 +27,6 @@ public class DiagnosisState extends DialogState {
     private VaidyaActivity app;
     private NLU nlu;
     public boolean sym_Expain_Flag = false;
-    private Map<String, Integer[]> SYMPTOM_VECTOR;
-    private Map<String, Integer[]> DISEASE_VECTOR;
-
-    int SYMPTOM_VEC_DIM = 0;
-    int DISEASE_VEC_DIM = 0;
-
-    private Map<Integer, String> SYMPTOM_IDX;
-    private Map<Integer, String> DISEASE_IDX;
 
     private Map<String, Set<String>> possible_symptoms;
     private Set<String> possible_diseases;
@@ -49,59 +41,9 @@ public class DiagnosisState extends DialogState {
         nlu = nlu1;
         this.setName("diagnosis");
 
-        SYMPTOM_VECTOR = new TreeMap<>();
-        DISEASE_VECTOR = new TreeMap<>();
-        SYMPTOM_IDX = new HashMap<>();
-        DISEASE_IDX = new HashMap<>();
-
-        System.out.println("Reading symptom vectors...");
-        File symp_vectors_file = new File(app.assetDir, "symp_vectors.txt");
-        int symp_idx = 0;
-        try(BufferedReader br = new BufferedReader(new FileReader(symp_vectors_file))) {
-            for(String line; (line = br.readLine()) != null; ) {
-                // process the line.
-                String[] sp = line.split(" ");
-                SYMPTOM_IDX.put(symp_idx, sp[0]);
-                String[] symp_vec = Arrays.copyOfRange(sp, 1, sp.length);
-                if (SYMPTOM_VEC_DIM == 0) {
-                    SYMPTOM_VEC_DIM = symp_vec.length;
-                }
-                SYMPTOM_VECTOR.put(sp[0], stringArrToIntArr(symp_vec));
-                symp_idx++;
-            }
-        } catch (IOException e) {
-            System.out.println("Couldn't read symptom vector file");
-        }
-
-        System.out.println("Reading disease vectors...");
-        File disease_vectors_file = new File(app.assetDir, "disease_vecs.txt");
-        int disease_idx = 0;
-        try(BufferedReader br = new BufferedReader(new FileReader(disease_vectors_file))) {
-            for(String line; (line = br.readLine()) != null; ) {
-                // process the line.
-                String[] sp = line.split(" ");
-                DISEASE_IDX.put(disease_idx, sp[0]);
-                String[] disease_vec = Arrays.copyOfRange(sp, 1, sp.length);
-                if (DISEASE_VEC_DIM == 0) {
-                    DISEASE_VEC_DIM = disease_vec.length;
-                }
-                DISEASE_VECTOR.put(sp[0], stringArrToIntArr(disease_vec));
-                disease_idx++;
-            }
-        } catch (IOException e) {
-            System.out.println("Couldn't read disease vector file");
-        }
         already_asked_symptoms = new ArrayList<>();
     }
 
-    private Integer[] stringArrToIntArr(String[] strArr) {
-        Integer[] intarr = new Integer[strArr.length];
-        int nelem = strArr.length;
-        for (int i = 0; i < nelem; i++) {
-            intarr[i] = Integer.parseInt(strArr[i]);
-        }
-        return intarr;
-    }
 
     private Integer[] intersect(Integer[] a, Integer[] b) {
         Integer[] res = new Integer[a.length];
@@ -129,11 +71,11 @@ public class DiagnosisState extends DialogState {
         entered = true;
         next_state = "diagnosis";
         //expect_binary = false;
-        Integer[] final_symp_vec = new Integer[SYMPTOM_VEC_DIM];
+        Integer[] final_symp_vec = new Integer[((HealthDomain)domain).SYMPTOM_VEC_DIM];
         Arrays.fill(final_symp_vec, 1);
         Map<String, Boolean> ack_symptoms = ((HealthDomain)domain).getSymptoms();
         for (Map.Entry<String, Boolean> e: ack_symptoms.entrySet()) {
-            Integer [] symp_vector =  SYMPTOM_VECTOR.get(e.getKey().replaceAll(" ", "_"));
+            Integer [] symp_vector =  ((HealthDomain)domain).SYMPTOM_VECTOR.get(e.getKey().replaceAll(" ", "_"));
             System.out.println("Vector for =========> " + e.getKey());
             printIntArray(symp_vector);
             System.out.println("Final vector : before =========> ");
@@ -144,7 +86,7 @@ public class DiagnosisState extends DialogState {
         }
         possible_diseases = new HashSet<>();
         for (Integer idx: getOneIndices(final_symp_vec)) {
-            possible_diseases.add(DISEASE_IDX.get(idx));
+            possible_diseases.add(((HealthDomain)domain).DISEASE_IDX.get(idx));
         }
         app.speakOut("There are " + possible_diseases.size() + " diseases found matching your symptoms");
         // Speak out if there are less than 5 diseases
@@ -192,7 +134,7 @@ public class DiagnosisState extends DialogState {
             already_asked_symptoms.add(symptom_toask);
         }
         if(!sym_Expain_Flag) {
-            app.appendColoredText(app.result_text, "Disease count = " + possible_diseases.size(), Color.GREEN);
+            app.sendChatMessage(true, "Disease count = " + possible_diseases.size(), null);
             if (possible_diseases.size() > 1) {
                 getPossibleSymptoms();
             } else {
@@ -214,11 +156,11 @@ public class DiagnosisState extends DialogState {
         possible_symptoms = new HashMap<>();
         Set<String> dis_list;
         for (String dis: possible_diseases) {
-            dis_vec = DISEASE_VECTOR.get(dis);
+            dis_vec = ((HealthDomain)domain).DISEASE_VECTOR.get(dis);
             System.out.println("Vector for disease====================>" + dis);
             printIntArray(dis_vec);
             for (Integer idx: getOneIndices(dis_vec)) {
-                poss_sym = SYMPTOM_IDX.get(idx);
+                poss_sym = ((HealthDomain)domain).SYMPTOM_IDX.get(idx);
                 System.out.println("Poss Sym===================>" + poss_sym);
                 if(poss_sym != null) {
                     dis_list = possible_symptoms.get(poss_sym);
@@ -254,11 +196,13 @@ public class DiagnosisState extends DialogState {
 
     @Override
     public void onExit() {
-        if(!sym_Expain_Flag){
+        if(!sym_Expain_Flag) {
             next_state = "disease_details";
         }
-        else{
+        else if (possible_diseases.size() == 1) {
             next_state = "symptom_details";
+        } else {
+            next_state = "greet";
         }
     }
 

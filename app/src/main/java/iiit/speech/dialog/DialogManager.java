@@ -3,8 +3,10 @@ package iiit.speech.dialog;
 import android.app.Activity;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 import iiit.speech.domain.DomainDesc;
@@ -44,14 +46,19 @@ public class DialogManager {
         states.put("disease_details", diseaseDetailsState);
         SymptomDetailsState symptomDetailsState = new SymptomDetailsState(app, nlu);
         states.put("symptom_details", symptomDetailsState);
+        DiseaseEnquiry diseaseEnquiry = new DiseaseEnquiry(app, nlu);
+        states.put("disease_enquiry",diseaseEnquiry);
+        FirstAidEnquiry firstAidEnquiry = new FirstAidEnquiry(app, nlu);
+        states.put("firstaid_enquiry",firstAidEnquiry);
 
         current_state = "greet";
+
     }
 
     public String manage(String hyp) {
 
         DialogState state = states.get(current_state);
-
+        app.state_history.add(current_state);
         if (nlu.isValidString(hyp)) {
             if (!state.entered) {
                 state.onEntry();
@@ -69,6 +76,7 @@ public class DialogManager {
                 state.onRecognize(hyp);
                 if (state.conclude) {
                     state.onExit();
+                    System.out.println("Concluded :" + current_state + "; Next state :" + state.next_state);
                     current_state = state.next_state;
                     if (current_state.equals("reset")) {
                         reset();
@@ -88,6 +96,9 @@ public class DialogManager {
                     }
                 }
             }
+        }
+        else if (hyp.equals("HARD_RESET")){
+            app.speakOut("Dialog has been reset");
         }
         else {
             app.speakOut("Please repeat");
