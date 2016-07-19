@@ -30,7 +30,7 @@
     <string name="stop_recording">Stop</string>
     <string name="audio_format">Format</string>
     <!-- Strings for Vaidya -->
-    <string name="greet_patient">Hi! I am sam.</string>
+    <string name="greet_patient">Welcome to Vaidya!</string>
     <string name="tap_on_mic">Tap on mic to speak</string>
     <string name="tap_to_stop">Tap again to stop</string>
 

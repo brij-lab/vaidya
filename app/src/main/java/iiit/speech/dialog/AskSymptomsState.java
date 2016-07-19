@@ -87,7 +87,7 @@ public class AskSymptomsState extends DialogState {
         ((HealthDomain) domain).displaySymptomList();
         System.out.println("Current Symptom ===> " + current_symptom);
         //if (current_symptom == null) {
-        if (symptom_request_count < 2) {
+        if (symptom_request_count < 2 && !app.state_history.get(app.state_history.size() - 2).equalsIgnoreCase("disease_enquiry")) {
             // There are no un-acknowledged symptoms in the list obtained up till now
             switch (symptom_request_count) {
                 case 0:
@@ -103,7 +103,7 @@ public class AskSymptomsState extends DialogState {
 
         } else if (current_symptom != null) {
             // TODO merge to accept natural language as response
-            app.speakOut("Do you have " + current_symptom);
+            app.speakOut("Did you say that you have " + current_symptom);
             // Set appropriate grammar
             current_grammar =  app.BINARY_RESPONSE;
             expect_binary = true;

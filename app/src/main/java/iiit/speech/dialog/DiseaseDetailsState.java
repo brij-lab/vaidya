@@ -51,11 +51,15 @@ public class DiseaseDetailsState extends DialogState {
         entered = true;
 
         disease = ((HealthDomain) domain).getDisease();
-        if (disease != null) {
-            app.speakOut("Do you want to know more about it");
+        if (disease != null && app.state_history.get(app.state_history.size()-2) == "disease_enquiry") {
             expect_binary = true;
         }
-    }
+        else if(disease != null){
+                app.speakOut("Do you want to know more about it");
+                expect_binary = true;
+            }
+        }
+
 
     @Override
     public void onRecognize(String hyp) {

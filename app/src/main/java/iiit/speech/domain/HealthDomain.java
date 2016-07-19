@@ -1,10 +1,19 @@
 package iiit.speech.domain;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+
+import iiit.speech.itra.VaidyaActivity;
 
 /**
  * Created by brij on 9/9/15.
@@ -16,14 +25,75 @@ public class HealthDomain extends DomainDesc{
     private String disease;
     private Set<String> removed_symptoms;
 
+    public Map<String, Integer[]> SYMPTOM_VECTOR;
+    public Map<String, Integer[]> DISEASE_VECTOR;
+
+    public int SYMPTOM_VEC_DIM = 0;
+    public int DISEASE_VEC_DIM = 0;
+
+    public Map<Integer, String> SYMPTOM_IDX;
+    public Map<Integer, String> DISEASE_IDX;
+
     public enum SymptomStatus {
         REMOVED, NOT_PRESENT, ACKNOWLEDGED, NOT_ACKNOWLEDGED
     }
 
-    public HealthDomain() {
+    public HealthDomain(VaidyaActivity app) {
         this.setName("health");
         symptoms = new TreeMap<>(); // To maintain order of symptoms in which they are being told
         removed_symptoms = new HashSet<>();
+
+        SYMPTOM_VECTOR = new TreeMap<>();
+        DISEASE_VECTOR = new TreeMap<>();
+        SYMPTOM_IDX = new HashMap<>();
+        DISEASE_IDX = new HashMap<>();
+
+        System.out.println("Reading symptom vectors...");
+        File symp_vectors_file = new File(app.assetDir, "symp_vectors.txt");
+        int symp_idx = 0;
+        try(BufferedReader br = new BufferedReader(new FileReader(symp_vectors_file))) {
+            for(String line; (line = br.readLine()) != null; ) {
+                // process the line.
+                String[] sp = line.split(" ");
+                SYMPTOM_IDX.put(symp_idx, sp[0]);
+                String[] symp_vec = Arrays.copyOfRange(sp, 1, sp.length);
+                if (SYMPTOM_VEC_DIM == 0) {
+                    SYMPTOM_VEC_DIM = symp_vec.length;
+                }
+                SYMPTOM_VECTOR.put(sp[0], stringArrToIntArr(symp_vec));
+                symp_idx++;
+            }
+        } catch (IOException e) {
+            System.out.println("Couldn't read symptom vector file");
+        }
+
+        System.out.println("Reading disease vectors...");
+        File disease_vectors_file = new File(app.assetDir, "disease_vecs.txt");
+        int disease_idx = 0;
+        try(BufferedReader br = new BufferedReader(new FileReader(disease_vectors_file))) {
+            for(String line; (line = br.readLine()) != null; ) {
+                // process the line.
+                String[] sp = line.split(" ");
+                DISEASE_IDX.put(disease_idx, sp[0]);
+                String[] disease_vec = Arrays.copyOfRange(sp, 1, sp.length);
+                if (DISEASE_VEC_DIM == 0) {
+                    DISEASE_VEC_DIM = disease_vec.length;
+                }
+                DISEASE_VECTOR.put(sp[0], stringArrToIntArr(disease_vec));
+                disease_idx++;
+            }
+        } catch (IOException e) {
+            System.out.println("Couldn't read disease vector file");
+        }
+    }
+
+    private Integer[] stringArrToIntArr(String[] strArr) {
+        Integer[] intarr = new Integer[strArr.length];
+        int nelem = strArr.length;
+        for (int i = 0; i < nelem; i++) {
+            intarr[i] = Integer.parseInt(strArr[i]);
+        }
+        return intarr;
     }
 
     public void setSymptoms(Map<String, Boolean> s) {
@@ -88,5 +158,25 @@ public class HealthDomain extends DomainDesc{
     }
     public boolean isRemoved(String sym) {
         return removed_symptoms.contains(sym);
+    }
+
+    public List<String> getSymptomsForDisease(String dis) {
+        List<String> symlist = new ArrayList<>();
+        String dis_ = dis.replaceAll(" ", "_");
+        Integer [] dis_vec = DISEASE_VECTOR.get(dis_);
+        System.out.println("Vector for disease====================>" + dis_);
+        //printIntArray(dis_vec);
+        for (Integer idx: getOneIndices(dis_vec)) {
+            symlist.add(SYMPTOM_IDX.get(idx));
+        }
+        return symlist;
+    }
+
+    private List<Integer> getOneIndices(Integer[] a) {
+        List<Integer> idx = new ArrayList<>();
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == 1) idx.add(i);
+        }
+        return idx;
     }
 }

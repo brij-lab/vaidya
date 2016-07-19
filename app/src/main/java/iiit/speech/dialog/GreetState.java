@@ -33,16 +33,16 @@ public class GreetState extends DialogState {
     @Override
     public void onEntry() {
         System.out.println("+++++++++++++++++ Greet state entered +++++++++++++++++++++");
-        //app.speakOut("Hi. Please tell your symptoms");
+        app.speakOut("Hi. Do you want me to diagnose your disease or assist you with first aid or help you with disease enquiry");
 
         // Set appropriate grammar
         //current_grammar =  app.GENERIC_SEARCH;
         entered = true;
         //next_state = "greet";
         //expect_binary = false;
-        current_grammar = app.SYMPTOM_RESPONSE;
-        conclude = true;
-        next_state = "ask_symptoms";
+        current_grammar = app.DISEASE_QUERY_RESPONSE;
+     //   conclude = true;
+     //   next_state = "ask_symptoms";
         try {
             domain = nlu.getDomain("health");
         } catch (IOException e) {
@@ -54,19 +54,23 @@ public class GreetState extends DialogState {
     @Override
     public void onRecognize(String hypothesis) {
 
-        if (expect_binary) {
+     //   if (expect_binary) {
             // Normalize binary response to either positive or negative
-            if (nlu.resolveBinaryHyp(hypothesis)) {
+        String greetResponse = nlu.resolveGreetStateResponse(hypothesis);
+            if (greetResponse.equalsIgnoreCase("first aid")) {
+                conclude = true;
+                next_state = "first_aid";
+            }
+            else if(greetResponse.equalsIgnoreCase("ask symptoms")) {
                 conclude = true;
                 next_state = "ask_symptoms";
             }
-            else
-            {
-                expect_binary = false;
-                current_grammar = app.GENERIC_SEARCH;
-                app.speakOut("Can I help you with something else?");
+            else if(greetResponse.equalsIgnoreCase("disease enquiry")){
+                conclude = true;
+                next_state = "disease_enquiry";
             }
-        }
+
+    /*    }
         else
         {
             try {
@@ -85,7 +89,7 @@ public class GreetState extends DialogState {
                     current_grammar = app.GENERIC_SEARCH;
                     break;
             }
-        }
+        }*/
     }
 
     @Override

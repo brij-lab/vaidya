@@ -4,25 +4,39 @@ import static edu.cmu.pocketsphinx.SpeechRecognizerSetup.defaultSetup;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.text.Spannable;
 import android.text.method.ScrollingMovementMethod;
 import android.text.style.ForegroundColorSpan;
+import android.text.style.ImageSpan;
+import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,8 +54,10 @@ public class VaidyaActivity extends Activity implements
     public final String SYMPTOM_RESPONSE = "symptom";
     public final String BINARY_RESPONSE = "binary";
     public final String SYMPTOM_QUERY_RESPONSE = "symp_query";
+    public final String DISEASE_QUERY_RESPONSE = "disease_query";
     public final String GENERIC_SEARCH = "generic";
-
+    public final String FIRSTAID_QUERY_RESPONSE = "firstaid_query";
+    // For google ASR
     private final int REQ_CODE_SPEECH_INPUT = 100;
 
     private SpeechRecognizer recognizer;
@@ -49,6 +65,7 @@ public class VaidyaActivity extends Activity implements
 
     Button mic_button;
     Button reset_button;
+    Button capture_button;
     TextView part_result_text;
     public TextView result_text;
     TextView caption_text;
@@ -57,7 +74,7 @@ public class VaidyaActivity extends Activity implements
     public int langid;
     public String langName = "_";
     public File assetDir;
-
+    public List<String> state_history;
     DialogManager dialogManager;
 
     private boolean listening = false;
@@ -65,12 +82,22 @@ public class VaidyaActivity extends Activity implements
     private TextToSpeech tts;
     private final int MY_DATA_CHECK_CODE = 0;
 
+    public static final int MEDIA_TYPE_IMAGE = 1;
+    public static final int MEDIA_TYPE_VIDEO = 2;
+    private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 100;
+    private static final int CAPTURE_VIDEO_ACTIVITY_REQUEST_CODE = 200;
+    private Uri cameraFileUri;
+
     VaidyaActivity app;
+
+    private ChatArrayAdapter chatArrayAdapter;
+    private ListView listView;
 
     @Override
     public void onCreate(Bundle state) {
         super.onCreate(state);
 
+        state_history = new ArrayList<>();
         // Prepare the data for UI
         setContentView(R.layout.main);
 
@@ -78,6 +105,12 @@ public class VaidyaActivity extends Activity implements
         if (extras != null) {
             langid = extras.getInt("langid");
         }
+
+        listView = (ListView) findViewById(R.id.msgview);
+
+        chatArrayAdapter = new ChatArrayAdapter(getApplicationContext(), R.layout.right);
+        listView.setAdapter(chatArrayAdapter);
+
         caption_text = (TextView) findViewById(R.id.caption_text);
         caption_text.setText("Preparing the medic " + langid);
 
@@ -93,6 +126,7 @@ public class VaidyaActivity extends Activity implements
 
         mic_button = (Button) findViewById(R.id.btnSpeak);
         reset_button = (Button) findViewById(R.id.btnReset);
+        capture_button = (Button) findViewById(R.id.btnCapture);
         //micText = (TextView) findViewById(R.id.micText);
         part_result_text = ((TextView) findViewById(R.id.partial_result_text));
         result_text = ((TextView) findViewById(R.id.result_text));
@@ -132,6 +166,9 @@ public class VaidyaActivity extends Activity implements
                     //switchSearch(KWS_SEARCH);
                     ((TextView) findViewById(R.id.caption_text)).setText(R.string.greet_patient);
                     mic_button.setClickable(true);
+                    mic_button.setEnabled(true);
+                    reset_button.setEnabled(true);
+                    capture_button.setEnabled(true);
                 }
             }
         }.execute();
@@ -168,17 +205,40 @@ public class VaidyaActivity extends Activity implements
                 if (dialogManager != null) {
                     result_text.setText("");
                     dialogManager.reset();
-                    dialogManager.manage(null);
+                    dialogManager.manage("HARD_RESET");
                     Toast.makeText(app, "Dialog has been reset", Toast.LENGTH_LONG).show();
                 }
             }
 
         });
+
+        capture_button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // create Intent to take a picture and return control to the calling application
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+                cameraFileUri = getOutputMediaFileUri(MEDIA_TYPE_IMAGE); // create a file to save the image
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, cameraFileUri); // set the image file name
+
+                // start the image capture Intent
+                startActivityForResult(intent, CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);
+            }
+
+        });
+    }
+
+    public boolean sendChatMessage(boolean side, String text, Uri imgUrl) {
+        chatArrayAdapter.add(new ChatMessage(side, text, imgUrl));
+        //side = !side;
+        return true;
     }
 
     /**
      * Showing google speech input dialog
      * */
+    @Deprecated
     private void promptSpeechInput() {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
@@ -203,7 +263,8 @@ public class VaidyaActivity extends Activity implements
         super.onActivityResult(requestCode, resultCode, data);
 
         switch (requestCode) {
-            case REQ_CODE_SPEECH_INPUT: {
+            // For google speech recognizer
+            /*case REQ_CODE_SPEECH_INPUT: {
                 if (resultCode == RESULT_OK && null != data) {
 
                     ArrayList<String> result = data
@@ -225,7 +286,7 @@ public class VaidyaActivity extends Activity implements
                     }
                 }
                 break;
-            }
+            }*/
 
             case MY_DATA_CHECK_CODE: {
                 if (resultCode == TextToSpeech.Engine.CHECK_VOICE_DATA_PASS) {
@@ -241,6 +302,20 @@ public class VaidyaActivity extends Activity implements
                 break;
             }
 
+            case CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE: {
+                if (resultCode == RESULT_OK) {
+                    // Image captured and saved to fileUri specified in the Intent
+                    Toast.makeText(this, "Image saved to:\n" +
+                            cameraFileUri, Toast.LENGTH_LONG).show();
+                    appendImage(true, cameraFileUri);
+                } else if (resultCode == RESULT_CANCELED) {
+                    // User cancelled the image capture
+                } else {
+                    // Image capture failed, advise user
+                }
+            }
+
+
         }
     }
 
@@ -254,6 +329,45 @@ public class VaidyaActivity extends Activity implements
             tts.stop();
             tts.shutdown();
         }
+    }
+
+    /** Create a file Uri for saving an image or video */
+    private static Uri getOutputMediaFileUri(int type){
+        return Uri.fromFile(getOutputMediaFile(type));
+    }
+
+    /** Create a File for saving an image or video */
+    private static File getOutputMediaFile(int type){
+        // To be safe, you should check that the SDCard is mounted
+        // using Environment.getExternalStorageState() before doing this.
+
+        File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_PICTURES), "Vaidya");
+        // This location works best if you want the created images to be shared
+        // between applications and persist after your app has been uninstalled.
+
+        // Create the storage directory if it does not exist
+        if (! mediaStorageDir.exists()){
+            if (! mediaStorageDir.mkdirs()){
+                Log.d("Vaidya", "failed to create directory");
+                return null;
+            }
+        }
+
+        // Create a media file name
+        String timeStamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+        File mediaFile;
+        if (type == MEDIA_TYPE_IMAGE){
+            mediaFile = new File(mediaStorageDir.getPath() + File.separator +
+                    "IMG_"+ timeStamp + ".jpg");
+        } else if(type == MEDIA_TYPE_VIDEO) {
+            mediaFile = new File(mediaStorageDir.getPath() + File.separator +
+                    "VID_"+ timeStamp + ".mp4");
+        } else {
+            return null;
+        }
+
+        return mediaFile;
     }
 
     /*protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -290,7 +404,8 @@ public class VaidyaActivity extends Activity implements
 
     public void speakOut(String txt) {
 
-        appendColoredText(result_text, txt, Color.YELLOW);
+        //appendColoredText(result_text, txt, Color.YELLOW);
+        sendChatMessage(true, txt, null);
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             tts.speak(txt, TextToSpeech.QUEUE_ADD, null, null);
@@ -337,13 +452,15 @@ public class VaidyaActivity extends Activity implements
             //makeText(getApplicationContext(), text, Toast.LENGTH_SHORT).show();
             //String prev_text = result_text.getText() + "<br>";
             //result_text.setText(prev_text + Html.fromHtml(text));
-            appendColoredText(result_text, text, Color.RED);
 
+            //appendColoredText(result_text, text, Color.RED);
+            sendChatMessage(false, text, null);
             // Set grammar for next dialog state
             current_response = dialogManager.manage(hypothesis.getHypstr());
         }
     }
 
+    @Deprecated
     public void appendColoredText(TextView tv, String text, int color) {
         int start = tv.getText().length();
         tv.append(text + "\n");
@@ -351,6 +468,23 @@ public class VaidyaActivity extends Activity implements
 
         Spannable spannableText = (Spannable) tv.getText();
         spannableText.setSpan(new ForegroundColorSpan(color), start, end, 0);
+    }
+
+    public void appendImage(boolean left, Uri imageUri) {
+
+        sendChatMessage(left, imageUri.toString(), imageUri);
+        /*
+        Spannable spannableText = (Spannable) tv.getText();
+
+        Bitmap imageSpan = BitmapFactory.decodeFile(imageUri.getPath());
+        Drawable d = new BitmapDrawable(imageSpan);
+        List<String> impath = imageUri.getPathSegments();
+        String imname = impath.get(impath.size() - 1);
+        Integer imid = Integer.valueOf(imname.split(".")[0].split("_")[1]);
+        */
+        //spannableText.setSpan(imageSpan, tv.getText().length(), tv.getText().length() + 1, 0);
+        //tv.setText(spannableText);
+       // tv.setCompoundDrawablesWithIntrinsicBounds(0,0,d,0);
     }
 
     @Override
@@ -437,6 +571,11 @@ public class VaidyaActivity extends Activity implements
         File symQueryGrammar = new File(assetsDir, "symptom_query_response"+langName+".gram");
         recognizer.addGrammarSearch(SYMPTOM_QUERY_RESPONSE, symQueryGrammar);
 
+        File disQueryGrammar = new File(assetsDir,"menu"+langName+".gram");
+        recognizer.addGrammarSearch(DISEASE_QUERY_RESPONSE, disQueryGrammar);
+
+        File firstaidQueryGrammar = new File(assetsDir, "firstaid"+langName+".gram");
+        recognizer.addGrammarSearch(FIRSTAID_QUERY_RESPONSE, firstaidQueryGrammar);
         // Create language model search
         File languageModel = new File(assetsDir, "health.lm.dmp");
         recognizer.addNgramSearch(GENERIC_SEARCH, languageModel);
