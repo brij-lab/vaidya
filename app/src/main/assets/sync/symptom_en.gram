@@ -46,7 +46,6 @@ grammar symptomresponse;
             decreased weight |
             depression |
             watery diarrhea |
-            muscle aches |
             sore throat |
             myalgia |
             muscle ache |
@@ -106,7 +105,6 @@ grammar symptomresponse;
             formation of ulcers |
             hepatomegaly |
             arthralgia |
-            headaches |
             hemoptysis |
             pneumonia |
             cramping |
@@ -177,7 +175,6 @@ grammar symptomresponse;
             speech problems |
             altered mental status |
             poor appetite |
-            itchy |
             mediastinal lymphadenopathy |
             lameness |
             nasal discharge |
@@ -194,7 +191,6 @@ grammar symptomresponse;
             eye damage |
             liver enlargement |
             eruption of rose colored spots |
-            abdominal cramps |
             high fever |
             huddling |
             hemorrhages in the skin |
@@ -206,7 +202,7 @@ grammar symptomresponse;
             convulsions |
             spastic paralysis |
             swollen lymph nodes |
-            abdominal cramps and pain |
+            abdominal cramps |
             regional lymphadenopathy |
             backache |
             pleural effusions |
@@ -260,7 +256,6 @@ grammar symptomresponse;
             shock |
             weak pulse |
             hypotension |
-            body aches |
             dry cough |
             hypoxia |
             loss of reflexes |
@@ -288,7 +283,6 @@ grammar symptomresponse;
             rash on extremities |
             swelling of the feet |
             gangrene |
-            lesions on the skin |
             severe pain behind the eyes |
             muscle and bone pain |
             mild bleeding |
@@ -380,7 +374,7 @@ grammar symptomresponse;
             pain in the chest and throughout body |
             fibrosis |
             watery or bloody diarrhea |
-            severe frontal headaches |
+            severe frontal headache |
             joint aches |
             flushing of the face |
             decreased level of consciousness |
@@ -388,7 +382,6 @@ grammar symptomresponse;
             dark urine |
             impaired speech |
             cognitive deterioration |
-            muscle pains |
             redness of the eyes |
             low blood pressure |
             acute shock |
@@ -462,7 +455,7 @@ grammar symptomresponse;
             bad dreams |
             frightening thoughts |
             avoidance |
-            hyperarousal of ptsd occurring within one month of a traumatic experience as acute stress disorder or asd |
+            hyperarousal of PTSD occurring within one month of a traumatic experience as acute stress disorder or ASD |
             agraphia |
             acalculia |
             finger agnosia |
@@ -476,7 +469,7 @@ grammar symptomresponse;
             maculopapular rash progressing into papular or petechial rash |
             alterations in sensorium |
             obstructing hydrocephalus |
-            fever for two to three days |
+            fever for two three days |
             nodules and cavitations of the lungs |
             swollen hilar lymph nodes |
             abdominal distension |
@@ -496,11 +489,9 @@ grammar symptomresponse;
             retinal hemorrhages |
             microaneurysms |
             skin reddening |
-            skin itching |
             gastrointestinal bleeding |
             intestinal bleeding |
             rash on the face which spreads to the trunk and limbs |
-            joint pains |
             prickling or itching sensation at the site of bite |
             agitation |
             hydrophobia |
@@ -633,6 +624,7 @@ grammar symptomresponse;
             ear discharge |
             eye discharge |
             paralysis of arms |
-            paralysis of legs;
+            paralysis of legs |
+            no | nope;
 
 public <symptoms> = [i think] [i am suffering from | i have | i don't have] ([and | or | also | not] <symptom>)+ [too];

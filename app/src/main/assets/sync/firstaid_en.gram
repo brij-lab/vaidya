@@ -2,15 +2,9 @@
 
 grammar menu;
 
-<type_of_response> =    first aid |
-                        diagnose |
-                        enquire |
-                        disease enquiry |
-                        disease details |
-                        diagnose my disease |
-                        diagnose disease |
-                        farmer's lung;
+<type_of_response> =    abdominal pain |
+                        stomach pain;
 
 
 
-public <response> = [i think | i need | i want to | i want to know |i have ] (<type_of_response>)+;
+public <response> = <type_of_response>;

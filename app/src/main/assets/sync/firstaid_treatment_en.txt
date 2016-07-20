@@ -1,0 +1,3 @@
+abdominal_pain ##  Do you have heartburn ## For heartburn from gastroesophageal reflux disease, take an over-the-counter antacid or acid reducer.
+abdominal_pain ## Do you have constipation ## take a mild stool softener or laxative
+abdominal_pain ## Do you have pain ## take acetaminophen (Aspirin Free Anacin, Liquiprin, Panadol, Tylenol). Avoid NSAIDs such as aspirin, ibuprofen (Advil, Midol, Motrin), or naproxen (Naprosyn, Aleve, Anaprox, Naprelan), because they can cause stomach irritation or bleeding.

@@ -1,0 +1,2 @@
+abdominal_pain ## Do you have pain and tenderness to the touch in the lower right abdomen with fever and/or vomiting? ## You may have appendicitis
+abdominal_pain ## Are you pregnant and have abdominal pain or vaginal bleeding? ## This may be a sign of an ectopic pregnancy or miscarriage

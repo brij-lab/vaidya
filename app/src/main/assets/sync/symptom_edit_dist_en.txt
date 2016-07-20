@@ -42,7 +42,6 @@ anorexia
 decreased weight
 depression
 watery diarrhea
-muscle aches
 sore throat
 myalgia
 muscle ache
@@ -102,7 +101,6 @@ rectal bleeding
 formation of ulcers
 hepatomegaly
 arthralgia
-headaches
 hemoptysis
 pneumonia
 cramping
@@ -173,7 +171,6 @@ behavioral change
 speech problems
 altered mental status
 poor appetite
-itchy
 mediastinal lymphadenopathy
 lameness
 nasal discharge
@@ -190,7 +187,6 @@ motor loss
 eye damage
 liver enlargement
 eruption of rose colored spots
-abdominal cramps
 high fever
 huddling
 hemorrhages in the skin
@@ -202,7 +198,7 @@ disorientation
 convulsions
 spastic paralysis
 swollen lymph nodes
-abdominal cramps and pain
+abdominal cramps
 regional lymphadenopathy
 backache
 pleural effusions
@@ -256,7 +252,6 @@ bleeding gums
 shock
 weak pulse
 hypotension
-body aches
 dry cough
 hypoxia
 loss of reflexes
@@ -284,7 +279,6 @@ eschars
 rash on extremities
 swelling of the feet
 gangrene
-lesions on the skin
 severe pain behind the eyes
 muscle and bone pain
 mild bleeding
@@ -376,7 +370,7 @@ bloated abdomens
 pain in the chest and throughout body
 fibrosis
 watery or bloody diarrhea
-severe frontal headaches
+severe frontal headache
 joint aches
 flushing of the face
 decreased level of consciousness
@@ -384,7 +378,6 @@ cranial nerve deficits
 dark urine
 impaired speech
 cognitive deterioration
-muscle pains
 redness of the eyes
 low blood pressure
 acute shock
@@ -458,7 +451,7 @@ flashbacks
 bad dreams
 frightening thoughts
 avoidance
-hyperarousal of ptsd occurring within one month of a traumatic experience as acute stress disorder or asd
+hyperarousal of PTSD occurring within one month of a traumatic experience as acute stress disorder or ASD
 agraphia
 acalculia
 finger agnosia
@@ -472,7 +465,7 @@ diaphoresis
 maculopapular rash progressing into papular or petechial rash
 alterations in sensorium
 obstructing hydrocephalus
-fever for two to three days
+fever for two three days
 nodules and cavitations of the lungs
 swollen hilar lymph nodes
 abdominal distension
@@ -492,11 +485,9 @@ cotton wool spots
 retinal hemorrhages
 microaneurysms
 skin reddening
-skin itching
 gastrointestinal bleeding
 intestinal bleeding
 rash on the face which spreads to the trunk and limbs
-joint pains
 prickling or itching sensation at the site of bite
 agitation
 hydrophobia

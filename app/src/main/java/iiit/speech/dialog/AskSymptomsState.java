@@ -49,19 +49,21 @@ public class AskSymptomsState extends DialogState {
 
         } else {
             // Extract symptoms from hyp
-            List<String> symps = nlu.findSymptomsInHyp(hyp);
-            for (String symp : symps) {
-                HealthDomain.SymptomStatus symp_status = ((HealthDomain) domain).getSymptomStatus(symp);
-                System.out.println("Extracted symptom from hypothesis : " + symp + " == status : " + symp_status.name());
-                switch (symp_status) {
-                    case NOT_PRESENT:
-                        // Symptom does not exists
-                        ((HealthDomain) domain).addSymptoms(symp);
-                        break;
-                    case REMOVED:
-                        app.speakOut("You told that you do not have " + symp);
-                        ((HealthDomain) domain).markRemovedSymptomUnAcknowledged(symp);
-                        break;
+            if (!nlu.checkNegative(hyp)) {
+                List<String> symps = nlu.findSymptomsInHyp(hyp);
+                for (String symp : symps) {
+                    HealthDomain.SymptomStatus symp_status = ((HealthDomain) domain).getSymptomStatus(symp);
+                    System.out.println("Extracted symptom from hypothesis : " + symp + " == status : " + symp_status.name());
+                    switch (symp_status) {
+                        case NOT_PRESENT:
+                            // Symptom does not exists
+                            ((HealthDomain) domain).addSymptoms(symp);
+                            break;
+                        case REMOVED:
+                            app.speakOut("You told that you do not have " + symp);
+                            ((HealthDomain) domain).markRemovedSymptomUnAcknowledged(symp);
+                            break;
+                    }
                 }
             }
         }
@@ -86,12 +88,19 @@ public class AskSymptomsState extends DialogState {
         String current_symptom = ((HealthDomain) domain).getSingleUnacknowledged();
         ((HealthDomain) domain).displaySymptomList();
         System.out.println("Current Symptom ===> " + current_symptom);
+        System.out.println("Previous states ===> ");
+        for (String st : app.state_history) {
+            System.out.println(st);
+        }
         //if (current_symptom == null) {
-        if (symptom_request_count < 2 && !app.state_history.get(app.state_history.size() - 2).equalsIgnoreCase("disease_enquiry")) {
+        if (app.state_history.get(app.state_history.size() - 1).equalsIgnoreCase("disease_enquiry")) {
+            symptom_request_count = 2;
+        }
+        if (symptom_request_count < 2) {
             // There are no un-acknowledged symptoms in the list obtained up till now
             switch (symptom_request_count) {
                 case 0:
-                    app.speakOut("Hi. Please tell your symptoms.");
+                    app.speakOut("Please tell your symptoms.");
                     break;
                 case 1:
                     app.speakOut("Please tell if you have any other symptoms.");
@@ -103,7 +112,7 @@ public class AskSymptomsState extends DialogState {
 
         } else if (current_symptom != null) {
             // TODO merge to accept natural language as response
-            app.speakOut("Did you say that you have " + current_symptom);
+            app.speakOut("Do you have " + current_symptom.replaceAll("_", " ") + "?");
             // Set appropriate grammar
             current_grammar =  app.BINARY_RESPONSE;
             expect_binary = true;
