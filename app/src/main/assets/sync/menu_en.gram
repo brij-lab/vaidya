@@ -9,7 +9,202 @@ grammar menu;
                         disease details |
                         diagnose my disease |
                         diagnose disease |
-                        farmer's lung;
+                        acute chest syndrome |
+                        acute hemorrhagic conjunctivitis |
+                        acute interstitial pneumonia |
+                        acute leukemia |
+                        acute stress disorder |
+                        adenovirus encephalitis |
+                        adenovirus hepatitis |
+                        adenovirus meningitis |
+                        adult onset stills disease |
+                        adult respiratory distress syndrome |
+                        african horse sickness |
+                        african swine fever |
+                        african tick bite fever |
+                        aids dementia complex |
+                        aids related complex |
+                        aleutian mink disease |
+                        allergic asthma |
+                        allergic conjunctivitis |
+                        alternating hemiplegia of childhood |
+                        anthrax disease |
+                        appendicitis |
+                        argentine hemorrhagic fever |
+                        arthritis |
+                        aspiration pneumonia |
+                        asthma |
+                        astrakhan spotted fever |
+                        autism spectrum disorder |
+                        avian influenza |
+                        bacterial gastritis |
+                        balkan hemorrhagic fever |
+                        bird fanciers lung |
+                        bolivian hemorrhagic fever |
+                        border disease |
+                        bovine hemorrhagic syndrome |
+                        bovine virus diarrhea mucosal disease |
+                        brazilian hemorrhagic fever |
+                        bronchitis |
+                        bubonic plague |
+                        caffey disease |
+                        canine distemper |
+                        cat scratch disease |
+                        cholera |
+                        chronic fatigue syndrome |
+                        classical swine fever |
+                        colorado tick fever |
+                        colorado tick fever encephalitis |
+                        cork handlers disease |
+                        cough variant asthma |
+                        crimean congo hemorrhagic fever |
+                        cytomegalovirus encephalitis |
+                        cytomegalovirus gastritis |
+                        cytomegalovirus hepatitis |
+                        cytomegalovirus pneumonia |
+                        dengue disease |
+                        dengue hemorrhagic fever |
+                        dengue shock syndrome |
+                        diarrhea |
+                        diphtheria |
+                        early congenital syphilis |
+                        eastern equine encephalitis |
+                        ebola hemorrhagic fever |
+                        encephalitis |
+                        endemic typhus |
+                        eosinophilic pneumonia |
+                        ephemeral fever |
+                        epidemic typhus |
+                        epilepsy syndrome |
+                        epstein barr virus encephalitis |
+                        epstein barr virus hepatitis |
+                        equine encephalitis |
+                        equine infectious anemia |
+                        far eastern spotted fever |
+                        farmer's lung |
+                        feline acquired immunodeficiency syndrome |
+                        flinders island spotted fever |
+                        gas gangrene |
+                        gastrointestinal anthrax |
+                        gastrointestinal tuberculosis |
+                        genital herpes |
+                        gonorrhea |
+                        hantavirus infectious disease |
+                        hantavirus pulmonary syndrome |
+                        hemorrhagic fever with renal syndrome |
+                        hepatic tuberculosis |
+                        hepatitis a |
+                        hepatitis b |
+                        hepatitis c |
+                        hepatitis d |
+                        hepatitis e |
+                        herpes simplex virus encephalitis |
+                        herpes simplex virus hepatitis |
+                        herpes simplex virus keratitis |
+                        herpes simplex virus meningitis |
+                        herpes zoster |
+                        herpes zoster meningitis |
+                        herpetic whitlow |
+                        hiv encephalopathy |
+                        hiv wasting syndrome |
+                        human immunodeficiency virus infectious disease |
+                        idiopathic pulmonary fibrosis |
+                        indian tick typhus |
+                        infant botulism |
+                        infantile cerebellar retinal degeneration |
+                        infectious canine hepatitis |
+                        influenza |
+                        influenza virus encephalitis |
+                        influenza virus pneumonia |
+                        inhalation anthrax |
+                        intestinal tuberculosis |
+                        intrinsic asthma |
+                        israeli tick typhus |
+                        jamestown canyon encephalitis |
+                        japanese encephalitis |
+                        japanese spotted fever |
+                        kawasaki disease |
+                        korean hemorrhagic fever |
+                        la crosse encephalitis |
+                        laryngitis |
+                        lassa fever |
+                        late congenital syphilis |
+                        lateral sclerosis |
+                        legionnaires disease |
+                        leigh disease |
+                        leprosy |
+                        louse borne relapsing fever |
+                        lung carcinoma |
+                        lyme disease |
+                        lymph node tuberculosis |
+                        lymphoid interstitial pneumonia |
+                        machado joseph disease |
+                        malaria |
+                        maple syrup urine disease |
+                        masa syndrome |
+                        measles |
+                        measles virus encephalitis |
+                        middle lobe syndrome |
+                        migraine |
+                        mixed cerebral palsy |
+                        mumps |
+                        mumps virus encephalitis |
+                        mumps virus hepatitis |
+                        mumps virus meningitis |
+                        murray valley encephalitis |
+                        nairobi sheep disease |
+                        neurological disorder |
+                        newcastle disease |
+                        nonspecific interstitial pneumonia |
+                        osmotic diarrhea |
+                        panic disorder |
+                        pleural disease |
+                        pneumonia |
+                        pneumonic plague |
+                        pontiac fever |
+                        primary pulmonary hypertension |
+                        pulmonary actinomycosis |
+                        pulmonary syphilis |
+                        pulmonary tuberculosis |
+                        q fever |
+                        queensland tick typhus |
+                        rabies |
+                        rift valley fever |
+                        rocky mountain spotted fever |
+                        ross river fever |
+                        rubella |
+                        rubella virus arthritis |
+                        rubella virus encephalitis |
+                        rubella virus hepatitis |
+                        rubella virus infectious disease |
+                        scrub typhus |
+                        severe acute respiratory syndrome |
+                        siberian tick typhus |
+                        sick building syndrome |
+                        sleeping sickness |
+                        snowshoe hare encephalitis |
+                        spinal polio |
+                        spotted fever |
+                        swine influenza |
+                        tick borne encephalitis |
+                        tick borne relapsing fever |
+                        tick infestation |
+                        toxic shock syndrome |
+                        trench fever |
+                        troyer syndrome |
+                        typhoid fever |
+                        vaccinia |
+                        venezuelan equine encephalitis |
+                        venezuelan hemorrhagic fever |
+                        viral gastritis |
+                        western equine encephalitis |
+                        west nile encephalitis |
+                        west nile fever |
+                        west nile virus infectious disease |
+                        whitewater arroyo hemorrhagic fever |
+                        yellow fever |
+                        yellow fever hepatitis |
+                        yellow fever virus infectious disease;
 
 
 

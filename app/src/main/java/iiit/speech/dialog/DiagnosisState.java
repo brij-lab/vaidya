@@ -196,14 +196,19 @@ public class DiagnosisState extends DialogState {
 
     @Override
     public void onExit() {
-        if(!sym_Expain_Flag) {
-            next_state = "disease_details";
+        if(sym_Expain_Flag) {
+            System.out.println("1");
+            next_state = "symptom_details";
+            //next_state = "disease_details";
         }
         else if (possible_diseases.size() == 1) {
-            next_state = "symptom_details";
+            System.out.println("2");
+            next_state = "disease_details";
         } else {
+            System.out.println("3");
             next_state = "greet";
         }
+        System.out.println("Next state : " + next_state);
     }
 
     void printIntArray(Integer [] arr) {

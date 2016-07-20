@@ -61,8 +61,8 @@ class ChatArrayAdapter extends ArrayAdapter<ChatMessage> {
         }
         chatText = (TextView) row.findViewById(R.id.msgr);
         chatText.setText(chatMessageObj.message);
-        System.out.println("Image URL : " + chatMessageObj.message);
-        System.out.println("Left : " + chatMessageObj.left);
+        //System.out.println("Image URL : " + chatMessageObj.message);
+        //System.out.println("Left : " + chatMessageObj.left);
         if (chatMessageObj.imgUrl != null) {
             imgView = (ImageView) row.findViewById(R.id.userpic);
             imgView.setImageBitmap(BitmapFactory.decodeFile(chatMessageObj.imgUrl.toString().replaceAll("file:", "")));

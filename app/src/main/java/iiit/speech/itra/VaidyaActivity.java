@@ -56,7 +56,7 @@ public class VaidyaActivity extends Activity implements
     public final String SYMPTOM_QUERY_RESPONSE = "symp_query";
     public final String DISEASE_QUERY_RESPONSE = "disease_query";
     public final String GENERIC_SEARCH = "generic";
-    public final String FIRSTAID_QUERY_RESPONSE = "firstaid_query";
+    public final String FIRSTAID_QUERY_RESPONSE = "first_aid";
     // For google ASR
     private final int REQ_CODE_SPEECH_INPUT = 100;
 

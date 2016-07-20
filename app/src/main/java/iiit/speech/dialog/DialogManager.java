@@ -49,7 +49,7 @@ public class DialogManager {
         DiseaseEnquiry diseaseEnquiry = new DiseaseEnquiry(app, nlu);
         states.put("disease_enquiry",diseaseEnquiry);
         FirstAidEnquiry firstAidEnquiry = new FirstAidEnquiry(app, nlu);
-        states.put("firstaid_enquiry",firstAidEnquiry);
+        states.put("first_aid",firstAidEnquiry);
 
         current_state = "greet";
 

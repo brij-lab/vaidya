@@ -63,13 +63,31 @@ public class NLU {
 
         return domain;
     }
-
+    public String resolveEmergencyHyp(String hyp){
+        if(hyp.equalsIgnoreCase("stomach pain") || hyp.equalsIgnoreCase("abdominal pain")){
+            return "abdominal_pain";
+        }
+        if(hyp.equalsIgnoreCase("burn")){
+            return "burn";
+        }
+        else{
+            return "choking";
+        }
+    }
     public boolean resolveBinaryHyp(String hyp) {
         boolean yes = false;
         if (hyp.contains("yes") || hyp.contains("yeah") || hyp.contains("yep")) {
             yes = true;
         }
         return yes;
+    }
+
+    public boolean checkNegative(String hyp) {
+        boolean flag = false;
+        if (hyp.equalsIgnoreCase("no") || hyp.equalsIgnoreCase("nope")) {
+            flag = true;
+        }
+        return flag;
     }
 
     public String resolveGreetStateResponse(String hyp){
