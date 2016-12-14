@@ -112,7 +112,7 @@ public class AskSymptomsState extends DialogState {
 
         } else if (current_symptom != null) {
             // TODO merge to accept natural language as response
-            app.speakOut("Do you have " + current_symptom.replaceAll("_", " ") + "?");
+            app.speakOut("Did you say " + current_symptom.replaceAll("_", " ") + "?");
             // Set appropriate grammar
             current_grammar =  app.BINARY_RESPONSE;
             expect_binary = true;

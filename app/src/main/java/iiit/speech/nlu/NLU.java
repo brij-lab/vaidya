@@ -70,8 +70,11 @@ public class NLU {
         if(hyp.equalsIgnoreCase("burn")){
             return "burn";
         }
+        if (hyp.equalsIgnoreCase("cut") || hyp.equalsIgnoreCase("wound") || hyp.equalsIgnoreCase("bruise")) {
+            return "cut";
+        }
         else{
-            return "choking";
+            return "cut";
         }
     }
     public boolean resolveBinaryHyp(String hyp) {
@@ -81,6 +84,7 @@ public class NLU {
         }
         return yes;
     }
+
 
     public boolean checkNegative(String hyp) {
         boolean flag = false;
