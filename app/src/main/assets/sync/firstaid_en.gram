@@ -3,7 +3,10 @@
 grammar menu;
 
 <type_of_response> =    abdominal pain |
-                        stomach pain;
+                        stomach pain |
+                        cut |
+                        wound |
+                        bruise;
 
 
 

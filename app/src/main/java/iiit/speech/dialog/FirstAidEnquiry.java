@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import iiit.speech.domain.EmergencyQuestion;
@@ -49,7 +48,7 @@ public class FirstAidEnquiry extends DialogState{
                     // process the line.
                     String[] sp = line.split(" ## ");
                     if (sp[0].equalsIgnoreCase(resolveFirstAid)) {
-                        firstaid_questions.add(new EmergencyQuestion(sp[1], sp[2]));
+                        firstaid_questions.add(new EmergencyQuestion(sp[1]));
                     }
                 }
             } catch (IOException e) {
@@ -63,7 +62,7 @@ public class FirstAidEnquiry extends DialogState{
                     // process the line.
                     String[] sp = line.split(" ## ");
                     if (sp[0].equalsIgnoreCase(resolveFirstAid)) {
-                        firstaid_questions.add(new EmergencyQuestion(sp[1], sp[2]));
+                        firstaid_questions.add(new EmergencyQuestion(sp[1]));
                     }
                 }
             } catch (IOException e) {
@@ -73,9 +72,9 @@ public class FirstAidEnquiry extends DialogState{
             quesLen = firstaid_questions.size();
         }
         else {
-            if (nlu.resolveBinaryHyp(hyp)) {
-                int idx = firstaid_questions.size() - quesLen;
-                app.speakOut(firstaid_questions.get(idx).getAns());
+            if (nlu.resolveBinaryHyp(hyp) && quesLen != firstaid_questions.size()) {
+                //int idx = firstaid_questions.size() - quesLen;
+              //  app.speakOut(firstaid_questions.get(idx).getAns());
                 app.speakOut("Please go to the doctor immediately");
                 conclude = true;
                 //next_state = "greet";
@@ -99,7 +98,7 @@ public class FirstAidEnquiry extends DialogState{
             current_grammar = app.BINARY_RESPONSE;
         } else {
             // Ran out of questions
-            app.speakOut("Sorry. This is beyond my scope.");
+            //app.speakOut("Sorry. This is beyond my scope.");
             conclude = true;
             //next_state = "greet";
         }

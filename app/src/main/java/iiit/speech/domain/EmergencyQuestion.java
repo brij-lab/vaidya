@@ -7,7 +7,7 @@ public class EmergencyQuestion {
     private String ques;
     private String ans;
 
-    public EmergencyQuestion(String ques, String ans) {
+    public EmergencyQuestion(String ques) {
         this.ques = ques;
         this.ans = ans;
     }
