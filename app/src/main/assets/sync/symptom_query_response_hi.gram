@@ -1,0 +1,7 @@
+#JSGF V1.0;
+
+grammar symptom_query_response;
+
+public <symptom_query> =    haan |
+                            nahi |
+                            kya ;

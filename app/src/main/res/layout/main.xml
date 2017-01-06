@@ -64,7 +64,7 @@
             android:src="@mipmap/ico_mic"
             android:clickable="false" />-->
 
-        <Button android:id="@+id/btnSpeak" android:text="Speak" android:layout_width="100dp"
+        <Button android:id="@+id/btnSpeak" android:text="Listen" android:layout_width="100dp"
             android:layout_height="wrap_content" android:background="@drawable/speak_button"
             android:layout_marginRight="5dp" android:enabled="false"/>
         <Button android:id="@+id/btnReset" android:text="Reset" android:layout_width="100dp"

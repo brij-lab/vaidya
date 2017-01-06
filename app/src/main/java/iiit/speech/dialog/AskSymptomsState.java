@@ -2,7 +2,9 @@ package iiit.speech.dialog;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
+import java.util.StringTokenizer;
 
 import iiit.speech.domain.DomainDesc;
 import iiit.speech.domain.HealthDomain;
@@ -36,7 +38,7 @@ public class AskSymptomsState extends DialogState {
 
     @Override
     public void onRecognize(String hyp) {
-        String current_symptom = ((HealthDomain) domain).getSingleUnacknowledged();
+        Integer current_symptom = ((HealthDomain) domain).getSingleUnacknowledged();
         if (expect_binary && current_symptom != null) {
             // If symptom is present mark it as acknowledged otherwise put it in removed_set
             if (nlu.resolveBinaryHyp(hyp)) {
@@ -50,8 +52,8 @@ public class AskSymptomsState extends DialogState {
         } else {
             // Extract symptoms from hyp
             if (!nlu.checkNegative(hyp)) {
-                List<String> symps = nlu.findSymptomsInHyp(hyp);
-                for (String symp : symps) {
+                List<Integer> symps = nlu.findSymptomsInHyp(hyp);
+                for (Integer symp : symps) {
                     HealthDomain.SymptomStatus symp_status = ((HealthDomain) domain).getSymptomStatus(symp);
                     System.out.println("Extracted symptom from hypothesis : " + symp + " == status : " + symp_status.name());
                     switch (symp_status) {
@@ -60,7 +62,7 @@ public class AskSymptomsState extends DialogState {
                             ((HealthDomain) domain).addSymptoms(symp);
                             break;
                         case REMOVED:
-                            app.speakOut("You told that you do not have " + symp);
+                            app.speakOut("You told that you do not have " + symp, null);
                             ((HealthDomain) domain).markRemovedSymptomUnAcknowledged(symp);
                             break;
                     }
@@ -85,7 +87,7 @@ public class AskSymptomsState extends DialogState {
     }
 
     private void completeSymptomList() {
-        String current_symptom = ((HealthDomain) domain).getSingleUnacknowledged();
+        Integer current_symptom = ((HealthDomain) domain).getSingleUnacknowledged();
         ((HealthDomain) domain).displaySymptomList();
         System.out.println("Current Symptom ===> " + current_symptom);
         System.out.println("Previous states ===> ");
@@ -100,10 +102,10 @@ public class AskSymptomsState extends DialogState {
             // There are no un-acknowledged symptoms in the list obtained up till now
             switch (symptom_request_count) {
                 case 0:
-                    app.speakOut("Please tell your symptoms.");
+                    app.speakOut("Please tell your symptoms.", null);
                     break;
                 case 1:
-                    app.speakOut("Please tell if you have any other symptoms.");
+                    app.speakOut("Please tell if you have any other symptoms.", null);
                     break;
             }
             // Set appropriate grammar
@@ -112,7 +114,11 @@ public class AskSymptomsState extends DialogState {
 
         } else if (current_symptom != null) {
             // TODO merge to accept natural language as response
-            app.speakOut("Did you say " + current_symptom.replaceAll("_", " ") + "?");
+            System.out.println("ASKING QUESTIONS ********************** ==> LANG NAME : " + app.langName + " --- " + current_symptom);
+            for (Map.Entry<Integer, String> e : ((HealthDomain) domain).LCONCEPT_SYMPTOM_MAP.get(app.langName).entrySet()) {
+                System.out.println(e.getKey() + " : " + e.getValue());
+            }
+            app.speakOut("Did you say " + ((HealthDomain) domain).LCONCEPT_SYMPTOM_MAP.get(app.langName).get(current_symptom) + "?", null);
             // Set appropriate grammar
             current_grammar =  app.BINARY_RESPONSE;
             expect_binary = true;

@@ -1,0 +1,13 @@
+#JSGF V1.0;
+
+grammar menu;
+
+<type_of_response> =    first aid |
+                        diagnose |
+                        enquire |
+                        disease enquiry |
+                        disease details |
+                        diagnose my disease |
+                        diagnose disease ;
+
+public <response> = <type_of_response>;

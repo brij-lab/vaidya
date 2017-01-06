@@ -2,8 +2,5 @@
 
 grammar binary;
 
-public <binary> =   undi |
-                    avnu undi |
-                    ledu |
-                    kadu |
-                    avnu ;
+public <binary> =   haan |
+                    nahi ;

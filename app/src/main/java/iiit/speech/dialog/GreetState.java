@@ -33,7 +33,7 @@ public class GreetState extends DialogState {
     @Override
     public void onEntry() {
         System.out.println("+++++++++++++++++ Greet state entered +++++++++++++++++++++");
-        app.speakOut("Hi. Do you want me to diagnose your disease or assist you with first aid or help you with disease enquiry");
+        app.speakOut("Hi. How may I assist you?", "Diagnose your disease / assist you with first aid /  disease enquiry");
 
         // Set appropriate grammar
         //current_grammar =  app.GENERIC_SEARCH;
@@ -45,6 +45,7 @@ public class GreetState extends DialogState {
      //   next_state = "ask_symptoms";
         try {
             domain = nlu.getDomain("health");
+            app.domain = domain;
         } catch (IOException e) {
             e.printStackTrace();
         }

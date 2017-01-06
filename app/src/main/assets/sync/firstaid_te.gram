@@ -1,0 +1,13 @@
+#JSGF V1.0;
+
+grammar menu;
+
+<type_of_response> =    abdominal pain |
+                        stomach pain |
+                        cut |
+                        wound |
+                        bruise;
+
+
+
+public <response> = <type_of_response>;

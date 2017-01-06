@@ -21,18 +21,21 @@ import iiit.speech.itra.VaidyaActivity;
 public class HealthDomain extends DomainDesc{
 
     public String symptom_explain;
-    private Map<String, Boolean> symptoms;
+    private Map<Integer, Boolean> symptoms;
     private String disease;
-    private Set<String> removed_symptoms;
+    private Set<Integer> removed_symptoms;
 
-    public Map<String, Integer[]> SYMPTOM_VECTOR;
+    public Map<Integer, Integer[]> SYMPTOM_VECTOR;
     public Map<String, Integer[]> DISEASE_VECTOR;
 
     public int SYMPTOM_VEC_DIM = 0;
     public int DISEASE_VEC_DIM = 0;
 
-    public Map<Integer, String> SYMPTOM_IDX;
+    //public Map<Integer, String> SYMPTOM_IDX;
+    public Map<String, Integer> SYMPTOM_CID;
     public Map<Integer, String> DISEASE_IDX;
+
+    public Map<String, Map<Integer, String>> LCONCEPT_SYMPTOM_MAP;
 
     public enum SymptomStatus {
         REMOVED, NOT_PRESENT, ACKNOWLEDGED, NOT_ACKNOWLEDGED
@@ -45,23 +48,45 @@ public class HealthDomain extends DomainDesc{
 
         SYMPTOM_VECTOR = new TreeMap<>();
         DISEASE_VECTOR = new TreeMap<>();
-        SYMPTOM_IDX = new HashMap<>();
+        //SYMPTOM_IDX = new HashMap<>();
         DISEASE_IDX = new HashMap<>();
+        SYMPTOM_CID = new HashMap<>();
+        LCONCEPT_SYMPTOM_MAP = new HashMap<>();
+
+        System.out.println("Reading symptom concept ids...");
+        File symp_cid_file = new File(app.assetDir, "sym_conceptid.txt");
+        //int symp_idx = 0;
+        try(BufferedReader br = new BufferedReader(new FileReader(symp_cid_file))) {
+            for(String line; (line = br.readLine()) != null; ) {
+                // process the line.
+                System.out.println(line);
+                String[] sp = line.split(",");
+                Integer cid = Integer.parseInt(sp[1]);
+                SYMPTOM_CID.put(sp[0], cid);
+                if(!LCONCEPT_SYMPTOM_MAP.containsKey(sp[2])) {
+                    LCONCEPT_SYMPTOM_MAP.put("_" + sp[2], new HashMap<Integer, String>());
+                }
+                LCONCEPT_SYMPTOM_MAP.get("_" + sp[2]).put(cid, sp[0]);
+            }
+        } catch (IOException e) {
+            System.out.println("Couldn't read symptom cid file");
+        }
 
         System.out.println("Reading symptom vectors...");
         File symp_vectors_file = new File(app.assetDir, "symp_vectors.txt");
-        int symp_idx = 0;
+        //int symp_idx = 0;
         try(BufferedReader br = new BufferedReader(new FileReader(symp_vectors_file))) {
             for(String line; (line = br.readLine()) != null; ) {
                 // process the line.
-                String[] sp = line.split(" ");
-                SYMPTOM_IDX.put(symp_idx, sp[0]);
-                String[] symp_vec = Arrays.copyOfRange(sp, 1, sp.length);
+                String[] sp = line.split("\t");
+                //SYMPTOM_IDX.put(symp_idx, sp[0]);
+                String[] sp1 = sp[1].split(" ");
+                String[] symp_vec = Arrays.copyOfRange(sp1, 0, sp1.length);
                 if (SYMPTOM_VEC_DIM == 0) {
                     SYMPTOM_VEC_DIM = symp_vec.length;
                 }
-                SYMPTOM_VECTOR.put(sp[0], stringArrToIntArr(symp_vec));
-                symp_idx++;
+                SYMPTOM_VECTOR.put(Integer.parseInt(sp[0]), stringArrToIntArr(symp_vec));
+                //symp_idx++;
             }
         } catch (IOException e) {
             System.out.println("Couldn't read symptom vector file");
@@ -96,10 +121,10 @@ public class HealthDomain extends DomainDesc{
         return intarr;
     }
 
-    public void setSymptoms(Map<String, Boolean> s) {
+    public void setSymptoms(Map<Integer, Boolean> s) {
         symptoms = s;
     }
-    public Map<String, Boolean> getSymptoms() {
+    public Map<Integer, Boolean> getSymptoms() {
         return symptoms;
     }
 
@@ -109,26 +134,26 @@ public class HealthDomain extends DomainDesc{
     public String getDisease() {
         return disease;
     }
-    public void addSymptoms(String sym) {
+    public void addSymptoms(Integer sym) {
         symptoms.put(sym, Boolean.FALSE);
     }
-    public void markSymptomAcknowledged(String sym) {
+    public void markSymptomAcknowledged(Integer sym) {
         symptoms.put(sym, Boolean.TRUE);
     }
-    public void markRemovedSymptomUnAcknowledged(String sym) {
+    public void markRemovedSymptomUnAcknowledged(Integer sym) {
         removed_symptoms.remove(sym);
         symptoms.put(sym, Boolean.FALSE);
     }
-    public String getSingleUnacknowledged() {
-        String k = null;
-        for (Map.Entry<String, Boolean> e : symptoms.entrySet()) {
+    public Integer getSingleUnacknowledged() {
+        Integer k = null;
+        for (Map.Entry<Integer, Boolean> e : symptoms.entrySet()) {
             if (e.getValue() == Boolean.FALSE) {
                 k = e.getKey(); break;
             }
         }
         return k;
     }
-    public SymptomStatus getSymptomStatus(String sym) {
+    public SymptomStatus getSymptomStatus(Integer sym) {
         if (isRemoved(sym)) {
             return SymptomStatus.REMOVED;
         } else {
@@ -144,30 +169,30 @@ public class HealthDomain extends DomainDesc{
     }
     public void displaySymptomList() {
         System.out.println("Symptoms list ==== ");
-        for (Map.Entry<String, Boolean> e : symptoms.entrySet()) {
+        for (Map.Entry<Integer, Boolean> e : symptoms.entrySet()) {
             System.out.println(e.getKey() + " : " + e.getValue());
         }
         System.out.println("Removed symptoms ==== ");
-        for (String e : removed_symptoms) {
+        for (Integer e : removed_symptoms) {
             System.out.println(e);
         }
     }
-    public void removeSymptom(String sym) {
+    public void removeSymptom(Integer sym) {
         symptoms.remove(sym);
         removed_symptoms.add(sym);
     }
-    public boolean isRemoved(String sym) {
+    public boolean isRemoved(Integer sym) {
         return removed_symptoms.contains(sym);
     }
 
-    public List<String> getSymptomsForDisease(String dis) {
-        List<String> symlist = new ArrayList<>();
+    public List<Integer> getSymptomsForDisease(String dis) {
+        List<Integer> symlist = new ArrayList<>();
         String dis_ = dis.replaceAll(" ", "_");
         Integer [] dis_vec = DISEASE_VECTOR.get(dis_);
         System.out.println("Vector for disease====================>" + dis_);
         //printIntArray(dis_vec);
         for (Integer idx: getOneIndices(dis_vec)) {
-            symlist.add(SYMPTOM_IDX.get(idx));
+            symlist.add(idx);
         }
         return symlist;
     }

@@ -28,7 +28,7 @@ public class DiagnosisState extends DialogState {
     private NLU nlu;
     public boolean sym_Expain_Flag = false;
 
-    private Map<String, Set<String>> possible_symptoms;
+    private Map<Integer, Set<String>> possible_symptoms;
     private Set<String> possible_diseases;
     private String symptom_toask;
     private List<String> already_asked_symptoms;
@@ -64,7 +64,7 @@ public class DiagnosisState extends DialogState {
     @Override
     public void onEntry() {
         System.out.println("+++++++++++++++++ Diagnosis state entered +++++++++++++++++++++");
-        app.speakOut("I have initial symptoms to start diagnosis.");
+        app.speakOut("I have initial symptoms to start diagnosis.", null);
 
         // Set appropriate grammar
         current_grammar =  app.BINARY_RESPONSE;
@@ -73,9 +73,9 @@ public class DiagnosisState extends DialogState {
         //expect_binary = false;
         Integer[] final_symp_vec = new Integer[((HealthDomain)domain).SYMPTOM_VEC_DIM];
         Arrays.fill(final_symp_vec, 1);
-        Map<String, Boolean> ack_symptoms = ((HealthDomain)domain).getSymptoms();
-        for (Map.Entry<String, Boolean> e: ack_symptoms.entrySet()) {
-            Integer [] symp_vector =  ((HealthDomain)domain).SYMPTOM_VECTOR.get(e.getKey().replaceAll(" ", "_"));
+        Map<Integer, Boolean> ack_symptoms = ((HealthDomain)domain).getSymptoms();
+        for (Map.Entry<Integer, Boolean> e: ack_symptoms.entrySet()) {
+            Integer [] symp_vector =  ((HealthDomain)domain).SYMPTOM_VECTOR.get(e.getKey());
             System.out.println("Vector for =========> " + e.getKey());
             printIntArray(symp_vector);
             System.out.println("Final vector : before =========> ");
@@ -88,11 +88,11 @@ public class DiagnosisState extends DialogState {
         for (Integer idx: getOneIndices(final_symp_vec)) {
             possible_diseases.add(((HealthDomain)domain).DISEASE_IDX.get(idx));
         }
-        app.speakOut("There are " + possible_diseases.size() + " diseases found matching your symptoms");
+        app.speakOut("There are " + possible_diseases.size() + " diseases found matching your symptoms", null);
         // Speak out if there are less than 5 diseases
         if (possible_diseases.size() < 5) {
             for (String dis: possible_diseases) {
-                app.speakOut(dis.replaceAll("_", " "));
+                app.speakOut(dis.replaceAll("_", " "), null);
             }
         }
         // If there are more than one possible disease then ask for more symptoms to resolve
@@ -140,7 +140,7 @@ public class DiagnosisState extends DialogState {
             } else {
                 for (String d : possible_diseases) {
                     d = d.replaceAll("_", " ");
-                    app.speakOut("your most probable diagnosis is " + d);
+                    app.speakOut("your most probable diagnosis is " + d, null);
                     app.appendColoredText(app.result_text, "Diagnosis = " + d, Color.WHITE);
                     ((HealthDomain) domain).setDisease(d);
                     conclude = true;
@@ -152,7 +152,7 @@ public class DiagnosisState extends DialogState {
 
     private void getPossibleSymptoms() {
         Integer[] dis_vec;
-        String poss_sym;
+        Integer poss_sym;
         possible_symptoms = new HashMap<>();
         Set<String> dis_list;
         for (String dis: possible_diseases) {
@@ -160,7 +160,7 @@ public class DiagnosisState extends DialogState {
             System.out.println("Vector for disease====================>" + dis);
             printIntArray(dis_vec);
             for (Integer idx: getOneIndices(dis_vec)) {
-                poss_sym = ((HealthDomain)domain).SYMPTOM_IDX.get(idx);
+                poss_sym = idx;
                 System.out.println("Poss Sym===================>" + poss_sym);
                 if(poss_sym != null) {
                     dis_list = possible_symptoms.get(poss_sym);
@@ -176,7 +176,7 @@ public class DiagnosisState extends DialogState {
         int Dc = possible_diseases.size() / 2;
         symptom_toask = null;
         int min_dif = 9999;
-        for (Map.Entry<String, Set<String>> e: possible_symptoms.entrySet()) {
+        for (Map.Entry<Integer, Set<String>> e: possible_symptoms.entrySet()) {
             if (!already_asked_symptoms.contains(e.getKey())) {
                 System.out.println("Symptom ==> " + e.getKey() + "  ; disease count ==>" + e.getValue().size());
                 for (String cdis : e.getValue()) {
@@ -184,12 +184,14 @@ public class DiagnosisState extends DialogState {
                 }
 
                 if (Math.abs(Dc - e.getValue().size()) < min_dif) {
-                    symptom_toask = e.getKey();
+                    symptom_toask = ((HealthDomain)domain).LCONCEPT_SYMPTOM_MAP.get(app.langName).get(e.getKey());
                     min_dif = Math.abs(Dc - e.getValue().size()) ;
                 }
             }
         }
-        app.speakOut("Do you have " + symptom_toask.replaceAll("_", " "));
+
+
+        app.speakOut("Do you have " + symptom_toask.replaceAll("_", " "), null);
         current_grammar = app.SYMPTOM_QUERY_RESPONSE;
         expect_binary = true;
     }

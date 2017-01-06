@@ -1,0 +1,623 @@
+headache ## headache
+fatigue ## fatigue
+fever ## fever
+abdominal pain ## abdominal pain
+nausea ## nausea
+jaundice ## jaundice
+rash ## rash
+skin rash ## skin rash
+anemia ## anemia
+malaise ## malaise
+distention ## distention
+constipation ## constipation
+diarrhea ## diarrhea
+mucopurulent discharge from the eye ## mucopurulent discharge from the eye
+pain in the eye ## pain in the eye
+redness ## redness
+stiff neck ## stiff neck
+confusion ## confusion
+eschar ## eschar
+regional adenopathy ## regional adenopathy
+maculopapular rash on extremities ## maculopapular rash on extremities
+swallowing ## swallowing
+pain ## pain
+burning ## burning
+distension ## distension
+decreased appetite ## decreased appetite
+vomiting ## vomiting
+weight loss ## weight loss
+bloody stools ## bloody stools
+rash which is followed by blisters ## rash which is followed by blisters
+itching ## itching
+burning pain ## burning pain
+paresthesia ## paresthesia
+cough ## cough
+wheezing ## wheezing
+splenomegaly ## splenomegaly
+bloody diarrhea ## bloody diarrhea
+hepatosplenomegaly ## hepatosplenomegaly
+chills ## chills
+rapid breathing ## rapid breathing
+anorexia ## anorexia
+decreased weight ## decreased weight
+depression ## depression
+watery diarrhea ## watery diarrhea
+sore throat ## sore throat
+myalgia ## myalgia
+muscle ache ## muscle ache
+coughing ## coughing
+pain in lower and upper extremities ## pain in lower and upper extremities
+papulovesicular rash on the soft palate ## papulovesicular rash on the soft palate
+cervical lymphadenopathy ## cervical lymphadenopathy
+conjunctival suffusion ## conjunctival suffusion
+blood in the urine ## blood in the urine
+blood in the sputum ## blood in the sputum
+hemorrhagic fever ## hemorrhagic fever
+photophobia ## photophobia
+neck stiffness ## neck stiffness
+meningitis ## meningitis
+accumulation of fluid in the abdomen ## accumulation of fluid in the abdomen
+dehydration ## dehydration
+scaling of skin lesions ## scaling of skin lesions
+thickening of nails ## thickening of nails
+swollen periungal tissue ## swollen periungal tissue
+scarring of the scalp ## scarring of the scalp
+anxiety ## anxiety
+shortness of breath ## shortness of breath
+chest tightness ## chest tightness
+lymphangitis ## lymphangitis
+lymphadenopathy ## lymphadenopathy
+stiffness ## stiffness
+irritation ## irritation
+swelling ## swelling
+joint pain ## joint pain
+murmurs ## murmurs
+peripheral edema ## peripheral edema
+pulmonary rales ## pulmonary rales
+petechia ## petechia
+skin lesions ## skin lesions
+gummatous ulcers ## gummatous ulcers
+periosteal lesions ## periosteal lesions
+paresis ## paresis
+tabes ## tabes
+optic atrophy ## optic atrophy
+interstitial keratitis ## interstitial keratitis
+sensorineural deafness ## sensorineural deafness
+dental deformities ## dental deformities
+renal failure ## renal failure
+hemorrhagic manifestations ## hemorrhagic manifestations
+pulmonary edema ## pulmonary edema
+sweating ## sweating
+chest pain ## chest pain
+muscle tightness ## muscle tightness
+mucopurulent nasal discharge ## mucopurulent nasal discharge
+nodular lesions in the lungs ## nodular lesions in the lungs
+blisters ## blisters
+drowsiness ## drowsiness
+seizures ## seizures
+seizure ## seizure
+severe headache ## severe headache
+rectal bleeding ## rectal bleeding
+formation of ulcers ## formation of ulcers
+hepatomegaly ## hepatomegaly
+arthralgia ## arthralgia
+hemoptysis ## hemoptysis
+pneumonia ## pneumonia
+cramping ## cramping
+failure to thrive ## failure to thrive
+blood stained nasal discharge ## blood stained nasal discharge
+perioral fissures ## perioral fissures
+choroiditis ## choroiditis
+hydrocephalus ## hydrocephalus
+intellectual disability ## intellectual disability
+osteochondritis ## osteochondritis
+pseudoparalysis ## pseudoparalysis
+nonproductive cough ## nonproductive cough
+maceration ## maceration
+conjunctivitis ## conjunctivitis
+scaling ## scaling
+irritability ## irritability
+abnormal reflexes ## abnormal reflexes
+involuntary movements ## involuntary movements
+hemiplagia ## hemiplagia
+ataxia ## ataxia
+nystagmus ## nystagmus
+dysphasia ## dysphasia
+lymphadenopathy of the neck ## lymphadenopathy of the neck
+back pain ## back pain
+abortion ## abortion
+stillbirth ## stillbirth
+arthritis ## arthritis
+skin nodules ## skin nodules
+maculopapular rash ## maculopapular rash
+sweats ## sweats
+weakness ## weakness
+neurologic changes ## neurologic changes
+acute respiratory distress ## acute respiratory distress
+lymphadenitis ## lymphadenitis
+prostration ## prostration
+tremors ## tremors
+loss of conjugate eye movements ## loss of conjugate eye movements
+muscle rigidity ## muscle rigidity
+hemiparesis ## hemiparesis
+coma ## coma
+runny nose ## runny nose
+enlarged ## enlarged
+loss of appetite ## loss of appetite
+difficulty in breathing ## difficulty in breathing
+sneezing ## sneezing
+circling ## circling
+excess salivation in piglets ## excess salivation in piglets
+intense itching in cattle ## intense itching in cattle
+myalgia in the legs and lumbosacral region ## myalgia in the legs and lumbosacral region
+inguinal lymphadenitis ## inguinal lymphadenitis
+abscesses in the groin area ## abscesses in the groin area
+paralysis ## paralysis
+muscle weakness ## muscle weakness
+rectal prolapse ## rectal prolapse
+growth retardation ## growth retardation
+lack of appetite ## lack of appetite
+cramps ## cramps
+incoordination ## incoordination
+muscle tremors ## muscle tremors
+loss of the voice ## loss of the voice
+acute chest pain ## acute chest pain
+disturbance of heart rate ## disturbance of heart rate
+dyspnea ## dyspnea
+hypoxemia ## hypoxemia
+cognitive impairment ## cognitive impairment
+motor dysfunction ## motor dysfunction
+behavioral change ## behavioral change
+speech problems ## speech problems
+altered mental status ## altered mental status
+poor appetite ## poor appetite
+mediastinal lymphadenopathy ## mediastinal lymphadenopathy
+lameness ## lameness
+nasal discharge ## nasal discharge
+ocular discharge ## ocular discharge
+cessation of rumination ## cessation of rumination
+relapsing fever ## relapsing fever
+leukopenia ## leukopenia
+petechiae ## petechiae
+necrosis ## necrosis
+difficulty breathing ## difficulty breathing
+adenopathy ## adenopathy
+sensory loss ## sensory loss
+motor loss ## motor loss
+eye damage ## eye damage
+liver enlargement ## liver enlargement
+eruption of rose colored spots ## eruption of rose colored spots
+high fever ## high fever
+huddling ## huddling
+hemorrhages in the skin ## hemorrhages in the skin
+opaque nail ## opaque nail
+yellow brown nail ## yellow brown nail
+crumbly nail that can separate from the nail bed ## crumbly nail that can separate from the nail bed
+stupor ## stupor
+disorientation ## disorientation
+convulsions ## convulsions
+spastic paralysis ## spastic paralysis
+swollen lymph nodes ## swollen lymph nodes
+abdominal cramps ## abdominal cramps
+regional lymphadenopathy ## regional lymphadenopathy
+backache ## backache
+pleural effusions ## pleural effusions
+staggering gait ## staggering gait
+dementia ## dementia
+blurred vision ## blurred vision
+stomach pain ## stomach pain
+red eyes ## red eyes
+flushed face ## flushed face
+red throat ## red throat
+nosebleeds ## nosebleeds
+blood in the feces and urine ## blood in the feces and urine
+cervical rigidity ## cervical rigidity
+muscle spasms ## muscle spasms
+bleeding from the oral and nasal mucosa ## bleeding from the oral and nasal mucosa
+bleeding from the bronchopulmonary ## bleeding from the bronchopulmonary
+lesions ## lesions
+vomiting of blood ## vomiting of blood
+severe diarrhea ## severe diarrhea
+acute flaccid paralysis ## acute flaccid paralysis
+lethargy ## lethargy
+heart failure ## heart failure
+pallor ## pallor
+cyanosis ## cyanosis
+tachycardia ## tachycardia
+enlargement of heart ## enlargement of heart
+abdominal discomfort ## abdominal discomfort
+tiredness ## tiredness
+muscle pain ## muscle pain
+reddening of the skin ## reddening of the skin
+thrombocytopenia ## thrombocytopenia
+pleural effusion ## pleural effusion
+congestive heart failure ## congestive heart failure
+nodule ## nodule
+bone lesions ## bone lesions
+lesions in the mucosa of digestive tract ## lesions in the mucosa of digestive tract
+necrosis of lymphoid tissue ## necrosis of lymphoid tissue
+hoof inflammation and dermatitis ## hoof inflammation and dermatitis
+difficulty feeding ## difficulty feeding
+ptosis ## ptosis
+loss of head control ## loss of head control
+breathing difficulties ## breathing difficulties
+muscular hypotonia ## muscular hypotonia
+muscular atrophy ## muscular atrophy
+feeding difficulties ## feeding difficulties
+recurrent episodes of vomiting and diarrhea ## recurrent episodes of vomiting and diarrhea
+pleuritic chest pain ## pleuritic chest pain
+easy bruising ## easy bruising
+blood spots ## blood spots
+bleeding gums ## bleeding gums
+shock ## shock
+weak pulse ## weak pulse
+hypotension ## hypotension
+dry cough ## dry cough
+hypoxia ## hypoxia
+loss of reflexes ## loss of reflexes
+hallucinations ## hallucinations
+numbness ## numbness
+parasthesias ## parasthesias
+respiratory failure ## respiratory failure
+burning sensation during urination ## burning sensation during urination
+discharge from the penis ## discharge from the penis
+increased vaginal discharge ## increased vaginal discharge
+vaginal bleeding between periods ## vaginal bleeding between periods
+orbital cellulitis ## orbital cellulitis
+proptosis ## proptosis
+pus discharge from the nose ## pus discharge from the nose
+dizziness ## dizziness
+altered consciousness ## altered consciousness
+vision loss ## vision loss
+shin pain ## shin pain
+soreness of the muscles of the legs and back ## soreness of the muscles of the legs and back
+memory loss ## memory loss
+sleepiness ## sleepiness
+breathing distress ## breathing distress
+watery eyes ## watery eyes
+eschars ## eschars
+rash on extremities ## rash on extremities
+swelling of the feet ## swelling of the feet
+gangrene ## gangrene
+severe pain behind the eyes ## severe pain behind the eyes
+muscle and bone pain ## muscle and bone pain
+mild bleeding ## mild bleeding
+stiff body ## stiff body
+exhaustion ## exhaustion
+change in bowel habits ## change in bowel habits
+spastic weakness of both legs ## spastic weakness of both legs
+muscle stiffness ## muscle stiffness
+sensory disturbance ## sensory disturbance
+spasms ## spasms
+vesicular rash of the ear or mouth ## vesicular rash of the ear or mouth
+tinnitus ## tinnitus
+vertigo ## vertigo
+otalgia ## otalgia
+respiratory problems ## respiratory problems
+bleeding disorder ## bleeding disorder
+tachypnea ## tachypnea
+dyspepsia ## dyspepsia
+formation of fistulas ## formation of fistulas
+cold sores ## cold sores
+bad breath ## bad breath
+oral lesions ## oral lesions
+severe abdominal and back pain ## severe abdominal and back pain
+severe pain ## severe pain
+sensitivity to light touch ## sensitivity to light touch
+epistaxis ## epistaxis
+hematemesis ## hematemesis
+melena ## melena
+menorrhagia ## menorrhagia
+night sweats ## night sweats
+cracking ## cracking
+delirium ## delirium
+papulovesicular rash ## papulovesicular rash
+sepsis ## sepsis
+murmur ## murmur
+sensory disturbances ## sensory disturbances
+bleeding ## bleeding
+odynophagia ## odynophagia
+swollen lymph glands ## swollen lymph glands
+skin rash on the chest ## skin rash on the chest
+cerebral hemorrhage ## cerebral hemorrhage
+marked leukocytosis ## marked leukocytosis
+diffuse infiltrates on chest radiograph ## diffuse infiltrates on chest radiograph
+coryza ## coryza
+maculopapular ## maculopapular
+watery blisters ## watery blisters
+swelling of the lymph nodes ## swelling of the lymph nodes
+limb pain ## limb pain
+paraplegia ## paraplegia
+dysarthria ## dysarthria
+bleeding into skin and other organs ## bleeding into skin and other organs
+nasal flaring in infants ## nasal flaring in infants
+bluish skin due to lack of oxygen ## bluish skin due to lack of oxygen
+fissures ## fissures
+diplopia ## diplopia
+dysphonia ## dysphonia
+dysphagia ## dysphagia
+descending muscle paralysis ## descending muscle paralysis
+lacrimation ## lacrimation
+recurring periods of wheezing ## recurring periods of wheezing
+mucus production ## mucus production
+sleep apnea ## sleep apnea
+breathing problems ## breathing problems
+cranial nerve palsies ## cranial nerve palsies
+skin ulcer ## skin ulcer
+severe muscle pain ## severe muscle pain
+falling blood pressure ## falling blood pressure
+sensitivity to light ## sensitivity to light
+bilateral corneal opacity ## bilateral corneal opacity
+oculonasal discharge ## oculonasal discharge
+rigidity of limbs ## rigidity of limbs
+slurred speech ## slurred speech
+cellulitis ## cellulitis
+lesions in the brain or meninges ## lesions in the brain or meninges
+ascending regional lymphadenopathy ## ascending regional lymphadenopathy
+itching of the scalp ## itching of the scalp
+pus filled lesions on the scalp ## pus filled lesions on the scalp
+patches of hair loss ## patches of hair loss
+stillborn piglets ## stillborn piglets
+mummified fetuses ## mummified fetuses
+premature farrowings ## premature farrowings
+weak born pigs ## weak born pigs
+myositis ## myositis
+degeneration of neuronal tissue ## degeneration of neuronal tissue
+enlarged spleen ## enlarged spleen
+hemorrhages in the internal organs ## hemorrhages in the internal organs
+bulging eyes ## bulging eyes
+bloated abdomens ## bloated abdomens
+pain in the chest and throughout body ## pain in the chest and throughout body
+fibrosis ## fibrosis
+watery or bloody diarrhea ## watery or bloody diarrhea
+severe frontal headache ## severe frontal headache
+joint aches ## joint aches
+flushing of the face ## flushing of the face
+decreased level of consciousness ## decreased level of consciousness
+cranial nerve deficits ## cranial nerve deficits
+dark urine ## dark urine
+impaired speech ## impaired speech
+cognitive deterioration ## cognitive deterioration
+redness of the eyes ## redness of the eyes
+low blood pressure ## low blood pressure
+acute shock ## acute shock
+vascular leakage ## vascular leakage
+acute kidney failure ## acute kidney failure
+body ache ## body ache
+sweat ## sweat
+tearing ## tearing
+physical weakness ## physical weakness
+rosy spots on the central body ## rosy spots on the central body
+bradycardia ## bradycardia
+mood disturbances ## mood disturbances
+behaviour disturbances ## behaviour disturbances
+cognitive disturbances ## cognitive disturbances
+neurologic disturbances ## neurologic disturbances
+movement impairment ## movement impairment
+rigors ## rigors
+rigor ## rigor
+red eye ## red eye
+skin rash called erythema migrans ## skin rash called erythema migrans
+lung lesions ## lung lesions
+forced expiration ## forced expiration
+profuse sweating ## profuse sweating
+spasmodic coughing ## spasmodic coughing
+ecchymoses on the tongue ## ecchymoses on the tongue
+lacrimation in humans ## lacrimation in humans
+gasping ## gasping
+twisting of head and neck ## twisting of head and neck
+complete paralysis ## complete paralysis
+reduced egg production in birds ## reduced egg production in birds
+productive cough ## productive cough
+widespread abnormalities of social interactions and communication ## widespread abnormalities of social interactions and communication
+severely restricted interests ## severely restricted interests
+highly repetitive behavior ## highly repetitive behavior
+indigestion ## indigestion
+reduced level of consciousness ## reduced level of consciousness
+neck pain ## neck pain
+facial flush ## facial flush
+hemorrhagic features ## hemorrhagic features
+proteinuria ## proteinuria
+soft tissue swelling ## soft tissue swelling
+chest discomfort or pain ## chest discomfort or pain
+mild spotted fever ## mild spotted fever
+sores ## sores
+swollen glands ## swollen glands
+ulcer formation ## ulcer formation
+abdominal bloating ## abdominal bloating
+persistent vomiting ## persistent vomiting
+difficulty speaking ## difficulty speaking
+difficulty swallowing ## difficulty swallowing
+difficulty chewing ## difficulty chewing
+changes in personality ## changes in personality
+twitching ## twitching
+low fever ## low fever
+lesions in the back area of the mouth ## lesions in the back area of the mouth
+abdominal pain in middle or lower right part ## abdominal pain in middle or lower right part
+personality and behavioral changes ## personality and behavioral changes
+partial paralysis ## partial paralysis
+groin pain ## groin pain
+discharge from penis ## discharge from penis
+scrotal swelling ## scrotal swelling
+blood in the semen ## blood in the semen
+neuropathy ## neuropathy
+autonomic instability ## autonomic instability
+psychosis ## psychosis
+multiorgan failure ## multiorgan failure
+desquamation ## desquamation
+nonfocal neurologic abnormalities ## nonfocal neurologic abnormalities
+respiratory distress ## respiratory distress
+flashbacks ## flashbacks
+bad dreams ## bad dreams
+frightening thoughts ## frightening thoughts
+avoidance ## avoidance
+hyperarousal of PTSD occurring within one month of a traumatic experience as acute stress disorder or ASD ## hyperarousal of PTSD occurring within one month of a traumatic experience as Acute Stress Disorder or ASD
+agraphia ## agraphia
+acalculia ## acalculia
+finger agnosia ## finger agnosia
+herpetic lesions ## herpetic lesions
+painful swallowing ## painful swallowing
+cough with mucus ## cough with mucus
+maculopapular or petechial rash ## maculopapular or petechial rash
+cough with sputum ## cough with sputum
+draining of sinuses ## draining of sinuses
+diaphoresis ## diaphoresis
+maculopapular rash progressing into papular or petechial rash ## maculopapular rash progressing into papular or petechial rash
+alterations in sensorium ## alterations in sensorium
+obstructing hydrocephalus ## obstructing hydrocephalus
+fever for two three days ## fever for two three days
+nodules and cavitations of the lungs ## nodules and cavitations of the lungs
+swollen hilar lymph nodes ## swollen hilar lymph nodes
+abdominal distension ## abdominal distension
+motor impairment ## motor impairment
+difficulty in walking and maintaining balance ## difficulty in walking and maintaining balance
+meningeal irritation ## meningeal irritation
+cerebellar syndrome ## cerebellar syndrome
+pleural thickening ## pleural thickening
+shivers ## shivers
+bleeding from the mouth ## bleeding from the mouth
+intense stabbing pain in the back and legs that recurs irregularly ## intense stabbing pain in the back and legs that recurs irregularly
+gait ataxia ## gait ataxia
+hyperesthesia ## hyperesthesia
+loss of bladder sensation leading to urine retention ## loss of bladder sensation leading to urine retention
+erectile dysfunction ## erectile dysfunction
+cotton wool spots ## cotton wool spots
+retinal hemorrhages ## retinal hemorrhages
+microaneurysms ## microaneurysms
+skin reddening ## skin reddening
+gastrointestinal bleeding ## gastrointestinal bleeding
+intestinal bleeding ## intestinal bleeding
+rash on the face which spreads to the trunk and limbs ## rash on the face which spreads to the trunk and limbs
+prickling or itching sensation at the site of bite ## prickling or itching sensation at the site of bite
+agitation ## agitation
+hydrophobia ## hydrophobia
+stiffness of the neck ## stiffness of the neck
+bleeding problems ## bleeding problems
+vascular dilation ## vascular dilation
+eyelid edema ## eyelid edema
+watering of the eye ## watering of the eye
+conjunctival congestion ## conjunctival congestion
+superficial punctate epithelial keratitis ## superficial punctate epithelial keratitis
+fluid filled blister formation ## fluid filled blister formation
+stiffness in the spine ## stiffness in the spine
+stiffness in the neck ## stiffness in the neck
+stiffness in the hips ## stiffness in the hips
+stiffness in the jaw ## stiffness in the jaw
+stiffness in the rib cage ## stiffness in the rib cage
+fitting ## fitting
+redness of skin ## redness of skin
+tenderness of skin ## tenderness of skin
+warmth of skin ## warmth of skin
+hemorrhagic lesions of the skin ## hemorrhagic lesions of the skin
+reduction in the fluid part of the blood ## reduction in the fluid part of the blood
+pins and needles sensation ## pins and needles sensation
+behavioral abnormalities ## behavioral abnormalities
+poor concentration ## poor concentration
+lassitude ## lassitude
+insomnia ## insomnia
+weakness and wasting of shoulder girdle and arm muscles ## weakness and wasting of shoulder girdle and arm muscles
+slowly progressive leg weakness with urinary or fecal incontinence or both ## slowly progressive leg weakness with urinary or fecal incontinence or both
+paralysis of the legs due to thrombosis of spinal arteries ## paralysis of the legs due to thrombosis of spinal arteries
+large blisters ## large blisters
+pain in the infected area ## pain in the infected area
+myonecrosis ## myonecrosis
+gas production ## gas production
+red colored skin rash ## red colored skin rash
+dysentery ## dysentery
+difficulty concentrating ## difficulty concentrating
+deterioration of memory ## deterioration of memory
+defective judgment ## defective judgment
+swelling of the lower abdomen and legs ## swelling of the lower abdomen and legs
+irregular heartbeat ## irregular heartbeat
+excessive salivation ## excessive salivation
+swelling of the face and tongue ## swelling of the face and tongue
+cyanosis of the tongue ## cyanosis of the tongue
+clay colored stools ## clay colored stools
+disturbances in sleep ## disturbances in sleep
+abnormal behavior ## abnormal behavior
+somnolence ## somnolence
+clay colored bowel movements ## clay colored bowel movements
+pleuretic chest pain ## pleuretic chest pain
+hindlimb weakness ## hindlimb weakness
+head tilt ## head tilt
+distention from gas or fluid ## distention from gas or fluid
+digestive disturbances ## digestive disturbances
+emaciation ## emaciation
+formation of tubercles ## formation of tubercles
+foul breath ## foul breath
+inflammatory infiltrations ## inflammatory infiltrations
+caseation ## caseation
+hairy fleece in lambs ## hairy fleece in lambs
+abnormal body conformation ## abnormal body conformation
+swollen and tender salivary glands under the ears or jaw on one or both sides of the face ## swollen and tender salivary glands under the ears or jaw on one or both sides of the face
+watery yellow diarrhea ## watery yellow diarrhea
+rapid respiration ## rapid respiration
+profound depression ## profound depression
+painful sores in the mouth ## painful sores in the mouth
+skin rash on the palms of the hands and soles of the feet ## skin rash on the palms of the hands and soles of the feet
+eye redness ## eye redness
+abdominal fullness related to an enlarged spleen ## abdominal fullness related to an enlarged spleen
+bone pain ## bone pain
+bruising ## bruising
+easy bleeding ## easy bleeding
+increased susceptibility to infection ## increased susceptibility to infection
+severe chest pain ## severe chest pain
+pleuritis ## pleuritis
+gastointestinal bleeding ## gastointestinal bleeding
+cerebellar ataxia ## cerebellar ataxia
+vaginal yeast infection ## vaginal yeast infection
+mouth sores ## mouth sores
+congestion of ocular conjunctivae ## congestion of ocular conjunctivae
+reddening of lips ## reddening of lips
+reddening of oral cavity ## reddening of oral cavity
+protuberance of tongue papillae ## protuberance of tongue papillae
+edema of extremities ## edema of extremities
+focal neurological signs ## focal neurological signs
+chills which rapidly progress to bilateral interstitial pulmonary infiltrates occurrence ## chills which rapidly progress to bilateral interstitial pulmonary infiltrates occurrence
+vomiting blood ## vomiting blood
+passing blood in the feces ## passing blood in the feces
+ecchymoses ## ecchymoses
+bleeding from the nose or gums ## bleeding from the nose or gums
+bleeding from venepuncture sites ## bleeding from venepuncture sites
+reduced consciousness ## reduced consciousness
+ocular muscle palsies ## ocular muscle palsies
+malnutrition ## malnutrition
+bronchospasm ## bronchospasm
+bloody sputum ## bloody sputum
+frothy sputum ## frothy sputum
+sparse scalp hair ## sparse scalp hair
+thin upper lip ## thin upper lip
+rounded nose ## rounded nose
+lesions in the brain ## lesions in the brain
+low grade fever ## low grade fever
+bleeding in the eyes ## bleeding in the eyes
+large joints ## large joints
+wide set eyes ## wide set eyes
+round flat face ## round flat face
+hiccups ## hiccups
+internal and external bleeding ## internal and external bleeding
+abrupt onset of dyspnea ## abrupt onset of dyspnea
+internal hemorrhage ## internal hemorrhage
+confusional syndrome ## confusional syndrome
+maculopapular rash on the trunk ## maculopapular rash on the trunk
+sudden onset of headache ## sudden onset of headache
+loss of strength ## loss of strength
+bleeding under the skin ## bleeding under the skin
+paralysis of arms and legs ## paralysis of arms and legs
+nephrotic range proteinuria ## nephrotic range proteinuria
+azotemia ## azotemia
+hypoalbuminemia ## hypoalbuminemia
+hyperlipidemia ## hyperlipidemia
+meningism ## meningism
+bronchial exudate ## bronchial exudate
+retrosternal pain ## retrosternal pain
+facial swelling ## facial swelling
+mucosal bleeding ## mucosal bleeding
+respiratory signs ## respiratory signs
+itchy patches ## itchy patches
+red rash on the skin ## red rash on the skin
+pain in the outer ear ## pain in the outer ear
+ear discharge ## ear discharge
+eye discharge ## eye discharge
+paralysis of arms ## paralysis of arms
+paralysis of legs ## paralysis of legs

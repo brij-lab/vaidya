@@ -32,7 +32,7 @@ public class FirstAidEnquiry extends DialogState{
         entered = true;
         current_grammar = app.FIRSTAID_QUERY_RESPONSE;
         expect_binary = false;
-        app.speakOut("Please state your emergency");
+        app.speakOut("Please state your emergency", null);
     }
 
     @Override
@@ -75,7 +75,7 @@ public class FirstAidEnquiry extends DialogState{
             if (nlu.resolveBinaryHyp(hyp) && quesLen != firstaid_questions.size()) {
                 //int idx = firstaid_questions.size() - quesLen;
               //  app.speakOut(firstaid_questions.get(idx).getAns());
-                app.speakOut("Please go to the doctor immediately");
+                app.speakOut("Please go to the doctor immediately", null);
                 conclude = true;
                 //next_state = "greet";
             }
@@ -93,7 +93,7 @@ public class FirstAidEnquiry extends DialogState{
     private void askQuestions() {
         int idx = firstaid_questions.size() - quesLen;
         if (idx < firstaid_questions.size()) {
-            app.speakOut(firstaid_questions.get(idx).getQues());
+            app.speakOut(firstaid_questions.get(idx).getQues(), null);
             expect_binary = true;
             current_grammar = app.BINARY_RESPONSE;
         } else {

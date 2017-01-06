@@ -52,8 +52,8 @@ public class NLU {
 
         if (stringContainsItemFromList(hyp, symptom_tokens)) {
             domain = new HealthDomain(app);
-            List<String> symps = findSymptomsInHyp(hyp);
-            for (String sym : symps) {
+            List<Integer> symps = findSymptomsInHyp(hyp);
+            for (Integer sym : symps) {
                 ((HealthDomain)domain).addSymptoms(sym);
             }
         }
@@ -79,7 +79,7 @@ public class NLU {
     }
     public boolean resolveBinaryHyp(String hyp) {
         boolean yes = false;
-        if (hyp.contains("yes") || hyp.contains("yeah") || hyp.contains("yep")) {
+        if (hyp.contains("yes") || hyp.contains("yeah") || hyp.contains("yep") || hyp.contains("haan") || hyp.contains("avnu")) {
             yes = true;
         }
         return yes;
@@ -131,14 +131,15 @@ public class NLU {
 
 
 
-    public List<String> findSymptomsInHyp(String inputString)
+    public List<Integer> findSymptomsInHyp(String inputString)
     {
-        List<String> syms = new ArrayList<>();
+        List<Integer> syms = new ArrayList<>();
+
         for(int i =0; i < symptom_list.length; i++)
         {
             if(inputString.contains(symptom_list[i]))
             {
-                syms.add(symptom_list[i]);
+                syms.add(((HealthDomain)app.domain).SYMPTOM_CID.get(symptom_list[i]));
             }
         }
         return syms;
@@ -197,6 +198,7 @@ public class NLU {
     }
 
     public boolean isValidString(String str) {
+        System.out.println("SOME TEXT =========== > " + str);
         boolean flag = false;
         if (str != null) {
             str = str.replaceAll(" ", "");

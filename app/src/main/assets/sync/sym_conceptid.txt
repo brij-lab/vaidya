@@ -1,0 +1,123 @@
+abdominal cramps,0,en
+abdominal pain,1,en
+anorexia,2,en
+blisters,3,en
+caseation,4,en
+chills,5,en
+cough,6,en
+diarrhea,7,en
+difficulty in breathing,8,en
+enlarged,9,en
+eruption of rose colored spots,10,en
+fever,11,en
+fibrosis,12,en
+formation of tubercles,13,en
+headache,14,en
+inflammatory infiltrations,15,en
+irritation,16,en
+joint pain,17,en
+leukopenia,18,en
+liver enlargement,19,en
+loss of appetite,20,en
+mild bleeding,21,en
+muscle ache,22,en
+muscle and bone pain,23,en
+myalgia,24,en
+nausea,25,en
+pain,26,en
+pleural effusion,27,en
+prostration,28,en
+rash,29,en
+redness,30,en
+runny nose,31,en
+severe headache,32,en
+severe pain behind the eyes,33,en
+sore throat,34,en
+splenomegaly,35,en
+stiffness,36,en
+swallowing,37,en
+swelling,38,en
+vomiting,39,en
+watery diarrhea,40,,en
+पेट में मरोड़,0,hi
+पेट में दर्द,1,hi
+अनरेक्सिया,2,hi
+फफोले,3,hi
+केसेअशन,4,hi
+ठंड लगना,5,hi
+खांसी,6,hi
+दस्त,7,hi
+सांस लेने में कठिनाई,8,hi
+बढ़ा हुआ,9,hi
+गुलाब रंग के धब्बे के विस्फोट,10,hi
+बुखार,11,hi
+फाइब्रोसिस,12,hi
+ट्यूबरकल के गठन,13,hi
+सरदर्द,14,hi
+भड़काऊ घुसपैठ,15,hi
+जलन,16,hi
+जोड़ों का दर्द,17,hi
+क्षाररागीश्वेतकोशिकाल्पता,18,hi
+यकृत वृद्धि,19,hi
+भूख में कमी,20,hi
+हल्के से खून बह रहा,21,hi
+मांसपेशियों में दर्द,22,hi
+मांसपेशियों और हड्डियों में दर्द,23,hi
+मांसलता में पीड़ा,24,hi
+जी मिचलाना,25,hi
+दर्द,26,hi
+फुफ्फुस बहाव,27,hi
+साष्टांग प्रणाम,28,hi
+लाल चकत्ते,29,hi
+लाली,30,hi
+बहती नाक,31,hi
+भयानक सरदर्द,32,hi
+आंखों के पीछे दर्द गंभीर,33,hi
+गले में खराश,34,hi
+तिल्ली का बढ़ना,35,hi
+कठोरता,36,hi
+निगलने,37,hi
+सूजन,38,hi
+उल्टी,39,hi
+पतली दस्त,40,hi
+ఉదర తిమ్మిరి,0,te
+పొత్తి కడుపు నొప్పి,1,te
+అనోరెక్సియా,2,te
+బొబ్బలు,3,te
+క్షయ వ్యాధి లక్షణము,4,te
+చలి,5,te
+దగ్గు,6,te
+అతిసారం,7,te
+శ్వాసలో ఇబ్బంది,8,te
+విస్తారిత,9,te
+గులాబీ రంగు మచ్చలు విస్ఫోటనం,10,te
+జ్వరం,11,te
+ఫైబ్రోసిస్,12,te
+ట్యూబెర్క్యూల ఏర్పాటు,13,te
+తలనొప్పి,14,te
+తాపజనక చొరబాట్లకు,15,te
+చికాకు,16,te
+కీళ్ల నొప్పి,17,te
+ల్యుకోపెనియా,18,te
+కాలేయ వ్యాకోచం,19,te
+ఆకలి లేకపోవడం,20,te
+తేలికపాటి రక్తస్రావం,21,te
+కండరము నొప్పి,22,te
+కండరాల మరియు ఎముకల నొప్పి,23,te
+కండరాల నొప్పి,24,te
+వికారం,25,te
+నొప్పి,26,te
+పుపుస ద్రవం,27,te
+అమిత శక్తిపాతం,28,te
+దద్దుర్లు,29,te
+ఎరుపు,30,te
+కారుతున్న ముక్కు,31,te
+తీవ్రమైన తలనొప్పి,32,te
+కళ్ళు వెనుక తీవ్రమైన నొప్పి,33,te
+గొంతు మంట,34,te
+ప్లీహము పెరుగుదల,35,te
+దృఢత్వం,36,te
+కబళించే,37,te
+వాపు,38,te
+వాంతులు,39,te
+నీటి అతిసారం,40,te
