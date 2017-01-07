@@ -115,7 +115,7 @@ public class AskSymptomsState extends DialogState {
         } else if (current_symptom != null) {
             // TODO merge to accept natural language as response
             System.out.println("ASKING QUESTIONS ********************** ==> LANG NAME : " + app.langName + " --- " + current_symptom);
-            for (Map.Entry<Integer, String> e : ((HealthDomain) domain).LCONCEPT_SYMPTOM_MAP.get(app.langName).entrySet()) {
+            for (Map.Entry<String, Map<Integer, String>> e : ((HealthDomain) domain).LCONCEPT_SYMPTOM_MAP.entrySet()) {
                 System.out.println(e.getKey() + " : " + e.getValue());
             }
             app.speakOut("Did you say " + ((HealthDomain) domain).LCONCEPT_SYMPTOM_MAP.get(app.langName).get(current_symptom) + "?", null);

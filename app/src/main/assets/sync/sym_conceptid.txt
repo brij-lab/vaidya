@@ -38,7 +38,7 @@ stiffness,36,en
 swallowing,37,en
 swelling,38,en
 vomiting,39,en
-watery diarrhea,40,,en
+watery diarrhea,40,en
 पेट में मरोड़,0,hi
 पेट में दर्द,1,hi
 अनरेक्सिया,2,hi

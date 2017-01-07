@@ -109,10 +109,10 @@ public class NLU {
     }
     public String resolveSymptomQueryHyp(String hyp){
 
-        if(hyp.contains("yes") || hyp.contains("yeah") || hyp.contains("yep")){
+        if(hyp.contains("yes") || hyp.contains("yeah") || hyp.contains("yep") || hyp.contains("haan") || hyp.contains("avnu") || hyp.contains("undi")){
             return "yes";
         }
-        else if(hyp.contains("no") || hyp.contains("nope") || hyp.contains("nothing")){
+        else if(hyp.contains("no") || hyp.contains("nope") || hyp.contains("nothing") || hyp.contains("nahi") || hyp.contains("ledu") || hyp.contains("kaadu")){
             return "no";
         }
         return "query";

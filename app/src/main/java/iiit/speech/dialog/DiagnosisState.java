@@ -115,13 +115,13 @@ public class DiagnosisState extends DialogState {
         if (expect_binary) {
             System.out.println("Resolving symtom =========> " + symptom_toask);
             if (nlu.resolveSymptomQueryHyp(hyp).equalsIgnoreCase("yes")) {
-                possible_diseases = possible_symptoms.get(symptom_toask);
+                possible_diseases = possible_symptoms.get(((HealthDomain)domain).SYMPTOM_CID.get(symptom_toask));
                 System.out.println("Remaining diseases ============>>>>");
                 for (String rdis : possible_diseases) {
                     System.out.println(rdis);
                 }
             } else if (nlu.resolveSymptomQueryHyp(hyp).equalsIgnoreCase("no")) {
-                possible_diseases.removeAll(possible_symptoms.get(symptom_toask));
+                possible_diseases.removeAll(possible_symptoms.get(((HealthDomain)domain).SYMPTOM_CID.get(symptom_toask)));
                 System.out.println("Remaining diseases ============>>>>");
                 for (String rdis : possible_diseases) {
                     System.out.println(rdis);

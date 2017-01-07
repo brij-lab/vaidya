@@ -63,10 +63,12 @@ public class HealthDomain extends DomainDesc{
                 String[] sp = line.split(",");
                 Integer cid = Integer.parseInt(sp[1]);
                 SYMPTOM_CID.put(sp[0], cid);
-                if(!LCONCEPT_SYMPTOM_MAP.containsKey(sp[2])) {
+                if(!LCONCEPT_SYMPTOM_MAP.containsKey("_" + sp[2])) {
                     LCONCEPT_SYMPTOM_MAP.put("_" + sp[2], new HashMap<Integer, String>());
+                    System.out.println("this is the language =============================>" + sp[2]);
                 }
                 LCONCEPT_SYMPTOM_MAP.get("_" + sp[2]).put(cid, sp[0]);
+                System.out.println("this is the conceptid and symptom =============================>" + cid + " ;" + sp[0]);
             }
         } catch (IOException e) {
             System.out.println("Couldn't read symptom cid file");

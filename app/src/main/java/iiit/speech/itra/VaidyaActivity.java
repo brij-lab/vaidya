@@ -73,6 +73,7 @@ public class VaidyaActivity extends Activity implements
     TextView micText;
 
     public int langid;
+    public Locale ttsLocale;
     public String langName = "_";
     public File assetDir;
     public List<String> state_history;
@@ -119,9 +120,11 @@ public class VaidyaActivity extends Activity implements
 
         if(langid == 0){
             langName = langName + "en";
+            ttsLocale = Locale.US;
         }
         else if(langid == 1){
             langName = langName +"hi";
+            ttsLocale = new Locale("hi", "IN");
         }
         else{
             langName = langName + "te";
@@ -393,8 +396,8 @@ public class VaidyaActivity extends Activity implements
     public void onInit(int initStatus) {
 
         if (initStatus == TextToSpeech.SUCCESS) {
-            if(tts.isLanguageAvailable(Locale.US)==TextToSpeech.LANG_AVAILABLE) {
-                tts.setLanguage(Locale.US);
+            if(tts.isLanguageAvailable(ttsLocale)==TextToSpeech.LANG_AVAILABLE) {
+                tts.setLanguage(ttsLocale);
                 //speakOut(getString(R.string.greet_patient));
                 current_response = dialogManager.manage(null);
             }
