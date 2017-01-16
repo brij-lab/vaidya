@@ -79,7 +79,7 @@ public class NLU {
     }
     public boolean resolveBinaryHyp(String hyp) {
         boolean yes = false;
-        if (hyp.contains("yes") || hyp.contains("yeah") || hyp.contains("yep") || hyp.contains("haan") || hyp.contains("avnu")) {
+        if (hyp.contains("yes") || hyp.contains("yeah") || hyp.contains("yep") || hyp.contains("haan") || hyp.contains("avnu") || hyp.contains("undi")) {
             yes = true;
         }
         return yes;
@@ -99,7 +99,7 @@ public class NLU {
         if(hyp.contains("first aid")){
             return "first aid";
         }
-        else if(hyp.contains("diagnose") || hyp.contains("diagnose disease")){
+        else if(hyp.contains("diagnose") || hyp.contains("diagnose disease")|| hyp.contains("jhaanch")|| hyp.contains("వైద్యం")){
             return "ask symptoms";
         }
         else if((stringContainsItemFromList(hyp, disease_list)) || hyp.contains("enquiry")){
@@ -112,7 +112,7 @@ public class NLU {
         if(hyp.contains("yes") || hyp.contains("yeah") || hyp.contains("yep") || hyp.contains("haan") || hyp.contains("avnu") || hyp.contains("undi")){
             return "yes";
         }
-        else if(hyp.contains("no") || hyp.contains("nope") || hyp.contains("nothing") || hyp.contains("nahi") || hyp.contains("ledu") || hyp.contains("kaadu")){
+        else if(hyp.contains("no") || hyp.contains("nope") || hyp.contains("nothing") || hyp.contains("nahi") || hyp.contains("ledu") || hyp.contains("kadu")){
             return "no";
         }
         return "query";

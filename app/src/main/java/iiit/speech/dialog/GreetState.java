@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import iiit.speech.domain.DomainDesc;
+import iiit.speech.itra.R;
 import iiit.speech.itra.VaidyaActivity;
 import iiit.speech.nlu.NLU;
 
@@ -32,9 +33,16 @@ public class GreetState extends DialogState {
 
     @Override
     public void onEntry() {
-        System.out.println("+++++++++++++++++ Greet state entered +++++++++++++++++++++");
-        app.speakOut("Hi. How may I assist you?", "Diagnose your disease / assist you with first aid /  disease enquiry");
-
+        System.out.println("+++++++++++++++++ Greet state entered +++++++++++++++++++++ ");
+        if(app.langName.equals("_en")) {
+            app.speakOut(app.getString(R.string.greet_msg), "Diagnose your disease / assist you with first aid /  disease enquiry");
+        }
+        else if(app.langName.equals("_hi")) {
+            app.speakOut(app.getString(R.string.greet_msg), "झाँच करना");
+        }
+        else{
+            app.speakOut(app.getString(R.string.greet_msg), "నమస్కారం నేను మీకు ఎలా సహాయ పడగలను? వైద్యం చెయ్యటం");
+        }
         // Set appropriate grammar
         //current_grammar =  app.GENERIC_SEARCH;
         entered = true;

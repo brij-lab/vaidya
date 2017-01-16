@@ -8,6 +8,7 @@ grammar menu;
                         disease enquiry |
                         disease details |
                         diagnose my disease |
-                        diagnose disease ;
+                        diagnose disease|
+                        jhaanch;
 
 public <response> = <type_of_response>;

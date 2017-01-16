@@ -3,5 +3,5 @@
 grammar symptom_query_response;
 
 public <symptom_query> =    avnu |
-                            kaadu |
+                            kadu |
                             enti ;

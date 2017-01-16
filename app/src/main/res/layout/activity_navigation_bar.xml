@@ -7,6 +7,7 @@
     <!-- As the main content view, the view below consumes the entire
          space available using match_parent in both dimensions. -->
     <FrameLayout android:id="@+id/container" android:layout_width="match_parent"
+        android:background="#A1CAF1"
         android:layout_height="match_parent" >
 
         <RadioGroup
@@ -26,7 +27,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hindi"
+                android:text="हिंदी"
                 android:id="@+id/langH"
                 android:layout_gravity="center_horizontal"
                 android:checked="false" />

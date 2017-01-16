@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import iiit.speech.domain.HealthDomain;
+import iiit.speech.itra.R;
 import iiit.speech.itra.VaidyaActivity;
 import iiit.speech.nlu.NLU;
 
@@ -49,7 +50,12 @@ public class SymptomDetailsState extends DialogState {
         conclude = true;
         symptom_Toexplain = ((HealthDomain) domain).symptom_explain;
         System.out.println("HYEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE" + symptom_Toexplain.toLowerCase());
-        app.speakOut("Symptom Definition is " + SYMPTOM_DEF.get(symptom_Toexplain.toLowerCase()), null);
+        if(app.langName.equals("_te")) {
+            app.speakOut(app.getString(R.string.sym_details_symdef) + SYMPTOM_DEF.get(symptom_Toexplain.toLowerCase()), app.getString(R.string.sym_details_symdef_te) + SYMPTOM_DEF.get(symptom_Toexplain.toLowerCase()));
+        }
+        else{
+            app.speakOut(app.getString(R.string.sym_details_symdef) + SYMPTOM_DEF.get(symptom_Toexplain.toLowerCase()), null);
+        }
         app.speakOut("Do you have " + symptom_Toexplain.replaceAll("_", " "), null);
         current_grammar = app.BINARY_RESPONSE;
         next_state = "diagnosis";

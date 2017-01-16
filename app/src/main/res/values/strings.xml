@@ -41,4 +41,18 @@
     <string name="pref_lang_summary">Select a Language</string>
     <string name="pref_lang_setting">Language settings</string>
 
+    <string name="ack_conflict">You told that you do not have <xliff:g id="symp" example="fever" >%s</xliff:g></string>
+    <string name="req_symptoms1">Please tell your symptoms.</string>
+    <string name="req_symptoms2">Please tell if you have any other symptoms.</string>
+    <string name="ack_symptom">Did you say <xliff:g id="symp" example="fever" >%s</xliff:g>?</string>
+    <string name="initial_symps">I have initial symptoms to start diagnosis.</string>
+    <string name="disease_count">There are <xliff:g id="sympcount" example="9" >%d</xliff:g> diseases found matching your symptoms.</string>
+    <string name="probable_diagnosis">Your most probable diagnosis is <xliff:g id="symp" example="fever" >%s</xliff:g>.</string>
+    <string name="shortlist_symp">Do you have <xliff:g id="symp" example="fever" >%s</xliff:g>?</string>
+    <string name="greet_msg">Hi. How may I assist you?</string>
+    <string name="sym_details_symdef">Symptom Definition is </string>
+    <string name="disease_details_ask">Do you want to know more about it?</string>
+    <string name="disease_details_tell">Okay. Here it is.</string>
+    <string name="consult">Okay. Please consult a doctor immediately.</string>
+
 </resources>

@@ -8,6 +8,7 @@ import java.util.StringTokenizer;
 
 import iiit.speech.domain.DomainDesc;
 import iiit.speech.domain.HealthDomain;
+import iiit.speech.itra.R;
 import iiit.speech.itra.VaidyaActivity;
 import iiit.speech.nlu.NLU;
 
@@ -62,7 +63,12 @@ public class AskSymptomsState extends DialogState {
                             ((HealthDomain) domain).addSymptoms(symp);
                             break;
                         case REMOVED:
-                            app.speakOut("You told that you do not have " + symp, null);
+                            if(app.langName.equals("_te")) {
+                                app.speakOut(app.getString(R.string.ack_conflict, ((HealthDomain) domain).LCONCEPT_SYMPTOM_MAP.get(app.langName).get(symp)), app.getString(R.string.ack_conflict_te, ((HealthDomain) domain).LCONCEPT_SYMPTOM_MAP.get(app.langName).get(symp)));
+                            }
+                            else{
+                                app.speakOut(app.getString(R.string.ack_conflict, ((HealthDomain) domain).LCONCEPT_SYMPTOM_MAP.get(app.langName).get(symp)), null);
+                            }
                             ((HealthDomain) domain).markRemovedSymptomUnAcknowledged(symp);
                             break;
                     }
@@ -102,10 +108,20 @@ public class AskSymptomsState extends DialogState {
             // There are no un-acknowledged symptoms in the list obtained up till now
             switch (symptom_request_count) {
                 case 0:
-                    app.speakOut("Please tell your symptoms.", null);
+                    if(app.langName.equals("_te")) {
+                        app.speakOut(app.getString(R.string.req_symptoms1),app.getString(R.string.req_symptoms1_te) );
+                    }
+                    else{
+                        app.speakOut(app.getString(R.string.req_symptoms1), null);
+                    }
                     break;
                 case 1:
-                    app.speakOut("Please tell if you have any other symptoms.", null);
+                    if(app.langName.equals("_te")) {
+                        app.speakOut(app.getString(R.string.req_symptoms2), app.getString(R.string.req_symptoms2_te));
+                    }
+                    else{
+                        app.speakOut(app.getString(R.string.req_symptoms2), null);
+                    }
                     break;
             }
             // Set appropriate grammar
@@ -118,7 +134,12 @@ public class AskSymptomsState extends DialogState {
             for (Map.Entry<String, Map<Integer, String>> e : ((HealthDomain) domain).LCONCEPT_SYMPTOM_MAP.entrySet()) {
                 System.out.println(e.getKey() + " : " + e.getValue());
             }
-            app.speakOut("Did you say " + ((HealthDomain) domain).LCONCEPT_SYMPTOM_MAP.get(app.langName).get(current_symptom) + "?", null);
+            if(app.langName.equals("_te")) {
+                app.speakOut(app.getString(R.string.ack_symptom, ((HealthDomain) domain).LCONCEPT_SYMPTOM_MAP.get(app.langName).get(current_symptom)), app.getString(R.string.ack_symptom_te, ((HealthDomain) domain).LCONCEPT_SYMPTOM_MAP.get(app.langName).get(current_symptom)));
+            }
+            else{
+                app.speakOut(app.getString(R.string.ack_symptom, ((HealthDomain) domain).LCONCEPT_SYMPTOM_MAP.get(app.langName).get(current_symptom)), null);
+            }
             // Set appropriate grammar
             current_grammar =  app.BINARY_RESPONSE;
             expect_binary = true;

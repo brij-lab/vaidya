@@ -16,6 +16,7 @@ import java.util.Set;
 import java.util.TreeMap;
 
 import iiit.speech.domain.HealthDomain;
+import iiit.speech.itra.R;
 import iiit.speech.itra.VaidyaActivity;
 import iiit.speech.nlu.NLU;
 
@@ -64,7 +65,12 @@ public class DiagnosisState extends DialogState {
     @Override
     public void onEntry() {
         System.out.println("+++++++++++++++++ Diagnosis state entered +++++++++++++++++++++");
-        app.speakOut("I have initial symptoms to start diagnosis.", null);
+        if(app.langName.equals("_te")) {
+            app.speakOut(app.getString(R.string.initial_symps), app.getString(R.string.initial_symps_te));
+        }
+        else{
+            app.speakOut(app.getString(R.string.initial_symps),null);
+        }
 
         // Set appropriate grammar
         current_grammar =  app.BINARY_RESPONSE;
@@ -88,7 +94,12 @@ public class DiagnosisState extends DialogState {
         for (Integer idx: getOneIndices(final_symp_vec)) {
             possible_diseases.add(((HealthDomain)domain).DISEASE_IDX.get(idx));
         }
-        app.speakOut("There are " + possible_diseases.size() + " diseases found matching your symptoms", null);
+        if(app.langName.equals("_te")) {
+            app.speakOut(app.getString(R.string.disease_count, possible_diseases.size()), app.getString(R.string.disease_count_te, possible_diseases.size()));
+        }
+        else{
+            app.speakOut(app.getString(R.string.disease_count, possible_diseases.size()), null);
+        }
         // Speak out if there are less than 5 diseases
         if (possible_diseases.size() < 5) {
             for (String dis: possible_diseases) {
@@ -140,7 +151,13 @@ public class DiagnosisState extends DialogState {
             } else {
                 for (String d : possible_diseases) {
                     d = d.replaceAll("_", " ");
-                    app.speakOut("your most probable diagnosis is " + d, null);
+                    if(app.langName.equals("_te")) {
+                        app.speakOut(app.getString(R.string.probable_diagnosis, d), app.getString(R.string.probable_diagnosis_te, d));
+                    }
+                    else{
+
+                        app.speakOut(app.getString(R.string.probable_diagnosis, d), null);
+                    }
                     app.appendColoredText(app.result_text, "Diagnosis = " + d, Color.WHITE);
                     ((HealthDomain) domain).setDisease(d);
                     conclude = true;
@@ -190,8 +207,12 @@ public class DiagnosisState extends DialogState {
             }
         }
 
-
-        app.speakOut("Do you have " + symptom_toask.replaceAll("_", " "), null);
+        if(app.langName.equals("_te")) {
+            app.speakOut(app.getString(R.string.shortlist_symp, symptom_toask.replaceAll("_", " ")), app.getString(R.string.shortlist_symp_te, symptom_toask.replaceAll("_", " ")));
+        }
+        else{
+            app.speakOut(app.getString(R.string.shortlist_symp, symptom_toask.replaceAll("_", " ")), null);
+        }
         current_grammar = app.SYMPTOM_QUERY_RESPONSE;
         expect_binary = true;
     }

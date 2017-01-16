@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import iiit.speech.domain.HealthDomain;
+import iiit.speech.itra.R;
 import iiit.speech.itra.VaidyaActivity;
 import iiit.speech.nlu.NLU;
 
@@ -55,7 +56,12 @@ public class DiseaseDetailsState extends DialogState {
             expect_binary = true;
         }
         else if(disease != null){
-                app.speakOut("Do you want to know more about it", null);
+            if(app.langName.equals("_te")) {
+                app.speakOut(app.getString(R.string.disease_details_ask), app.getString(R.string.disease_details_ask_te));
+            }
+            else{
+                app.speakOut(app.getString(R.string.disease_details_ask), null);
+            }
                 expect_binary = true;
             }
         }
@@ -64,9 +70,14 @@ public class DiseaseDetailsState extends DialogState {
     @Override
     public void onRecognize(String hyp) {
         if (nlu.resolveBinaryHyp(hyp)) {
-            app.speakOut("Okay. Here it is.", DISEASE_DEF.get(disease.toLowerCase()));
+            app.speakOut(app.getString(R.string.disease_details_tell), DISEASE_DEF.get(disease.toLowerCase()));
         } else {
-            app.speakOut("Okay. Please consult a doctor immediately.", null);
+            if(app.langName.equals("_te")) {
+                app.speakOut(app.getString(R.string.consult), app.getString(R.string.consult_te));
+            }
+            else{
+                app.speakOut(app.getString(R.string.consult), null);
+            }
         }
         conclude = true;
     }

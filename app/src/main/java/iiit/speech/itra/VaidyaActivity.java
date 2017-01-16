@@ -14,6 +14,7 @@ import java.util.Locale;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -103,20 +104,11 @@ public class VaidyaActivity extends Activity implements
 
         state_history = new ArrayList<>();
         // Prepare the data for UI
-        setContentView(R.layout.main);
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             langid = extras.getInt("langid");
         }
-
-        listView = (ListView) findViewById(R.id.msgview);
-
-        chatArrayAdapter = new ChatArrayAdapter(getApplicationContext(), R.layout.right);
-        listView.setAdapter(chatArrayAdapter);
-
-        caption_text = (TextView) findViewById(R.id.caption_text);
-        caption_text.setText("Preparing the medic " + langid);
 
         if(langid == 0){
             langName = langName + "en";
@@ -128,7 +120,25 @@ public class VaidyaActivity extends Activity implements
         }
         else{
             langName = langName + "te";
+            ttsLocale = new Locale("te", "IN");
         }
+
+        Locale.setDefault(ttsLocale);
+        Configuration config = new Configuration();
+        config.locale = ttsLocale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+
+        setContentView(R.layout.main);
+
+        listView = (ListView) findViewById(R.id.msgview);
+
+        chatArrayAdapter = new ChatArrayAdapter(getApplicationContext(), R.layout.right);
+        listView.setAdapter(chatArrayAdapter);
+
+        caption_text = (TextView) findViewById(R.id.caption_text);
+        caption_text.setText("Preparing the medic " + langid);
+
+
 
         mic_button = (Button) findViewById(R.id.btnSpeak);
         reset_button = (Button) findViewById(R.id.btnReset);
@@ -170,7 +180,12 @@ public class VaidyaActivity extends Activity implements
                             .setText("Failed to init recognizer " + result);
                 } else {
                     //switchSearch(KWS_SEARCH);
-                    ((TextView) findViewById(R.id.caption_text)).setText(R.string.greet_patient);
+                    if(app.langName.equals("_te")){
+                        ((TextView) findViewById(R.id.caption_text)).setText(R.string.greet_patient_te);
+                    }
+                    else {
+                        ((TextView) findViewById(R.id.caption_text)).setText(R.string.greet_patient);
+                    }
                     mic_button.setClickable(true);
                     mic_button.setEnabled(true);
                     reset_button.setEnabled(true);
@@ -457,8 +472,8 @@ public class VaidyaActivity extends Activity implements
 
         if (hypothesis != null) {
             String text = hypothesis.getHypstr() + "\t";
-            text = text + String.valueOf(hypothesis.getBestScore()) + "\t";
-            text = text + String.valueOf(hypothesis.getProb());
+         //   text = text + String.valueOf(hypothesis.getBestScore()) + "\t";
+         //   text = text + String.valueOf(hypothesis.getProb());
             //makeText(getApplicationContext(), text, Toast.LENGTH_SHORT).show();
             //String prev_text = result_text.getText() + "<br>";
             //result_text.setText(prev_text + Html.fromHtml(text));
