@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Vaidya</string>
+
+    <string name="kws_caption">To start demonstration say \"oh mighty computer\".</string>
+    <string name="menu_caption">Say \"digits\", \"forecast\" or \"phones\" to choose the grammar, language model or phonetic decoder example.</string>
+    <string name="digits_caption">To try recognition of digits: say something like \"one two three four five\".</string>
+    <string name="forecast_caption">To try recognition of a weather forecast like \"sunny spells on Wednesday\".</string>
+    <string name="phone_caption">To try phonetic recognition say anything.</string>
+    <string name="title_activity_navigation_bar">Vaidya</string>
+
+    <string name="title_section1">Cough / Stress Analysis</string>
+    <string name="title_section2">Early Diagnosis</string>
+    <string name="title_section3">Visual Input</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_sound_recording_example2">SoundRecordingExample2</string>
+    <string name="app_info"/>
+    <string name="choose_format_title">Choose Audio Format</string>
+    <string name="start_recording">Record</string>
+    <string name="stop_recording">Stop</string>
+    <string name="audio_format">Format</string>
+    <!-- Strings for Vaidya -->
+    <string name="greet_patient">-- वैद्या --</string>
+    <string name="tap_on_mic">Tap on mic to speak</string>
+    <string name="tap_to_stop">Tap again to stop</string>
+
+    <string name="speech_prompt">Say something&#8230;</string>
+    <string name="speech_not_supported">Sorry! Your device doesn\'t support speech input</string>
+
+    <string name="pref_lang">Virtual Assistant Language</string>
+    <string name="pref_lang_summary">Select a Language</string>
+    <string name="pref_lang_setting">Language settings</string>
+
+    <string name="greet_msg">नमस्ते । मैं आपकी मदद कैसे कर सकती हूं ?</string>
+
+    <string name="ack_conflict">आपने कहा कि आपको <xliff:g id="symp" example="fever" >%s</xliff:g> नहीं है.</string>
+    <string name="req_symptoms1">कृपया अपने लक्षण बताइये ।</string>
+    <string name="req_symptoms2">और कोई लक्षण ?</string>
+    <string name="ack_symptom">क्या आपने <xliff:g id="symp" example="fever" >%s</xliff:g> बोला ?</string>
+    <string name="initial_symps">मैं अब इन लक्षणों से बीमारी की खोज शुरू करती हूँ ।</string>
+    <string name="disease_count">इन लक्षणों से <xliff:g id="sympcount" example="9" >%d</xliff:g> बीमारियां मिले </string>
+    <string name="probable_diagnosis">आपकी सबसे ज्यादा संभावित बीमारी <xliff:g id="symp" example="fever" >%s</xliff:g> है.</string>
+    <string name="shortlist_symp">क्या आपको <xliff:g id="symp" example="fever" >%s</xliff:g> है ?</string>
+    <string name="sym_details_symdef">लक्षण कि अर्थ </string>
+    <string name="disease_details_ask">क्या आपको इसके बारे में और जानना है ?</string>
+    <string name="disease_details_tell">कृपया अधिक जानकारी पढिये </string>
+    <string name="consult">अपने निकटतम डॉक्टर से शीघ्र मिलिये </string>
+
+</resources>
