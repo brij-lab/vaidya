@@ -55,7 +55,7 @@ public class DiseaseDetailsState extends DialogState {
             expect_binary = true;
         }
         else if(disease != null){
-                app.speakOut("Do you want to know more about it");
+                app.speakOut("Do you want to know more about it", null);
                 expect_binary = true;
             }
         }
@@ -64,9 +64,9 @@ public class DiseaseDetailsState extends DialogState {
     @Override
     public void onRecognize(String hyp) {
         if (nlu.resolveBinaryHyp(hyp)) {
-            app.speakOut(DISEASE_DEF.get(disease.toLowerCase()));
+            app.speakOut("Okay. Here it is.", DISEASE_DEF.get(disease.toLowerCase()));
         } else {
-            app.speakOut("Okay. Please consult a doctor immediately.");
+            app.speakOut("Okay. Please consult a doctor immediately.", null);
         }
         conclude = true;
     }

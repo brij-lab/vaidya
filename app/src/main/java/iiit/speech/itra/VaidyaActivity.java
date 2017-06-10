@@ -183,7 +183,7 @@ public class VaidyaActivity extends Activity implements
                     //mic_button.setImageResource(R.mipmap.ico_mic);
                     //micText.setText(getString(R.string.tap_on_mic));
                     mic_button.setBackground(getDrawable(R.drawable.speak_button));
-                    mic_button.setText("Speak");
+                    mic_button.setText("Listen");
                 } else {
                     recognizer.startListening(current_response);
                     listening = true;
@@ -402,15 +402,19 @@ public class VaidyaActivity extends Activity implements
 
     }
 
-    public void speakOut(String txt) {
+    public void speakOut(String stxt, String wtxt) {
 
         //appendColoredText(result_text, txt, Color.YELLOW);
-        sendChatMessage(true, txt, null);
+        if (wtxt != null) {
+            sendChatMessage(true, wtxt, null);
+        } else {
+            sendChatMessage(true, stxt, null);
+        }
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            tts.speak(txt, TextToSpeech.QUEUE_ADD, null, null);
+            tts.speak(stxt, TextToSpeech.QUEUE_ADD, null, null);
         } else {
-            tts.speak(txt, TextToSpeech.QUEUE_ADD, null);
+            tts.speak(stxt, TextToSpeech.QUEUE_ADD, null);
         }
 
     }

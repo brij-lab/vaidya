@@ -1,623 +1,123 @@
-headache
-fatigue
-fever
-abdominal pain
-nausea
-jaundice
-rash
-skin rash
-anemia
-malaise
-distention
-constipation
-diarrhea
-mucopurulent discharge from the eye
-pain in the eye
-redness
-stiff neck
-confusion
-eschar
-regional adenopathy
-maculopapular rash on extremities
-swallowing
-pain
-burning
-distension
-decreased appetite
-vomiting
-weight loss
-bloody stools
-rash which is followed by blisters
-itching
-burning pain
-paresthesia
-cough
-wheezing
-splenomegaly
-bloody diarrhea
-hepatosplenomegaly
-chills
-rapid breathing
-anorexia
-decreased weight
-depression
-watery diarrhea
-sore throat
-myalgia
-muscle ache
-coughing
-pain in lower and upper extremities
-papulovesicular rash on the soft palate
-cervical lymphadenopathy
-conjunctival suffusion
-blood in the urine
-blood in the sputum
-hemorrhagic fever
-photophobia
-neck stiffness
-meningitis
-accumulation of fluid in the abdomen
-dehydration
-scaling of skin lesions
-thickening of nails
-swollen periungal tissue
-scarring of the scalp
-anxiety
-shortness of breath
-chest tightness
-lymphangitis
-lymphadenopathy
-stiffness
-irritation
-swelling
-joint pain
-murmurs
-peripheral edema
-pulmonary rales
-petechia
-skin lesions
-gummatous ulcers
-periosteal lesions
-paresis
-tabes
-optic atrophy
-interstitial keratitis
-sensorineural deafness
-dental deformities
-renal failure
-hemorrhagic manifestations
-pulmonary edema
-sweating
-chest pain
-muscle tightness
-mucopurulent nasal discharge
-nodular lesions in the lungs
-blisters
-drowsiness
-seizures
-seizure
-severe headache
-rectal bleeding
-formation of ulcers
-hepatomegaly
-arthralgia
-hemoptysis
-pneumonia
-cramping
-failure to thrive
-blood stained nasal discharge
-perioral fissures
-choroiditis
-hydrocephalus
-intellectual disability
-osteochondritis
-pseudoparalysis
-nonproductive cough
-maceration
-conjunctivitis
-scaling
-irritability
-abnormal reflexes
-involuntary movements
-hemiplagia
-ataxia
-nystagmus
-dysphasia
-lymphadenopathy of the neck
-back pain
-abortion
-stillbirth
-arthritis
-skin nodules
-maculopapular rash
-sweats
-weakness
-neurologic changes
-acute respiratory distress
-lymphadenitis
-prostration
-tremors
-loss of conjugate eye movements
-muscle rigidity
-hemiparesis
-coma
-runny nose
-enlarged
-loss of appetite
-difficulty in breathing
-sneezing
-circling
-excess salivation in piglets
-intense itching in cattle
-myalgia in the legs and lumbosacral region
-inguinal lymphadenitis
-abscesses in the groin area
-paralysis
-muscle weakness
-rectal prolapse
-growth retardation
-lack of appetite
-cramps
-incoordination
-muscle tremors
-loss of the voice
-acute chest pain
-disturbance of heart rate
-dyspnea
-hypoxemia
-cognitive impairment
-motor dysfunction
-behavioral change
-speech problems
-altered mental status
-poor appetite
-mediastinal lymphadenopathy
-lameness
-nasal discharge
-ocular discharge
-cessation of rumination
-relapsing fever
-leukopenia
-petechiae
-necrosis
-difficulty breathing
-adenopathy
-sensory loss
-motor loss
-eye damage
-liver enlargement
-eruption of rose colored spots
-high fever
-huddling
-hemorrhages in the skin
-opaque nail
-yellow brown nail
-crumbly nail that can separate from the nail bed
-stupor
-disorientation
-convulsions
-spastic paralysis
-swollen lymph nodes
 abdominal cramps
-regional lymphadenopathy
-backache
-pleural effusions
-staggering gait
-dementia
-blurred vision
-stomach pain
-red eyes
-flushed face
-red throat
-nosebleeds
-blood in the feces and urine
-cervical rigidity
-muscle spasms
-bleeding from the oral and nasal mucosa
-bleeding from the bronchopulmonary
-lesions
-vomiting of blood
-severe diarrhea
-acute flaccid paralysis
-lethargy
-heart failure
-pallor
-cyanosis
-tachycardia
-enlargement of heart
-abdominal discomfort
-tiredness
-muscle pain
-reddening of the skin
-thrombocytopenia
-pleural effusion
-congestive heart failure
-nodule
-bone lesions
-lesions in the mucosa of digestive tract
-necrosis of lymphoid tissue
-hoof inflammation and dermatitis
-difficulty feeding
-ptosis
-loss of head control
-breathing difficulties
-muscular hypotonia
-muscular atrophy
-feeding difficulties
-recurrent episodes of vomiting and diarrhea
-pleuritic chest pain
-easy bruising
-blood spots
-bleeding gums
-shock
-weak pulse
-hypotension
-dry cough
-hypoxia
-loss of reflexes
-hallucinations
-numbness
-parasthesias
-respiratory failure
-burning sensation during urination
-discharge from the penis
-increased vaginal discharge
-vaginal bleeding between periods
-orbital cellulitis
-proptosis
-pus discharge from the nose
-dizziness
-altered consciousness
-vision loss
-shin pain
-soreness of the muscles of the legs and back
-memory loss
-sleepiness
-breathing distress
-watery eyes
-eschars
-rash on extremities
-swelling of the feet
-gangrene
-severe pain behind the eyes
-muscle and bone pain
-mild bleeding
-stiff body
-exhaustion
-change in bowel habits
-spastic weakness of both legs
-muscle stiffness
-sensory disturbance
-spasms
-vesicular rash of the ear or mouth
-tinnitus
-vertigo
-otalgia
-respiratory problems
-bleeding disorder
-tachypnea
-dyspepsia
-formation of fistulas
-cold sores
-bad breath
-oral lesions
-severe abdominal and back pain
-severe pain
-sensitivity to light touch
-epistaxis
-hematemesis
-melena
-menorrhagia
-night sweats
-cracking
-delirium
-papulovesicular rash
-sepsis
-murmur
-sensory disturbances
-bleeding
-odynophagia
-swollen lymph glands
-skin rash on the chest
-cerebral hemorrhage
-marked leukocytosis
-diffuse infiltrates on chest radiograph
-coryza
-maculopapular
-watery blisters
-swelling of the lymph nodes
-limb pain
-paraplegia
-dysarthria
-bleeding into skin and other organs
-nasal flaring in infants
-bluish skin due to lack of oxygen
-fissures
-diplopia
-dysphonia
-dysphagia
-descending muscle paralysis
-lacrimation
-recurring periods of wheezing
-mucus production
-sleep apnea
-breathing problems
-cranial nerve palsies
-skin ulcer
-severe muscle pain
-falling blood pressure
-sensitivity to light
-bilateral corneal opacity
-oculonasal discharge
-rigidity of limbs
-slurred speech
-cellulitis
-lesions in the brain or meninges
-ascending regional lymphadenopathy
-itching of the scalp
-pus filled lesions on the scalp
-patches of hair loss
-stillborn piglets
-mummified fetuses
-premature farrowings
-weak born pigs
-myositis
-degeneration of neuronal tissue
-enlarged spleen
-hemorrhages in the internal organs
-bulging eyes
-bloated abdomens
-pain in the chest and throughout body
-fibrosis
-watery or bloody diarrhea
-severe frontal headache
-joint aches
-flushing of the face
-decreased level of consciousness
-cranial nerve deficits
-dark urine
-impaired speech
-cognitive deterioration
-redness of the eyes
-low blood pressure
-acute shock
-vascular leakage
-acute kidney failure
-body ache
-sweat
-tearing
-physical weakness
-rosy spots on the central body
-bradycardia
-mood disturbances
-behaviour disturbances
-cognitive disturbances
-neurologic disturbances
-movement impairment
-rigors
-rigor
-red eye
-skin rash called erythema migrans
-lung lesions
-forced expiration
-profuse sweating
-spasmodic coughing
-ecchymoses on the tongue
-lacrimation in humans
-gasping
-twisting of head and neck
-complete paralysis
-reduced egg production in birds
-productive cough
-widespread abnormalities of social interactions and communication
-severely restricted interests
-highly repetitive behavior
-indigestion
-reduced level of consciousness
-neck pain
-facial flush
-hemorrhagic features
-proteinuria
-soft tissue swelling
-chest discomfort or pain
-mild spotted fever
-sores
-swollen glands
-ulcer formation
-abdominal bloating
-persistent vomiting
-difficulty speaking
-difficulty swallowing
-difficulty chewing
-changes in personality
-twitching
-low fever
-lesions in the back area of the mouth
-abdominal pain in middle or lower right part
-personality and behavioral changes
-partial paralysis
-groin pain
-discharge from penis
-scrotal swelling
-blood in the semen
-neuropathy
-autonomic instability
-psychosis
-multiorgan failure
-desquamation
-nonfocal neurologic abnormalities
-respiratory distress
-flashbacks
-bad dreams
-frightening thoughts
-avoidance
-hyperarousal of PTSD occurring within one month of a traumatic experience as acute stress disorder or ASD
-agraphia
-acalculia
-finger agnosia
-herpetic lesions
-painful swallowing
-cough with mucus
-maculopapular or petechial rash
-cough with sputum
-draining of sinuses
-diaphoresis
-maculopapular rash progressing into papular or petechial rash
-alterations in sensorium
-obstructing hydrocephalus
-fever for two three days
-nodules and cavitations of the lungs
-swollen hilar lymph nodes
-abdominal distension
-motor impairment
-difficulty in walking and maintaining balance
-meningeal irritation
-cerebellar syndrome
-pleural thickening
-shivers
-bleeding from the mouth
-intense stabbing pain in the back and legs that recurs irregularly
-gait ataxia
-hyperesthesia
-loss of bladder sensation leading to urine retention
-erectile dysfunction
-cotton wool spots
-retinal hemorrhages
-microaneurysms
-skin reddening
-gastrointestinal bleeding
-intestinal bleeding
-rash on the face which spreads to the trunk and limbs
-prickling or itching sensation at the site of bite
-agitation
-hydrophobia
-stiffness of the neck
-bleeding problems
-vascular dilation
-eyelid edema
-watering of the eye
-conjunctival congestion
-superficial punctate epithelial keratitis
-fluid filled blister formation
-stiffness in the spine
-stiffness in the neck
-stiffness in the hips
-stiffness in the jaw
-stiffness in the rib cage
-fitting
-redness of skin
-tenderness of skin
-warmth of skin
-hemorrhagic lesions of the skin
-reduction in the fluid part of the blood
-pins and needles sensation
-behavioral abnormalities
-poor concentration
-lassitude
-insomnia
-weakness and wasting of shoulder girdle and arm muscles
-slowly progressive leg weakness with urinary or fecal incontinence or both
-paralysis of the legs due to thrombosis of spinal arteries
-large blisters
-pain in the infected area
-myonecrosis
-gas production
-red colored skin rash
-dysentery
-difficulty concentrating
-deterioration of memory
-defective judgment
-swelling of the lower abdomen and legs
-irregular heartbeat
-excessive salivation
-swelling of the face and tongue
-cyanosis of the tongue
-clay colored stools
-disturbances in sleep
-abnormal behavior
-somnolence
-clay colored bowel movements
-pleuretic chest pain
-hindlimb weakness
-head tilt
-distention from gas or fluid
-digestive disturbances
-emaciation
-formation of tubercles
-foul breath
-inflammatory infiltrations
+abdominal pain
+anorexia
+blisters
 caseation
-hairy fleece in lambs
-abnormal body conformation
-swollen and tender salivary glands under the ears or jaw on one or both sides of the face
-watery yellow diarrhea
-rapid respiration
-profound depression
-painful sores in the mouth
-skin rash on the palms of the hands and soles of the feet
-eye redness
-abdominal fullness related to an enlarged spleen
-bone pain
-bruising
-easy bleeding
-increased susceptibility to infection
-severe chest pain
-pleuritis
-gastointestinal bleeding
-cerebellar ataxia
-vaginal yeast infection
-mouth sores
-congestion of ocular conjunctivae
-reddening of lips
-reddening of oral cavity
-protuberance of tongue papillae
-edema of extremities
-focal neurological signs
-chills which rapidly progress to bilateral interstitial pulmonary infiltrates occurrence
-vomiting blood
-passing blood in the feces
-ecchymoses
-bleeding from the nose or gums
-bleeding from venepuncture sites
-reduced consciousness
-ocular muscle palsies
-malnutrition
-bronchospasm
-bloody sputum
-frothy sputum
-sparse scalp hair
-thin upper lip
-rounded nose
-lesions in the brain
-low grade fever
-bleeding in the eyes
-large joints
-wide set eyes
-round flat face
-hiccups
-internal and external bleeding
-abrupt onset of dyspnea
-internal hemorrhage
-confusional syndrome
-maculopapular rash on the trunk
-sudden onset of headache
-loss of strength
-bleeding under the skin
-paralysis of arms and legs
-nephrotic range proteinuria
-azotemia
-hypoalbuminemia
-hyperlipidemia
-meningism
-bronchial exudate
-retrosternal pain
-facial swelling
-mucosal bleeding
-respiratory signs
-itchy patches
-red rash on the skin
-pain in the outer ear
-ear discharge
-eye discharge
-paralysis of arms
-paralysis of legs
+chills
+cough
+diarrhea
+difficulty in breathing
+enlarged
+eruption of rose colored spots
+fever
+fibrosis
+formation of tubercles
+headache
+inflammatory infiltrations
+irritation
+joint pain
+leukopenia
+liver enlargement
+loss of appetite
+mild bleeding
+muscle ache
+muscle and bone pain
+myalgia
+nausea
+pain
+pleural effusion
+prostration
+rash
+redness
+runny nose
+severe headache
+severe pain behind the eyes
+sore throat
+splenomegaly
+stiffness
+swallowing
+swelling
+vomiting
+watery diarrhea
+पेट में मरोड़
+पेट में दर्द
+अनरेक्सिया
+फफोले
+केसेअशन
+ठंड लगना
+खांसी
+दस्त
+सांस लेने में कठिनाई
+बढ़ा हुआ
+गुलाब रंग के धब्बे के विस्फोट
+बुखार
+फाइब्रोसिस
+ट्यूबरकल के गठन
+सरदर्द
+भड़काऊ घुसपैठ
+जलन
+जोड़ों का दर्द
+क्षाररागीश्वेतकोशिकाल्पता
+यकृत वृद्धि
+भूख में कमी
+हल्के से खून बह रहा
+मांसपेशियों में दर्द
+मांसपेशियों और हड्डियों में दर्द
+मांसलता में पीड़ा
+जी मिचलाना
+दर्द
+फुफ्फुस बहाव
+साष्टांग प्रणाम
+लाल चकत्ते
+लाली
+बहती नाक
+भयानक सरदर्द
+आंखों के पीछे दर्द गंभीर
+गले में खराश
+तिल्ली का बढ़ना
+कठोरता
+निगलने
+सूजन
+उल्टी
+पतली दस्त
+ఉదర తిమ్మిరి
+పొత్తి కడుపు నొప్పి
+అనోరెక్సియా
+బొబ్బలు
+క్షయ వ్యాధి లక్షణము
+చలి
+దగ్గు
+అతిసారం
+శ్వాసలో ఇబ్బంది
+విస్తారిత
+గులాబీ రంగు మచ్చలు విస్ఫోటనం
+జ్వరం
+ఫైబ్రోసిస్
+ట్యూబెర్క్యూల ఏర్పాటు
+తలనొప్పి
+తాపజనక చొరబాట్లకు
+చికాకు
+కీళ్ల నొప్పి
+ల్యుకోపెనియా
+కాలేయ వ్యాకోచం
+ఆకలి లేకపోవడం
+తేలికపాటి రక్తస్రావం
+కండరము నొప్పి
+కండరాల మరియు ఎముకల నొప్పి
+కండరాల నొప్పి
+వికారం
+నొప్పి
+పుపుస ద్రవం
+అమిత శక్తిపాతం
+దద్దుర్లు
+ఎరుపు
+కారుతున్న ముక్కు
+తీవ్రమైన తలనొప్పి
+కళ్ళు వెనుక తీవ్రమైన నొప్పి
+గొంతు మంట
+ప్లీహము పెరుగుదల
+దృఢత్వం
+కబళించే
+వాపు
+వాంతులు
+నీటి అతిసారం

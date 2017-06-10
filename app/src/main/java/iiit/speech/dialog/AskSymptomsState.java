@@ -60,7 +60,7 @@ public class AskSymptomsState extends DialogState {
                             ((HealthDomain) domain).addSymptoms(symp);
                             break;
                         case REMOVED:
-                            app.speakOut("You told that you do not have " + symp);
+                            app.speakOut("You told that you do not have " + symp, null);
                             ((HealthDomain) domain).markRemovedSymptomUnAcknowledged(symp);
                             break;
                     }
@@ -100,10 +100,10 @@ public class AskSymptomsState extends DialogState {
             // There are no un-acknowledged symptoms in the list obtained up till now
             switch (symptom_request_count) {
                 case 0:
-                    app.speakOut("Please tell your symptoms.");
+                    app.speakOut("Please tell your symptoms.", null);
                     break;
                 case 1:
-                    app.speakOut("Please tell if you have any other symptoms.");
+                    app.speakOut("Please tell if you have any other symptoms.", null);
                     break;
             }
             // Set appropriate grammar
@@ -112,7 +112,7 @@ public class AskSymptomsState extends DialogState {
 
         } else if (current_symptom != null) {
             // TODO merge to accept natural language as response
-            app.speakOut("Did you say " + current_symptom.replaceAll("_", " ") + "?");
+            app.speakOut("Did you say " + current_symptom.replaceAll("_", " ") + "?", null);
             // Set appropriate grammar
             current_grammar =  app.BINARY_RESPONSE;
             expect_binary = true;

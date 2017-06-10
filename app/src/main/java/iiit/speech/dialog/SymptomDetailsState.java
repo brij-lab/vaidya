@@ -49,8 +49,8 @@ public class SymptomDetailsState extends DialogState {
         conclude = true;
         symptom_Toexplain = ((HealthDomain) domain).symptom_explain;
         System.out.println("HYEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE" + symptom_Toexplain.toLowerCase());
-        app.speakOut("Symptom Definition is " + SYMPTOM_DEF.get(symptom_Toexplain.toLowerCase()));
-        app.speakOut("Do you have " + symptom_Toexplain.replaceAll("_", " "));
+        app.speakOut("Symptom Definition is " + SYMPTOM_DEF.get(symptom_Toexplain.toLowerCase()), null);
+        app.speakOut("Do you have " + symptom_Toexplain.replaceAll("_", " "), null);
         current_grammar = app.BINARY_RESPONSE;
         next_state = "diagnosis";
     }

@@ -64,7 +64,7 @@ public class DiagnosisState extends DialogState {
     @Override
     public void onEntry() {
         System.out.println("+++++++++++++++++ Diagnosis state entered +++++++++++++++++++++");
-        app.speakOut("I have initial symptoms to start diagnosis.");
+        app.speakOut("I have initial symptoms to start diagnosis.", null);
 
         // Set appropriate grammar
         current_grammar =  app.BINARY_RESPONSE;
@@ -88,11 +88,11 @@ public class DiagnosisState extends DialogState {
         for (Integer idx: getOneIndices(final_symp_vec)) {
             possible_diseases.add(((HealthDomain)domain).DISEASE_IDX.get(idx));
         }
-        app.speakOut("There are " + possible_diseases.size() + " diseases found matching your symptoms");
+        app.speakOut("There are " + possible_diseases.size() + " diseases found matching your symptoms", null);
         // Speak out if there are less than 5 diseases
         if (possible_diseases.size() < 5) {
             for (String dis: possible_diseases) {
-                app.speakOut(dis.replaceAll("_", " "));
+                app.speakOut(dis.replaceAll("_", " "), null);
             }
         }
         // If there are more than one possible disease then ask for more symptoms to resolve
@@ -140,7 +140,7 @@ public class DiagnosisState extends DialogState {
             } else {
                 for (String d : possible_diseases) {
                     d = d.replaceAll("_", " ");
-                    app.speakOut("your most probable diagnosis is " + d);
+                    app.speakOut("your most probable diagnosis is " + d, null);
                     app.appendColoredText(app.result_text, "Diagnosis = " + d, Color.WHITE);
                     ((HealthDomain) domain).setDisease(d);
                     conclude = true;
@@ -189,7 +189,7 @@ public class DiagnosisState extends DialogState {
                 }
             }
         }
-        app.speakOut("Do you have " + symptom_toask.replaceAll("_", " "));
+        app.speakOut("Do you have " + symptom_toask.replaceAll("_", " "), null);
         current_grammar = app.SYMPTOM_QUERY_RESPONSE;
         expect_binary = true;
     }

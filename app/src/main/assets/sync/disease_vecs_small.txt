@@ -1,7 +1,0 @@
-acute_pharyngitis 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-acute_gastroentrictis 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0
-urinal_tract_infection 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0
-tuberculosis 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1
-malaria 0 0 1 0 1 0 1 0 1 0 0 0 0 0 0 0 0 0
-dengue 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0
-diabetes 0 0 0 0 0 0 0 0 0 1 0 1 1 1 0 0 1 0

@@ -98,10 +98,10 @@ public class DialogManager {
             }
         }
         else if (hyp.equals("HARD_RESET")){
-            app.speakOut("Dialog has been reset");
+            app.speakOut("Dialog has been reset", null);
         }
         else {
-            app.speakOut("Please repeat");
+            app.speakOut("Please repeat", null);
         }
 
         System.out.println("Current state ======> " + state.getName());

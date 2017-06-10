@@ -23,7 +23,7 @@ public class DiseaseEnquiry extends DialogState {
     public void onEntry() {
         entered = true;
         current_grammar = app.DISEASE_QUERY_RESPONSE;
-        app.speakOut("Enquire disease name or Diagnose disease name?");
+        app.speakOut("Enquire disease name or Diagnose disease name?", null);
 
     }
 
@@ -33,8 +33,8 @@ public class DiseaseEnquiry extends DialogState {
         System.out.println("Hypothesis ======================>" + hyp);
         System.out.println(" detail_of_disease ======================>" +  detail_of_disease);
         if(nlu.resolveGreetStateResponse(hyp).contains("ask symptoms")){
-            for (String sym : ((HealthDomain) domain).getSymptomsForDisease(detail_of_disease)) {
-                ((HealthDomain) domain).addSymptoms(sym);
+            for (Integer sym : ((HealthDomain) domain).getSymptomsForDisease(detail_of_disease)) {
+                //((HealthDomain) domain).addSymptoms(sym);
             }
             conclude = true;
             next_state = "ask_symptoms";
