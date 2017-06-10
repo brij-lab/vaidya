@@ -1,7 +1,7 @@
 Vaidya: A spoken Dialog System for Health Domain
 =====
 
-About
+## About
 -----------
 Introducing Vaidya, a spoken dialog system built for the purpose of
 
@@ -18,7 +18,7 @@ device.
 3. Low-resource dialog modeling
 
 
-Progress
+## Progress
 --------------
 
 1. Developed low-resource language-independent keyword spotting
