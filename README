@@ -1,0 +1,28 @@
+Vaidya: A spoken Dialog System for Health Domain
+=====
+
+About
+-----------
+Introducing Vaidya, a spoken dialog system built for the purpose of
+
+solving basic healthcare requirements in Indian context.
+
+Objectives:
+
+1. Avoid network dependence by keeping the complete system in
+
+device.
+
+2. Support multiple languages
+
+3. Low-resource dialog modeling
+
+
+Progress
+--------------
+
+1. Developed low-resource language-independent keyword spotting
+
+2. Developed highly-scalable language identification
+
+3. Provided support for three languages, namely, Hindi, English and Telugu
